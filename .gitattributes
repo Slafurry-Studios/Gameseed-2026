@@ -1,0 +1,16 @@
+* text=auto eol=lf
+
+*.cs        text eol=lf
+*.unity     text eol=lf merge=unityyamlmerge
+*.prefab    text eol=lf merge=unityyamlmerge
+*.asset     text eol=lf merge=unityyamlmerge
+*.meta      text eol=lf merge=unityyamlmerge
+*.anim      text eol=lf merge=unityyamlmerge
+*.json      text eol=lf
+
+*.png       binary
+*.jpg       binary
+*.fbx       binary
+*.wav       binary
+*.mp3       binary
+*.dll       binary
