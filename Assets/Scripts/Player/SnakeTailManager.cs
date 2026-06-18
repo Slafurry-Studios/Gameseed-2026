@@ -76,18 +76,15 @@ namespace Game.Player
 
         private void RecordMarker()
         {
-            // Ensure array has enough size
             int requiredSize = (bodyParts.Count + 1) * historyGap + 1;
             if (positionHistory == null || positionHistory.Length < requiredSize)
             {
                 AllocateHistory(requiredSize * 2);
             }
 
-            // Move index backwards circularly
             historyIndex--;
             if (historyIndex < 0) historyIndex = positionHistory.Length - 1;
 
-            // Record current position and rotation
             positionHistory[historyIndex] = new Marker(transform.position, transform.rotation);
             
             if (historyCount < positionHistory.Length)
