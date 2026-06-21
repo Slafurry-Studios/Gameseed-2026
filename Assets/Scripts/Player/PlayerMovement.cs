@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,8 @@ namespace Game.Player
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerMovement : MonoBehaviour
     {
+        public event Action<float> OnStaminaPctChanged;
+
         [Header("Movement Settings")]
         [SerializeField] private float forwardSpeed = 5f;
         [SerializeField] private float turnSpeed = 360f; // Kecepatan berputar (derajat per detik)
@@ -50,6 +53,11 @@ namespace Game.Player
             if (sprintAction != null) sprintAction.action.Disable();
         }
 
+        private void Start()
+        {
+            OnStaminaPctChanged?.Invoke(currentStamina / maxStamina);
+        }
+
         private void Update()
         {
             if (moveAction != null)
@@ -67,6 +75,8 @@ namespace Game.Player
 
         private void HandleSprintingAndStamina()
         {
+            float previousStamina = currentStamina;
+
             bool sprintInputHeld = sprintAction != null && sprintAction.action.IsPressed();
 
             if (!sprintInputHeld)
@@ -100,6 +110,11 @@ namespace Game.Player
                     currentStamina += staminaRegenRate * Time.deltaTime;
                     currentStamina = Mathf.Min(currentStamina, maxStamina);
                 }
+            }
+
+            if (currentStamina != previousStamina)
+            {
+                OnStaminaPctChanged?.Invoke(currentStamina / maxStamina);
             }
         }
 
