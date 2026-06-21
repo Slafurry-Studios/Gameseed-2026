@@ -66,7 +66,18 @@ namespace Game.Player
                 
                 if (input.sqrMagnitude > 0.01f)
                 {
-                    targetAngle = Vector2.SignedAngle(Vector2.up, input.normalized);
+                    if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
+                    {
+                        input.y = 0;
+                        input.x = Mathf.Sign(input.x);
+                    }
+                    else
+                    {
+                        input.x = 0;
+                        input.y = Mathf.Sign(input.y);
+                    }
+
+                    targetAngle = Vector2.SignedAngle(Vector2.up, input);
                 }
             }
 
