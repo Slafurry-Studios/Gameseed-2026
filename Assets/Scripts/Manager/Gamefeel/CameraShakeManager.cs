@@ -20,6 +20,18 @@ public class CameraShakeManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        if (impulseSource == null)
+        {
+            impulseSource = GetComponent<CinemachineImpulseSource>();
+            if (impulseSource == null)
+            {
+                Debug.LogError("[CameraShakeManager] No CinemachineImpulseSource found on the GameObject!");
+            }
+        }
+    }
+
     public void Shake(float amplitude, float frequency)
     {
         if (impulseSource == null)
