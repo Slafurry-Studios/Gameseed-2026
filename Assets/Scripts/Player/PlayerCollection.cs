@@ -15,21 +15,6 @@ namespace Game.Player
         public UnityEvent<int> onThreatPointGained;
         public UnityEvent<int> onTechPointCollected;
 
-        public void Collect(Gameplay.CollectibleType type, int amount)
-        {
-            switch (type)
-            {
-                case Gameplay.CollectibleType.Orb:
-                    AddOrbs(amount);
-                    break;
-                case Gameplay.CollectibleType.ThreatPoint:
-                    AddThreatPoints(amount);
-                    break;
-                case Gameplay.CollectibleType.TechPoint:
-                    AddTechPoints(amount);
-                    break;
-            }
-        }
 
         public void AddOrbs(int amount)
         {
