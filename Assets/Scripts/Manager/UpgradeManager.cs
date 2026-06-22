@@ -1,24 +1,9 @@
 using System;
 using UnityEngine;
-public class UpgradeManager : MonoBehaviour
+public class UpgradeManager : Singleton<UpgradeManager>
 {
-    public static UpgradeManager Instance { get; private set; }
     private int upgradePoints = 0;
     public event Action<int> OnUpgradePointsChanged;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
 
     // Method to increase upgrade points
     public void IncreaseUpgradePoints(int amount)

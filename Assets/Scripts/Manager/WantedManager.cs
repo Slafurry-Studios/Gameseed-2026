@@ -1,10 +1,8 @@
 using System;
 using UnityEngine;
 
-public class WantedManager : MonoBehaviour
+public class WantedManager : Singleton<WantedManager>
 {
-    public static WantedManager Instance { get; private set; }
-
     [SerializeField] private WantedLevel[] wantedLevels;
 
     private int threatPoints = 0;
@@ -12,19 +10,6 @@ public class WantedManager : MonoBehaviour
 
     // Other objects can subscribe to this event
     public event Action<WantedLevel> OnWantedLevelIncreased;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     public void IncreaseThreatPoints(int amount)
     {
