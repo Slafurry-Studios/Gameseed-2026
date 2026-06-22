@@ -287,6 +287,16 @@ MonoBehaviour:
   orbitRadius: 1.5
   rotateIndicator: 1
   rotationOffset: -90
+  shootAction: {fileID: 1120369429361536294, guid: 487d6f98c21f58d4c8a0d99e91627e36, type: 3}
+  bulletPrefab: {fileID: 1338399822672591885, guid: d0db26803bb1d2a4a802f8857098a4be, type: 3}
+  fireRate: 0.5
+  bulletDamage: 10
+  bulletSpeed: 20
+  maxShootDistance: 10
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  hitRadius: 0.2
 --- !u!114 &8351684795539557676
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Game.Gameplay;
 
 namespace Game.Player
 {
@@ -21,7 +22,19 @@ namespace Game.Player
         [Tooltip("Offset rotation in degrees if the indicator's sprite doesn't point correctly. Example: -90 if sprite faces UP.")]
         [SerializeField] private float rotationOffset = -90f;
         
+        [Header("Shooting Settings")]
+        [SerializeField] private InputActionReference shootAction;
+        [SerializeField] private Bullet bulletPrefab;
+        [SerializeField] private float fireRate = 0.5f;
+        [SerializeField] private float bulletDamage = 10f;
+        [SerializeField] private float bulletSpeed = 20f;
+        [SerializeField] private float maxShootDistance = 10f;
+        [SerializeField] private LayerMask targetMask;
+        [SerializeField] private float hitRadius = 0.2f;
+        
         private Camera mainCamera;
+        private float nextFireTime;
+        private Vector3 currentAimDirection;
 
         private void Awake()
         {
@@ -38,9 +51,38 @@ namespace Game.Player
             }
         }
 
+        private void OnEnable()
+        {
+            if (shootAction != null) shootAction.action.Enable();
+        }
+
+        private void OnDisable()
+        {
+            if (shootAction != null) shootAction.action.Disable();
+        }
+
         private void Update()
         {
             AimAtCursor();
+            HandleShooting();
+        }
+
+        private void HandleShooting()
+        {
+            if (shootAction == null || bulletPrefab == null || BulletManager.Instance == null) return;
+
+            if (shootAction.action.IsPressed() && Time.time >= nextFireTime)
+            {
+                nextFireTime = Time.time + fireRate;
+                Shoot();
+            }
+        }
+
+        private void Shoot()
+        {
+            if (currentAimDirection == Vector3.zero) return;
+
+            BulletManager.Instance.FireBullet(bulletPrefab, aimIndicator.position, currentAimDirection, bulletDamage, bulletSpeed, maxShootDistance, targetMask, hitRadius);
         }
 
         private void AimAtCursor()
@@ -53,6 +95,7 @@ namespace Game.Player
             mouseWorldPos.z = orbitCenter.position.z;
 
             Vector3 aimDirection = (mouseWorldPos - orbitCenter.position).normalized;
+            currentAimDirection = aimDirection;
             
             if (aimDirection != Vector3.zero)
             {
