@@ -75,10 +75,9 @@ public class WantedManager : MonoBehaviour
 [System.Serializable]
 public struct WantedLevel
 {
-    public string Name { get; private set; }
-    public int Level { get; private set; }
-    public int Threshold { get; private set; }
-
+    public string Name;
+    public int Level;
+    public int Threshold;
     public WantedLevel(string name, int level, int threshold)
     {
         Name = name;
