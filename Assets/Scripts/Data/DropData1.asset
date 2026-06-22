@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drops:
   - prefabToDrop: {fileID: 3312142346109112432, guid: 2c74305f22dceca40a6aec2c44d27833, type: 3}
-    amount: 1
-    dropChance: 0
+    amount: 70
+    dropChance: 1

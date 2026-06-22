@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7724496807086647891}
   - component: {fileID: 956670007771396231}
-  - component: {fileID: 6626758333627534753}
   m_Layer: 0
   m_Name: Tail
   m_TagString: Untagged
@@ -85,16 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6626758333627534753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2488826902731729857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8183640d4c2df2144a260d2533b8015c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  growthRate: 1
