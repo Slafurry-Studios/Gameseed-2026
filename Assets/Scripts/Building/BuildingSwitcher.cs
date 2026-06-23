@@ -3,32 +3,40 @@ using UnityEngine;
 [System.Serializable]
 public struct Building
 {
-    public GameObject buildingPrefab;
+    public Sprite buildingSprite;
 
     [Tooltip("Jumlah hit sebelum building ini hancur")]
     public int hitThreshold;
 }
 
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class BuildingSwitcher : MonoBehaviour
 {
     [Header("Building")]
     public Building[] buildingPrefabs;
 
-
     [Header("Particle")]
     public GameObject destroyParticlePrefab;
 
-
-    private GameObject currentBuilding;
+    private SpriteRenderer spriteRenderer;
     private int currentIndex = 0;
-
     private int hitCount = 0;
+
+
+    void Awake()
+    {
+        // otomatis mengambil SpriteRenderer
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
 
     void Start()
     {
-        SpawnBuilding();
+        if (buildingPrefabs != null && buildingPrefabs.Length > 0)
+        {
+            spriteRenderer.sprite = buildingPrefabs[currentIndex].buildingSprite;
+        }
     }
 
 
@@ -64,26 +72,17 @@ public class BuildingSwitcher : MonoBehaviour
     }
 
 
-    void SpawnBuilding()
-    {
-        currentBuilding = Instantiate(
-            buildingPrefabs[currentIndex].buildingPrefab,
-            transform.position,
-            transform.rotation,
-            transform
-        );
-    }
-
-
     void ChangeBuilding()
     {
         DestroyCurrentBuilding();
 
         currentIndex++;
 
+
         if (currentIndex < buildingPrefabs.Length)
         {
-            SpawnBuilding();
+            spriteRenderer.sprite =
+                buildingPrefabs[currentIndex].buildingSprite;
         }
         else
         {
@@ -94,37 +93,32 @@ public class BuildingSwitcher : MonoBehaviour
 
     void DestroyCurrentBuilding()
     {
-        if (currentBuilding == null)
+        if (destroyParticlePrefab == null)
             return;
 
 
-        if (destroyParticlePrefab != null)
+        GameObject effect = Instantiate(
+            destroyParticlePrefab,
+            transform.position,
+            Quaternion.identity
+        );
+
+
+        ParticleSystem ps = effect.GetComponent<ParticleSystem>();
+
+        if (ps != null)
         {
-            GameObject effect = Instantiate(
-                destroyParticlePrefab,
-                currentBuilding.transform.position,
-                Quaternion.identity
+            ps.Play();
+
+            Destroy(
+                effect,
+                ps.main.duration +
+                ps.main.startLifetime.constantMax
             );
-
-
-            ParticleSystem ps = effect.GetComponent<ParticleSystem>();
-
-            if (ps != null)
-            {
-                ps.Play();
-
-                Destroy(
-                    effect,
-                    ps.main.duration + ps.main.startLifetime.constantMax
-                );
-            }
-            else
-            {
-                Destroy(effect, 3f);
-            }
         }
-
-
-        Destroy(currentBuilding);
+        else
+        {
+            Destroy(effect, 3f);
+        }
     }
 }
