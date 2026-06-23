@@ -1,4 +1,5 @@
 using UnityEngine;
+using Game.Core;
 
 [System.Serializable]
 public struct Building
@@ -11,59 +12,45 @@ public struct Building
 
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class BuildingSwitcher : MonoBehaviour
+public class BuildingSwitcher : MonoBehaviour, IDamageable
 {
     [Header("Building")]
     public Building[] buildingPrefabs;
 
     [Header("Particle")]
     public GameObject destroyParticlePrefab;
-
+    
     private SpriteRenderer spriteRenderer;
+
     private int currentIndex = 0;
     private int hitCount = 0;
 
-
     void Awake()
     {
-        // otomatis mengambil SpriteRenderer
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
 
     void Start()
     {
         if (buildingPrefabs != null && buildingPrefabs.Length > 0)
         {
-            spriteRenderer.sprite = buildingPrefabs[currentIndex].buildingSprite;
+            spriteRenderer.sprite =
+                buildingPrefabs[currentIndex].buildingSprite;
         }
     }
 
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Hit();
-        }
-    }
-
-
-    void Hit()
+    public void TakeDamage(float damage)
     {
         hitCount++;
-
-        Debug.Log("Total Hit : " + hitCount);
+        Debug.Log(gameObject.name + " terkena hit : " + hitCount);
 
         CheckThreshold();
     }
-
 
     void CheckThreshold()
     {
         if (currentIndex >= buildingPrefabs.Length)
             return;
-
 
         if (hitCount >= buildingPrefabs[currentIndex].hitThreshold)
         {
@@ -71,13 +58,11 @@ public class BuildingSwitcher : MonoBehaviour
         }
     }
 
-
     void ChangeBuilding()
     {
-        DestroyCurrentBuilding();
+        PlayDestroyEffect();
 
         currentIndex++;
-
 
         if (currentIndex < buildingPrefabs.Length)
         {
@@ -90,12 +75,10 @@ public class BuildingSwitcher : MonoBehaviour
         }
     }
 
-
-    void DestroyCurrentBuilding()
+    void PlayDestroyEffect()
     {
         if (destroyParticlePrefab == null)
             return;
-
 
         GameObject effect = Instantiate(
             destroyParticlePrefab,
@@ -103,8 +86,8 @@ public class BuildingSwitcher : MonoBehaviour
             Quaternion.identity
         );
 
-
-        ParticleSystem ps = effect.GetComponent<ParticleSystem>();
+        ParticleSystem ps =
+            effect.GetComponent<ParticleSystem>();
 
         if (ps != null)
         {
