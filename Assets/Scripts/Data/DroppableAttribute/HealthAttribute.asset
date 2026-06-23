@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f11f1f5ac8b468418358dee1000ff8b, type: 3}
-  m_Name: DropData1
+  m_Script: {fileID: 11500000, guid: 1161acee8e2a20d4b81e820aeac6402f, type: 3}
+  m_Name: HealthAttribute
   m_EditorClassIdentifier: 
-  drops:
-  - prefabToDrop: {fileID: 3312142346109112432, guid: 2c74305f22dceca40a6aec2c44d27833, type: 3}
-    amount: 70
-    dropChance: 1

@@ -17,7 +17,7 @@ namespace Game.Data
         public float dropChance;
     }
 
-    [CreateAssetMenu(fileName = "NewLootDropData", menuName = "Game/Data/Loot Drop Data")]
+    [CreateAssetMenu(fileName = "NewLootDropData", menuName = "Game/Dropable/Loot Drop Data")]
     public class LootDropData : ScriptableObject
     {
         [Header("Loot Table")]

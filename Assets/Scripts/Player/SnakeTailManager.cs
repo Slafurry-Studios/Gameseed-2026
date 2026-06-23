@@ -6,25 +6,24 @@ namespace Game.Player
     public class SnakeTailManager : MonoBehaviour
     {
         [Header("Tail Settings")]
-        [Tooltip("Prefab for the tail segment")]
         [SerializeField] private GameObject tailPrefab;
         [SerializeField] private int initialTailSize = 0;
-        
-        [Tooltip("How many physics frames (FixedUpdate) of delay between each segment. Smaller value = closer segments.")]
+
+        [Tooltip("Delay antar segment (lebih kecil = lebih rapat)")]
         [SerializeField] private int historyGap = 10;
-        
+
         private List<GameObject> bodyParts = new List<GameObject>();
-        
         private Transform tailContainer;
-        
+
         private Marker[] positionHistory;
         private int historyIndex = 0;
         private int historyCount = 0;
-        
+
         private struct Marker
         {
             public Vector3 position;
             public Quaternion rotation;
+
             public Marker(Vector3 pos, Quaternion rot)
             {
                 position = pos;
@@ -35,20 +34,32 @@ namespace Game.Player
         private void Start()
         {
             tailContainer = new GameObject("TailContainer_" + gameObject.name).transform;
-            
+
             AllocateHistory(Mathf.Max(100, (initialTailSize + 2) * historyGap));
-            
             RecordMarker();
-            
+
             for (int i = 0; i < initialTailSize; i++)
             {
                 Grow();
             }
         }
 
+        private void OnDestroy()
+        {
+            if (tailContainer != null)
+                Destroy(tailContainer.gameObject);
+        }
+
+        private void Update()
+        {
+            RecordMarker();
+            UpdateBodyParts();
+        }
+
         private void AllocateHistory(int newSize)
         {
             Marker[] newHistory = new Marker[newSize];
+
             if (positionHistory != null && historyCount > 0)
             {
                 for (int i = 0; i < historyCount; i++)
@@ -56,44 +67,36 @@ namespace Game.Player
                     newHistory[i] = GetMarker(i);
                 }
             }
+
             positionHistory = newHistory;
             historyIndex = 0;
-        }
-
-        private void OnDestroy()
-        {
-            if (tailContainer != null)
-            {
-                Destroy(tailContainer.gameObject);
-            }
-        }
-
-        private void FixedUpdate()
-        {
-            RecordMarker();
-            UpdateBodyParts();
         }
 
         private void RecordMarker()
         {
             int requiredSize = (bodyParts.Count + 1) * historyGap + 1;
+
             if (positionHistory == null || positionHistory.Length < requiredSize)
             {
                 AllocateHistory(requiredSize * 2);
             }
 
             historyIndex--;
-            if (historyIndex < 0) historyIndex = positionHistory.Length - 1;
+            if (historyIndex < 0)
+                historyIndex = positionHistory.Length - 1;
 
-            positionHistory[historyIndex] = new Marker(transform.position, transform.rotation);
-            
+            positionHistory[historyIndex] =
+                new Marker(transform.position, transform.rotation);
+
             if (historyCount < positionHistory.Length)
                 historyCount++;
         }
 
         private Marker GetMarker(int offset)
         {
-            if (offset >= historyCount) offset = historyCount - 1;
+            if (offset >= historyCount)
+                offset = historyCount - 1;
+
             int actualIndex = (historyIndex + offset) % positionHistory.Length;
             return positionHistory[actualIndex];
         }
@@ -103,11 +106,13 @@ namespace Game.Player
             for (int i = 0; i < bodyParts.Count; i++)
             {
                 int pointOffset = (i + 1) * historyGap;
+
                 if (pointOffset < historyCount)
                 {
-                    Marker targetMarker = GetMarker(pointOffset);
-                    bodyParts[i].transform.position = targetMarker.position;
-                    bodyParts[i].transform.rotation = targetMarker.rotation;
+                    Marker target = GetMarker(pointOffset);
+
+                    bodyParts[i].transform.position = target.position;
+                    bodyParts[i].transform.rotation = target.rotation;
                 }
             }
         }
@@ -118,8 +123,9 @@ namespace Game.Player
             {
                 Vector3 spawnPos = transform.position;
                 Quaternion spawnRot = transform.rotation;
-                
+
                 int endOffset = (bodyParts.Count + 1) * historyGap;
+
                 if (historyCount > 0)
                 {
                     Marker endMarker = GetMarker(endOffset);
@@ -127,7 +133,9 @@ namespace Game.Player
                     spawnRot = endMarker.rotation;
                 }
 
-                GameObject newPart = Instantiate(tailPrefab, spawnPos, spawnRot, tailContainer);
+                GameObject newPart =
+                    Instantiate(tailPrefab, spawnPos, spawnRot, tailContainer);
+
                 bodyParts.Add(newPart);
             }
         }
