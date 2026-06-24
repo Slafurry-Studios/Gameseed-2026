@@ -296,7 +296,7 @@ MonoBehaviour:
   maxShootDistance: 10
   targetMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 12288
   hitRadius: 0.2
 --- !u!114 &8351684795539557676
 MonoBehaviour:
