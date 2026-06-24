@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3539537030402174766}
   - component: {fileID: 3000686924654708557}
   - component: {fileID: 4828805808972862264}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,3 +136,5 @@ MonoBehaviour:
   attributes:
   - attribute: {fileID: 11400000, guid: 871123eb775517842ae0926cc83c69bc, type: 2}
     amount: 1
+  duration: 0.5
+  pullDistance: 2
