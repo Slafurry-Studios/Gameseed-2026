@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 1115726731}
   - component: {fileID: 1115726730}
   - component: {fileID: 1115726729}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Damagable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,10 +472,6 @@ PrefabInstance:
     - target: {fileID: 3010827601464262802, guid: 9da4ca01fc56a394699a65771f252616, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7977524004125337865, guid: 9da4ca01fc56a394699a65771f252616, type: 3}
-      propertyPath: targetMask.m_Bits
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
