@@ -4,23 +4,32 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Food
-  - food
+  - Interactable
+  - Boss
+  - Building
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Damageable
+  - Player
   - Water
   - UI
   - Obstacle
+  - NPC
+  - PlayerBullet
+  - EnemyBullet
+  - Drop
+  - DamagableEnvironment
+  - Environment
+  - Enemy_Air
+  - Enemy_Ground
   - 
   - 
   - 
   - 
   - 
   - 
-  - 
+  -
   - 
   - 
   - 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1772367885017840760}
   - component: {fileID: 2875290721197959905}
   - component: {fileID: 1407143032725093526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Consumable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,3 +138,5 @@ MonoBehaviour:
     amount: 1
   - attribute: {fileID: 11400000, guid: fde28dab5355a6343b94b160caa40d85, type: 2}
     amount: 5
+  duration: 0.5
+  pullDistance: 2

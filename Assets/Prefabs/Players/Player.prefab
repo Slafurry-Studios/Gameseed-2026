@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 8351684795539557676}
   - component: {fileID: -8338949141181473109}
   - component: {fileID: -7058775488412070641}
+  - component: {fileID: 556949521701828137}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -295,7 +296,7 @@ MonoBehaviour:
   maxShootDistance: 10
   targetMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 12288
   hitRadius: 0.2
 --- !u!114 &8351684795539557676
 MonoBehaviour:
@@ -311,6 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tailPrefab: {fileID: 2488826902731729857, guid: deeca6ea89224e440afe02bf3652cc38, type: 3}
   initialTailSize: 1
+  minRecordDistance: 0.02
   historyGap: 10
 --- !u!114 &-8338949141181473109
 MonoBehaviour:
@@ -350,6 +352,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growPointsPerTail: 5
   currentGrowPoints: 0
+--- !u!114 &556949521701828137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942693537167940922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b49d6b9b8d360c4b8994d9f550bbf4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &8265279299031505708
 GameObject:
   m_ObjectHideFlags: 0

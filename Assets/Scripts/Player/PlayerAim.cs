@@ -82,7 +82,7 @@ namespace Game.Player
         {
             if (currentAimDirection == Vector3.zero) return;
             // CameraShakeManager.Instance.Shake(1f, 1f);
-            HitStopManager.Instance.Stop(0.1f);
+            // HitStopManager.Instance.Stop(0.1f);
             BulletManager.Instance.FireBullet(bulletPrefab, aimIndicator.position, currentAimDirection, bulletDamage, bulletSpeed, maxShootDistance, targetMask, hitRadius);
         }
 
