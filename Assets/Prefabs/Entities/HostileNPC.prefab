@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -163,10 +163,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -177,7 +177,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5735333541849465890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +190,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fb004a1b69bb546bdab633d53ee048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnSpeed: 360
+  rayDistance: 5
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  rayCount: 9
+  rayAngle: 90
 --- !u!114 &2568806823863336089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,8 +210,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
   stateList:
-  - {fileID: 9186990769624057675}
   - {fileID: 6110810434214893122}
+  - {fileID: 9186990769624057675}
   - {fileID: 3525601822381677066}
   - {fileID: 5216690922700936955}
 --- !u!114 &5216690922700936955
@@ -221,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358ac01ba09d9af49babb1b5b6b67fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 2
+  speedMultiplier: 0.5
   minWanderTime: 3
   maxWanderTime: 5
 --- !u!114 &6110810434214893122
@@ -236,9 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3853e38a033b934381a5b8265bdeaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panicRadius: 6
+  panicRadius: 5
   safeRadius: 8
-  speedMultiplier: 5
+  speedMultiplier: 0.8
 --- !u!114 &9186990769624057675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,8 +258,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRadius: 10
   fireRate: 0.5
-  bulletPrefab: {fileID: 0}
-  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 1338399822672591885, guid: d0db26803bb1d2a4a802f8857098a4be, type: 3}
+  firePoint: {fileID: 1953955888216965759}
   bulletDamage: 1
   bulletSpeed: 10
   bulletMaxDistance: 20
@@ -265,7 +270,7 @@ MonoBehaviour:
   requiresLineOfSight: 1
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!114 &3525601822381677066
 MonoBehaviour:
   m_ObjectHideFlags: 0

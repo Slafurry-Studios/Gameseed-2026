@@ -1,38 +1,51 @@
 using UnityEngine;
 
-namespace Game.AI 
+public class NPCMovement : MonoBehaviour
 {
-    [RequireComponent(typeof(Rigidbody2D))]
-    public class NPCMovement : MonoBehaviour
+    [Header("Steering Settings")]
+    public float rayDistance = 1.5f;
+    public LayerMask obstacleLayer;
+    public int rayCount = 8;
+    public float rayAngle = 90f;
+
+    private Rigidbody2D rb;
+
+    private void Awake()
     {
-        [SerializeField] private float turnSpeed = 360f;
+        rb = GetComponent<Rigidbody2D>();
+    }
 
-        private Rigidbody2D rb;
-        private Vector2 currentDirection;
-        private float currentSpeed;
-
-        private void Awake()
+    public void SetMovement(Vector2 desiredDirection, float speed)
+    {
+        if (desiredDirection == Vector2.zero)
         {
-            rb = GetComponent<Rigidbody2D>();
-            rb.gravityScale = 0f; 
+            rb.velocity = Vector2.zero;
+            return;
         }
 
-        public void SetMovement(Vector2 direction, float speed)
-        {
-            currentDirection = direction;
-            currentSpeed = speed;
-        }
+        Vector2 finalDirection = Steer(desiredDirection);
+        rb.velocity = finalDirection * speed;
+    }
 
-        private void FixedUpdate()
+    private Vector2 Steer(Vector2 desired)
+    {
+        Vector2 final = desired;
+        
+        // Cast rays in a fan shape to detect obstacles
+        for (int i = 0; i < rayCount; i++)
         {
-            rb.velocity = currentDirection * currentSpeed;
+            float angle = Mathf.Lerp(-rayAngle / 2, rayAngle / 2, (float)i / (rayCount - 1));
+            Vector2 dir = Quaternion.Euler(0, 0, angle) * desired;
 
-            if (currentDirection.sqrMagnitude > 0.01f)
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, rayDistance, obstacleLayer);
+            
+            if (hit.collider != null)
             {
-                float targetAngle = Vector2.SignedAngle(Vector2.up, currentDirection);
-                float newAngle = Mathf.MoveTowardsAngle(rb.rotation, targetAngle, turnSpeed * Time.fixedDeltaTime);
-                rb.MoveRotation(newAngle);
+                // If we hit a wall, steer away from the normal of the hit
+                Vector2 awayFromWall = Vector2.Reflect(desired, hit.normal);
+                final += awayFromWall * 0.5f; // Adjust force
             }
         }
+        return final.normalized;
     }
 }

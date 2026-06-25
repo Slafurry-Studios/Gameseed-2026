@@ -31,6 +31,21 @@ namespace Game.AI
             }
         }
 
+        private void Start() // Move logic here
+        {
+            if (Target == null && PlayerManager.PlayerTransform != null) 
+            {
+                Target = PlayerManager.PlayerTransform;
+            }
+        
+            // Safety fallback if PlayerManager wasn't ready
+            if (Target == null)
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null) Target = player.transform;
+            }
+        }
+
         private void EvaluateStates()
         {
             foreach (EntityState state in stateList)
