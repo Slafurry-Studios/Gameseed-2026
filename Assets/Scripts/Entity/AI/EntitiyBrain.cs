@@ -33,19 +33,15 @@ namespace Game.AI
 
         private void EvaluateStates()
         {
-            // 1. Check the list from top to bottom
             foreach (EntityState state in stateList)
             {
-                // 2. Ask the state if its conditions are met (e.g., "Is the snek close?")
                 if (state.CheckConditions(this))
                 {
-                    // 3. If it wants to run, and it isn't already running, switch to it!
                     if (currentState != state)
                     {
                         ChangeState(state);
                     }
-                    
-                    // Stop checking the rest of the list so lower-priority states don't override it
+
                     return; 
                 }
             }

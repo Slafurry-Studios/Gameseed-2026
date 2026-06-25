@@ -18,13 +18,11 @@ namespace Game.Temp
         {
             Debug.Log("Building clicked and destroyed!");
             
-            // Drop the associated loot
             if (lootDropper != null)
             {
                 lootDropper.DropLoot();
             }
 
-            // Destroy the building
             Destroy(gameObject);
         }
     }

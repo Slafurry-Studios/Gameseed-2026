@@ -144,5 +144,13 @@ namespace Game.Player
 
             rb.angularVelocity = 0f;
         }
+
+        public float CurrentSpeed 
+        { 
+            get 
+            { 
+                return forwardSpeed * (isSprinting ? sprintMultiplier : 1f); 
+            } 
+        }
     }
 }
