@@ -9,10 +9,13 @@ namespace Game.Player
         [SerializeField] private GameObject tailPrefab;
         [SerializeField] private int initialTailSize = 0;
 
+        [Tooltip("Jarak minimum untuk merekam posisi. Mencegah ekor menumpuk saat diam.")]
+        [SerializeField] private float minRecordDistance = 0.02f;
+
         [Tooltip("Delay antar segment (lebih kecil = lebih rapat)")]
         [SerializeField] private int historyGap = 10;
 
-        private List<GameObject> bodyParts = new List<GameObject>();
+        private List<Transform> bodyParts = new List<Transform>();
         private Transform tailContainer;
 
         private Marker[] positionHistory;
@@ -52,7 +55,21 @@ namespace Game.Player
 
         private void Update()
         {
-            RecordMarker();
+            bool shouldRecord = true;
+            if (historyCount > 0)
+            {
+                float sqrDist = (transform.position - positionHistory[historyIndex].position).sqrMagnitude;
+                if (sqrDist < minRecordDistance * minRecordDistance)
+                {
+                    shouldRecord = false;
+                }
+            }
+
+            if (shouldRecord)
+            {
+                RecordMarker();
+            }
+
             UpdateBodyParts();
         }
 
@@ -111,8 +128,8 @@ namespace Game.Player
                 {
                     Marker target = GetMarker(pointOffset);
 
-                    bodyParts[i].transform.position = target.position;
-                    bodyParts[i].transform.rotation = target.rotation;
+                    bodyParts[i].position = target.position;
+                    bodyParts[i].rotation = target.rotation;
                 }
             }
         }
@@ -136,7 +153,7 @@ namespace Game.Player
                 GameObject newPart =
                     Instantiate(tailPrefab, spawnPos, spawnRot, tailContainer);
 
-                bodyParts.Add(newPart);
+                bodyParts.Add(newPart.transform);
             }
         }
     }
