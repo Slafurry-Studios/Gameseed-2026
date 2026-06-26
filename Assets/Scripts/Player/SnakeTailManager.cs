@@ -6,26 +6,34 @@ namespace Game.Player
     public class SnakeTailManager : MonoBehaviour
     {
         [Header("Tail Settings")]
+        [SerializeField] private GameObject bodyPrefab;
         [SerializeField] private GameObject tailPrefab;
-        [SerializeField] private int initialTailSize = 0;
+        [SerializeField] private int initialBodySize = 3;
 
-        [Tooltip("Jarak minimum untuk merekam posisi. Mencegah ekor menumpuk saat diam.")]
+        [Tooltip("Jarak minimum untuk merekam posisi")]
         [SerializeField] private float minRecordDistance = 0.02f;
 
-        [Tooltip("Delay antar segment (lebih kecil = lebih rapat)")]
+        [Tooltip("Delay antar segment")]
         [SerializeField] private int historyGap = 10;
 
+
         private List<Transform> bodyParts = new List<Transform>();
+
+        private Transform tail;
+
         private Transform tailContainer;
+
 
         private Marker[] positionHistory;
         private int historyIndex = 0;
         private int historyCount = 0;
 
+
         private struct Marker
         {
             public Vector3 position;
             public Quaternion rotation;
+
 
             public Marker(Vector3 pos, Quaternion rot)
             {
@@ -34,127 +42,220 @@ namespace Game.Player
             }
         }
 
+
+
         private void Start()
         {
-            tailContainer = new GameObject("TailContainer_" + gameObject.name).transform;
+            tailContainer =
+                new GameObject("TailContainer_" + gameObject.name).transform;
 
-            AllocateHistory(Mathf.Max(100, (initialTailSize + 2) * historyGap));
+
+            AllocateHistory(
+                Mathf.Max(100, (initialBodySize + 3) * historyGap)
+            );
+
+
             RecordMarker();
 
-            for (int i = 0; i < initialTailSize; i++)
-            {
-                Grow();
-            }
+
+            // buat body
+            Grow(initialBodySize);
+
+
+            // buat tail satu kali
+            CreateTail();
         }
 
-        private void OnDestroy()
-        {
-            if (tailContainer != null)
-                Destroy(tailContainer.gameObject);
-        }
+
 
         private void Update()
         {
-            bool shouldRecord = true;
-            if (historyCount > 0)
-            {
-                float sqrDist = (transform.position - positionHistory[historyIndex].position).sqrMagnitude;
-                if (sqrDist < minRecordDistance * minRecordDistance)
-                {
-                    shouldRecord = false;
-                }
-            }
-
-            if (shouldRecord)
-            {
-                RecordMarker();
-            }
+            RecordMovement();
 
             UpdateBodyParts();
+
+            UpdateTail();
         }
 
-        private void AllocateHistory(int newSize)
-        {
-            Marker[] newHistory = new Marker[newSize];
 
-            if (positionHistory != null && historyCount > 0)
+
+        private void RecordMovement()
+        {
+            bool record = true;
+
+
+            if (historyCount > 0)
             {
-                for (int i = 0; i < historyCount; i++)
-                {
-                    newHistory[i] = GetMarker(i);
-                }
+                float sqr =
+                    (transform.position -
+                    GetMarker(0).position).sqrMagnitude;
+
+
+                if (sqr < minRecordDistance * minRecordDistance)
+                    record = false;
             }
 
-            positionHistory = newHistory;
-            historyIndex = 0;
+
+            if(record)
+                RecordMarker();
         }
 
-        private void RecordMarker()
-        {
-            int requiredSize = (bodyParts.Count + 1) * historyGap + 1;
 
-            if (positionHistory == null || positionHistory.Length < requiredSize)
+
+        private void CreateTail()
+        {
+            if(tail != null)
+                return;
+
+
+            Marker marker =
+                GetMarker((bodyParts.Count + 1) * historyGap);
+
+
+            GameObject obj =
+                Instantiate(
+                    tailPrefab,
+                    marker.position,
+                    marker.rotation,
+                    tailContainer
+                );
+
+
+            tail = obj.transform;
+        }
+
+
+
+        private void UpdateTail()
+        {
+            if(tail == null)
+                return;
+
+
+            int offset =
+                (bodyParts.Count + 1) * historyGap;
+
+
+            if(offset < historyCount)
             {
-                AllocateHistory(requiredSize * 2);
+                Marker marker = GetMarker(offset);
+
+                tail.position = marker.position;
+                tail.rotation = marker.rotation;
             }
-
-            historyIndex--;
-            if (historyIndex < 0)
-                historyIndex = positionHistory.Length - 1;
-
-            positionHistory[historyIndex] =
-                new Marker(transform.position, transform.rotation);
-
-            if (historyCount < positionHistory.Length)
-                historyCount++;
         }
 
-        private Marker GetMarker(int offset)
-        {
-            if (offset >= historyCount)
-                offset = historyCount - 1;
 
-            int actualIndex = (historyIndex + offset) % positionHistory.Length;
-            return positionHistory[actualIndex];
-        }
 
         private void UpdateBodyParts()
         {
-            for (int i = 0; i < bodyParts.Count; i++)
+            for(int i = 0; i < bodyParts.Count; i++)
             {
-                int pointOffset = (i + 1) * historyGap;
+                int offset =
+                    (i + 1) * historyGap;
 
-                if (pointOffset < historyCount)
+
+                if(offset < historyCount)
                 {
-                    Marker target = GetMarker(pointOffset);
+                    Marker marker =
+                        GetMarker(offset);
 
-                    bodyParts[i].position = target.position;
-                    bodyParts[i].rotation = target.rotation;
+
+                    bodyParts[i].position =
+                        marker.position;
+
+
+                    bodyParts[i].rotation =
+                        marker.rotation;
                 }
             }
         }
 
+
+
         public void Grow(int amount = 1)
         {
-            for (int i = 0; i < amount; i++)
+            for(int i = 0; i < amount; i++)
             {
-                Vector3 spawnPos = transform.position;
-                Quaternion spawnRot = transform.rotation;
+                Marker marker =
+                    GetMarker(
+                        (bodyParts.Count + 1)
+                        * historyGap
+                    );
 
-                int endOffset = (bodyParts.Count + 1) * historyGap;
 
-                if (historyCount > 0)
-                {
-                    Marker endMarker = GetMarker(endOffset);
-                    spawnPos = endMarker.position;
-                    spawnRot = endMarker.rotation;
-                }
+                GameObject body =
+                    Instantiate(
+                        bodyPrefab,
+                        marker.position,
+                        marker.rotation,
+                        tailContainer
+                    );
 
-                GameObject newPart =
-                    Instantiate(tailPrefab, spawnPos, spawnRot, tailContainer);
 
-                bodyParts.Add(newPart.transform);
+                bodyParts.Add(body.transform);
             }
+        }
+
+
+
+        private void AllocateHistory(int size)
+        {
+            positionHistory =
+                new Marker[size];
+
+
+            historyIndex = 0;
+        }
+
+
+
+        private void RecordMarker()
+        {
+            int required =
+                (bodyParts.Count + 3)
+                * historyGap;
+
+
+            if(positionHistory.Length < required)
+            {
+                AllocateHistory(required * 2);
+            }
+
+
+            historyIndex--;
+
+
+            if(historyIndex < 0)
+                historyIndex =
+                    positionHistory.Length - 1;
+
+
+            positionHistory[historyIndex] =
+                new Marker(
+                    transform.position,
+                    transform.rotation
+                );
+
+
+            if(historyCount < positionHistory.Length)
+                historyCount++;
+        }
+
+
+
+        private Marker GetMarker(int offset)
+        {
+            if(offset >= historyCount)
+                offset = historyCount - 1;
+
+
+            int index =
+                (historyIndex + offset)
+                % positionHistory.Length;
+
+
+            return positionHistory[index];
         }
     }
 }

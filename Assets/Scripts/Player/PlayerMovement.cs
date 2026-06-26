@@ -134,6 +134,17 @@ namespace Game.Player
             return currentStamina / maxStamina;
         }
 
+        public void SetStamina(float value)
+        {
+            float previousStamina = currentStamina;
+            currentStamina = Mathf.Clamp(value, 0f, maxStamina);
+            if (currentStamina != previousStamina)
+            {
+                OnStaminaPctChanged?.Invoke(currentStamina / maxStamina);
+            }
+        }
+
+
         private void FixedUpdate()
         {
             float newAngle = Mathf.MoveTowardsAngle(rb.rotation, targetAngle, turnSpeed * Time.fixedDeltaTime);
