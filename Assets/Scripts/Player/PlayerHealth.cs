@@ -23,7 +23,6 @@ namespace Game.Player
         {
             currentHealth = 0f;
             base.Die();
-            Debug.Log("[PlayerHealth] Player has died!");
             
             if (playerDizzyAnimator != null)
             {
@@ -58,6 +57,25 @@ namespace Game.Player
             {
                 Die();
             }
+        }
+        public void ResetPlayer()
+        {
+            isDead = false; 
+            
+            currentHealth = 100f; 
+
+            if (playerDizzyAnimator != null)
+            {
+                playerDizzyAnimator.gameObject.SetActive(false);
+            }
+
+            if (playerMovement != null)
+            {
+                playerMovement.enabled = true;
+                playerMovement.SetStamina(100f);
+            }
+
+            Debug.Log("[PlayerHealth] Player has been reset and respawned!");
         }
     }
 }

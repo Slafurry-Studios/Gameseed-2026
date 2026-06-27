@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  playerDizzyObject: {fileID: 0}
+  playerDizzyAnimator: {fileID: 0}
   playerMovement: {fileID: 6872822171515884240}
 --- !u!1 &8265279299031505708
 GameObject:
@@ -440,7 +440,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_Sprite: {fileID: -1333303275, guid: c1f04176b955afb4d85514d32b2afb46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

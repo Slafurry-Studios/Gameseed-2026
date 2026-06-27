@@ -2,20 +2,31 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Game.Player;
+using TMPro;
 
 public class GameOver : MonoBehaviour
 {
     [Header("Game")]
     [SerializeField] private string levelScene = "MainMenu";
     [SerializeField] private GameObject gameOverCanvas;
+    [SerializeField] private GameObject respawnPos;
+    [SerializeField] private TextMeshProUGUI timerText;
+    // [SerializeField] private TextMeshProUGUI threatPoint;
+    // [SerializeField] private TextMeshProUGUI growthPoint;
+    // [SerializeField] private TextMeshProUGUI SubscriberPoint;
 
     [Header("Player Data")]
     [SerializeField] private PlayerHealth playerHealth;
+    // [SerializeField] private PlayerGrowth playerGrowth;
 
     [Header("Settings")]
     [SerializeField] private float freezeDuration = 2f;
 
     private bool gameOver = false;
+    private float timerReset = 3f;
+    private bool isCounting = false;
+    public bool IsCounting => isCounting;
+    private static bool shouldCountdown = false;
 
     private void Start()
     {
@@ -27,6 +38,13 @@ public class GameOver : MonoBehaviour
         if (playerHealth != null)
         {
             playerHealth.OnDied += HandlePlayerDied;
+        }
+
+        if (shouldCountdown)
+        {
+            shouldCountdown = false;
+            Time.timeScale = 0f;
+            StartCoroutine(StartCountdown());
         }
     }
 
@@ -54,16 +72,79 @@ public class GameOver : MonoBehaviour
 
     private IEnumerator GameOverSequence()
     {
-        // Tunggu sampai durasi animasi dizzy selesai (default 2 detik)
         yield return new WaitForSeconds(freezeDuration);
 
-        // Hentikan pergerakan waktu permainan
-        Time.timeScale = 0f;
-
-        // Tampilkan popup Game Over
         if (gameOverCanvas != null)
         {
             gameOverCanvas.SetActive(true);
+        }
+
+        Time.timeScale = 0f;
+    }
+
+    private IEnumerator StartCountdown()
+    {
+        if (TransitionManager.Instance != null)
+        {
+            yield return new WaitForSecondsRealtime(0.2f);
+        }
+        else
+        {
+            yield return new WaitForSecondsRealtime(0.1f);
+        }
+
+        isCounting = true;
+        Time.timeScale = 0f;
+
+        float timer = timerReset;
+
+        if (timerText != null)
+        {
+            timerText.gameObject.SetActive(true);
+        }
+
+        while (timer > 0)
+        {
+            if (timerText != null)
+            {
+                timerText.text = Mathf.Ceil(timer).ToString();
+            }
+
+            timer -= Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        if (timerText != null)
+        {
+            timerText.text = "GO!";
+        }
+
+        yield return new WaitForSecondsRealtime(1f);
+
+        if (timerText != null)
+        {
+            timerText.text = "";
+            timerText.gameObject.SetActive(false);
+        }
+
+        Time.timeScale = 1f;
+        isCounting = false;
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        gameOver = false;
+        shouldCountdown = true;
+
+        if (TransitionManager.Instance != null)
+        {
+            string currentScene = SceneManager.GetActiveScene().name;
+            TransitionManager.Instance.LoadScene(currentScene);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
