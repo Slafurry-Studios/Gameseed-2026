@@ -7,6 +7,7 @@ namespace Game.Manager
 
     public class ThreatPointManager : MonoBehaviour
     {
+        [SerializeField] private int MaxPoint = 5000;
         [SerializeField] private Threshold[] threatThresholds;
         public event Action<float> OnThreatPointIncreased;
 

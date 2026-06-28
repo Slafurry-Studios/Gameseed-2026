@@ -1,18 +1,15 @@
 using UnityEngine;
-using Game.Player;
+using Game.Manager;
+using System;
 
 namespace Game.Gameplay.Attributes
 {
-    [CreateAssetMenu(fileName = "NewOrbAttribute", menuName = "Game/Dropable/Attributes/Orb Attribute")]
+    [CreateAssetMenu(fileName = "NewSubsAttribute", menuName = "Game/Dropable/Attributes/Subs Attribute")]
     public class SubsAttribute : AttributeData
     {
         public override void Apply(GameObject target, float amount)
         {
-            PlayerCollection collection = target.GetComponent<PlayerCollection>();
-            if (collection != null)
-            {
-                collection.AddOrbs(Mathf.RoundToInt(amount));
-            }
+            GameManager.Instance.AddThreat((int) Math.Round(amount));
         }
     }
 }

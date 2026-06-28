@@ -1,5 +1,6 @@
 using UnityEngine;
-using Game.Player;
+using Game.Manager;
+using System;
 
 namespace Game.Gameplay.Attributes
 {
@@ -8,11 +9,7 @@ namespace Game.Gameplay.Attributes
     {
         public override void Apply(GameObject target, float amount)
         {
-            PlayerCollection collection = target.GetComponent<PlayerCollection>();
-            if (collection != null)
-            {
-                collection.AddThreatPoints(Mathf.RoundToInt(amount));
-            }
+            GameManager.Instance.AddThreat((int) Math.Round(amount));
         }
     }
 }
