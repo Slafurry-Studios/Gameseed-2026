@@ -1,19 +1,20 @@
 using UnityEngine;
+using Game.Upgrade;
 
 namespace Game.Manager
 {
 
     public class GameManager : Singleton<GameManager>
     {
-        private ThreatPointManager threatManager;
-        private SubscriptionPointManager subsManager;
-        private UpgradeManager upgradeManager;
+        public ThreatPointManager threatManager { get; private set; }
+        public SubscriptionPointManager subsManager { get; private set; }
+        public UpgradeManager upgradeManager { get; private set; }
 
         void Start()
         {
-            threatManager = GetComponent<ThreatPointManager>();
-            subsManager = GetComponent<SubscriptionPointManager>();
-            upgradeManager = GetComponent<UpgradeManager>();
+            threatManager = FindAnyObjectByType<ThreatPointManager>();
+            subsManager = FindAnyObjectByType<SubscriptionPointManager>();
+            upgradeManager = FindAnyObjectByType<UpgradeManager>();
         }
 
         public void AddThreat(int amount)

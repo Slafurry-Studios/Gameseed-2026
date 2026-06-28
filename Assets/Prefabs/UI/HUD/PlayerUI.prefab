@@ -1478,7 +1478,7 @@ MonoBehaviour:
   SnakeHurt: {fileID: 531950499, guid: e793a8f83e57ae22aa6af15e2bd79d03, type: 3}
   SnakeNormal: {fileID: -611602316, guid: e13f64ee856c27f9aad04478dd4cb8c7, type: 3}
   shakeDuration: 0.3
-  shakeIntensity: 10
+  shakeIntensity: 2
   hurtDisplayTime: 0.5
 --- !u!224 &7164991142005517731 stripped
 RectTransform:
