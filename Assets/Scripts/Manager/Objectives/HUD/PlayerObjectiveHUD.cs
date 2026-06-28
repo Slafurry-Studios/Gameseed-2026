@@ -31,6 +31,8 @@ public class PlayerObjectiveHUD : Singleton<PlayerObjectiveHUD>
 
         playerObjectiveItems.Add(item);
         itemLookup[objective] = item;
+
+        SortItems();
     }
 
     private void HandleProgress(Objective objective, float currentValue)
@@ -50,6 +52,21 @@ public class PlayerObjectiveHUD : Singleton<PlayerObjectiveHUD>
         if (itemLookup.TryGetValue(objective, out var item))
         {
             item.TaskCompleted();
+        }
+    }
+
+    private void SortItems()
+    {
+        playerObjectiveItems.Sort((a, b) =>
+        {
+            bool aMain = a.GetProgress().Data.IsMainMission;
+            bool bMain = b.GetProgress().Data.IsMainMission;
+            return bMain.CompareTo(aMain); 
+        });
+
+        for (int i = 0; i < playerObjectiveItems.Count; i++)
+        {
+            playerObjectiveItems[i].transform.SetSiblingIndex(i);
         }
     }
 

@@ -430,6 +430,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1034334758378411399}
     m_Modifications:
+    - target: {fileID: 501810679096146474, guid: 2628de8496af59ab19a7b10e0048e783, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470723068374729498, guid: 2628de8496af59ab19a7b10e0048e783, type: 3}
+      propertyPath: donationRect
+      value: 
+      objectReference: {fileID: 3457680699369303219}
+    - target: {fileID: 1470723068374729498, guid: 2628de8496af59ab19a7b10e0048e783, type: 3}
+      propertyPath: donationCanvasGroup
+      value: 
+      objectReference: {fileID: 5145187112249495452}
     - target: {fileID: 5956327672750932416, guid: 2628de8496af59ab19a7b10e0048e783, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -517,13 +529,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8842703221526925577, guid: 2628de8496af59ab19a7b10e0048e783, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5145187112249495452}
   m_SourcePrefab: {fileID: 100100000, guid: 2628de8496af59ab19a7b10e0048e783, type: 3}
+--- !u!224 &3457680699369303219 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3766792979929311683, guid: 2628de8496af59ab19a7b10e0048e783, type: 3}
+  m_PrefabInstance: {fileID: 1998032550659786096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5265640835916530864 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5956327672750932416, guid: 2628de8496af59ab19a7b10e0048e783, type: 3}
   m_PrefabInstance: {fileID: 1998032550659786096}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6993500601668473977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8842703221526925577, guid: 2628de8496af59ab19a7b10e0048e783, type: 3}
+  m_PrefabInstance: {fileID: 1998032550659786096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &5145187112249495452
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993500601668473977}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &5522520356751167214
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,16 +4,15 @@ using UnityEngine.UI;
 public class PlayerStatsHUD : Singleton<PlayerStatsHUD>
 {
     [Header("UI References")]
-    [SerializeField] private Slider healthSlider;
-    [SerializeField] private Slider staminaSlider;
+    [SerializeField] private Image HealthUI;
+    [SerializeField] private Image Health2UI;
+    [SerializeField] private Image SnakeFaceUI;
+    [SerializeField] private Slider EnergySlider;
 
-    public void UpdateHealth(float maxHealth, float currentHealth)
-    {
-        healthSlider.value = currentHealth / maxHealth;
-    }
+    [Header("Assets")]
+    [SerializeField] private Sprite[] HealthAsset = new Sprite[5];
+    [SerializeField] private Sprite[] Health2Asset = new Sprite[5];
+    [SerializeField] private Sprite[] SnakeFaceAsset = new Sprite[2];
 
-    public void UpdateStamina(float maxStamina, float currentStamina)
-    {
-        staminaSlider.value = currentStamina / maxStamina;
-    }
+    // public void 
 }

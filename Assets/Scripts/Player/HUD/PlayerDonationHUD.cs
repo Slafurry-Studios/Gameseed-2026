@@ -10,10 +10,10 @@ public class PlayerDonationHUD : Singleton<PlayerDonationHUD>
     [SerializeField] private CanvasGroup donationCanvasGroup;
 
     [Header("Settings")]
-    [SerializeField] private float showDuration = 2.5f;   
+    [SerializeField] private float showDuration = 2.5f;
     [SerializeField] private float fadeInDuration = 0.3f;
     [SerializeField] private float fadeOutDuration = 0.4f;
-    [SerializeField] private float slideDistance = 30f;  
+    [SerializeField] private float slideDistance = 30f;
 
     private Coroutine currentRoutine;
     private Vector2 originalPos;
@@ -24,6 +24,24 @@ public class PlayerDonationHUD : Singleton<PlayerDonationHUD>
         if (donationRect == null) donationRect = donationUI.GetComponent<RectTransform>();
         if (donationCanvasGroup == null) donationCanvasGroup = donationUI.GetComponent<CanvasGroup>();
         originalPos = donationRect.anchoredPosition;
+    }
+
+    private void OnEnable()
+    {
+        ObjectiveManager.Instance.OnObjectiveAdded += HandleObjectiveAdded;
+    }
+
+    private void OnDisable()
+    {
+        ObjectiveManager.Instance.OnObjectiveAdded -= HandleObjectiveAdded;
+    }
+
+    private void HandleObjectiveAdded(Objective objective)
+    {
+        if (objective.Channel != null && objective.Channel.useDonation)
+        {
+            UpdateDonation(objective.Channel.donationMessage);
+        }
     }
 
     public void UpdateDonation(string donation)
@@ -49,7 +67,7 @@ public class PlayerDonationHUD : Singleton<PlayerDonationHUD>
         {
             t += Time.deltaTime;
             float p = Mathf.Clamp01(t / fadeInDuration);
-            float eased = 1f - Mathf.Pow(1f - p, 3f); 
+            float eased = 1f - Mathf.Pow(1f - p, 3f);
 
             donationCanvasGroup.alpha = eased;
             donationRect.anchoredPosition = Vector2.Lerp(startPos, originalPos, eased);
