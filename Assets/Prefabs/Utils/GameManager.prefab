@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1474413651686578673}
   - component: {fileID: 7101958945764350957}
   - component: {fileID: 3366780398479834264}
+  - component: {fileID: 3641634936374996148}
+  - component: {fileID: 937571056604835971}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -83,5 +85,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47910fdf3cd7c564c888f0e718de2bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3641634936374996148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4747456712980624973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7dee62794f7c41d790bb7a8f4ac37f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chatDatabase: {fileID: 11400000, guid: a7be1be7151a36e08bf143a2f72d4600, type: 2}
+  minChatInterval: 0.2
+  maxChatInterval: 5
+  burstInterval: 0.3
+  enableDebugKeys: 1
+  debugChatCount: 3
+--- !u!114 &937571056604835971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4747456712980624973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1bcd30a1b6db488ad9c438ecb658b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

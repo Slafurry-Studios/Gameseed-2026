@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7691132235059302834}
   - component: {fileID: 4419215342162328128}
   - component: {fileID: 477227566894234385}
-  - component: {fileID: 949817987323174194}
   - component: {fileID: 3049338051283178277}
   m_Layer: 5
   m_Name: ChatPanel
@@ -104,24 +103,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
---- !u!114 &949817987323174194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8918098167883939260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7dee62794f7c41d790bb7a8f4ac37f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chatDatabase: {fileID: 11400000, guid: a7be1be7151a36e08bf143a2f72d4600, type: 2}
-  minChatInterval: 0.2
-  maxChatInterval: 0.5
-  burstInterval: 0.3
-  enableDebugKeys: 1
-  debugChatCount: 3
 --- !u!114 &3049338051283178277
 MonoBehaviour:
   m_ObjectHideFlags: 0
