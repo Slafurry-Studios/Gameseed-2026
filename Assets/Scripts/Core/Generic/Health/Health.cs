@@ -6,7 +6,7 @@ namespace Game.Generic
 {
     public class Health : MonoBehaviour, IDamageable
     {
-        public event Action<float> OnHealthPctChanged;
+        public event Action<float> OnHealthChanged;
         public event Action<float> OnDamaged;
         public event Action<float> OnHealed;
         public event Action OnDied;
@@ -28,7 +28,7 @@ namespace Game.Generic
 
         protected virtual void Start()
         {
-            OnHealthPctChanged?.Invoke(GetHealthNormalized());
+            OnHealthChanged?.Invoke(GetHealth());
         }
 
         public virtual void TakeDamage(float amount)
@@ -40,7 +40,7 @@ namespace Game.Generic
             currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
 
             OnDamaged?.Invoke(amount);
-            OnHealthPctChanged?.Invoke(GetHealthNormalized());
+            OnHealthChanged?.Invoke(GetHealth());
 
             if (currentHealth <= 0f)
             {
@@ -57,14 +57,14 @@ namespace Game.Generic
             currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
 
             OnHealed?.Invoke(amount);
-            OnHealthPctChanged?.Invoke(GetHealthNormalized());
+            OnHealthChanged?.Invoke(GetHealth());
         }
 
         public virtual void SetHealth(float value)
         {
             currentHealth = Mathf.Clamp(value, 0f, maxHealth);
 
-            OnHealthPctChanged?.Invoke(GetHealthNormalized());
+            OnHealthChanged?.Invoke(GetHealth());
 
             if (currentHealth <= 0f && !isDead)
             {
@@ -72,9 +72,9 @@ namespace Game.Generic
             }
         }
 
-        public float GetHealthNormalized()
+        public float GetHealth()
         {
-            return currentHealth / maxHealth;
+            return currentHealth;
         }
 
         protected virtual void Die()

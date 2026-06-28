@@ -7,6 +7,7 @@ public struct Objective
     public BaseObjectiveChannel Channel;
     public float ObjectiveThreshold;
     public ObjectiveType ObjectiveType;
+    public bool IsMainMission;
 
     public override bool Equals(object obj)
     {
