@@ -4,8 +4,8 @@ using System;
 
 namespace Game.Gameplay.Attributes
 {
-    [CreateAssetMenu(fileName = "NewThreatPointAttribute", menuName = "Game/Dropable/Attributes/Threat Point Attribute")]
-    public class ThreatPointAttribute : AttributeData
+    [CreateAssetMenu(fileName = "NewSubsAttribute", menuName = "Game/Dropable/Attributes/Subs Attribute")]
+    public class SubsAttribute : AttributeData
     {
         public override void Apply(GameObject target, float amount)
         {
