@@ -16,24 +16,20 @@ namespace Game.Player
         [Tooltip("Delay antar segment")]
         [SerializeField] private int historyGap = 10;
 
-
         private List<Transform> bodyParts = new List<Transform>();
 
         private Transform tail;
 
         private Transform tailContainer;
 
-
         private Marker[] positionHistory;
         private int historyIndex = 0;
         private int historyCount = 0;
-
 
         private struct Marker
         {
             public Vector3 position;
             public Quaternion rotation;
-
 
             public Marker(Vector3 pos, Quaternion rot)
             {
@@ -42,47 +38,32 @@ namespace Game.Player
             }
         }
 
-
-
         private void Start()
         {
             tailContainer =
                 new GameObject("TailContainer_" + gameObject.name).transform;
 
-
             AllocateHistory(
                 Mathf.Max(100, (initialBodySize + 3) * historyGap)
             );
 
-
             RecordMarker();
 
+            SpawnInitialBody();
 
-            // buat body
-            Grow(initialBodySize);
-
-
-            // buat tail satu kali
             CreateTail();
         }
-
-
 
         private void Update()
         {
             RecordMovement();
-
             UpdateBodyParts();
-
             UpdateTail();
         }
-
-
 
         private void RecordMovement()
         {
             bool record = true;
-
 
             if (historyCount > 0)
             {
@@ -90,53 +71,42 @@ namespace Game.Player
                     (transform.position -
                     GetMarker(0).position).sqrMagnitude;
 
-
                 if (sqr < minRecordDistance * minRecordDistance)
                     record = false;
             }
 
-
-            if(record)
+            if (record)
                 RecordMarker();
         }
 
-
-
         private void CreateTail()
         {
-            if(tail != null)
+            if (tail != null)
                 return;
 
-
-            Marker marker =
-                GetMarker((bodyParts.Count + 1) * historyGap);
-
+            Vector3 spawnPos =
+                GetSpawnBehindHead(bodyParts.Count);
 
             GameObject obj =
                 Instantiate(
                     tailPrefab,
-                    marker.position,
-                    marker.rotation,
+                    spawnPos,
+                    transform.rotation,
                     tailContainer
                 );
-
 
             tail = obj.transform;
         }
 
-
-
         private void UpdateTail()
         {
-            if(tail == null)
+            if (tail == null)
                 return;
-
 
             int offset =
                 (bodyParts.Count + 1) * historyGap;
 
-
-            if(offset < historyCount)
+            if (offset < historyCount)
             {
                 Marker marker = GetMarker(offset);
 
@@ -145,25 +115,20 @@ namespace Game.Player
             }
         }
 
-
-
         private void UpdateBodyParts()
         {
-            for(int i = 0; i < bodyParts.Count; i++)
+            for (int i = 0; i < bodyParts.Count; i++)
             {
                 int offset =
                     (i + 1) * historyGap;
 
-
-                if(offset < historyCount)
+                if (offset < historyCount)
                 {
                     Marker marker =
                         GetMarker(offset);
 
-
                     bodyParts[i].position =
                         marker.position;
-
 
                     bodyParts[i].rotation =
                         marker.rotation;
@@ -171,18 +136,15 @@ namespace Game.Player
             }
         }
 
-
-
         public void Grow(int amount = 1)
         {
-            for(int i = 0; i < amount; i++)
+            for (int i = 0; i < amount; i++)
             {
                 Marker marker =
                     GetMarker(
                         (bodyParts.Count + 1)
                         * historyGap
                     );
-
 
                 GameObject body =
                     Instantiate(
@@ -192,23 +154,17 @@ namespace Game.Player
                         tailContainer
                     );
 
-
                 bodyParts.Add(body.transform);
             }
         }
-
-
 
         private void AllocateHistory(int size)
         {
             positionHistory =
                 new Marker[size];
 
-
             historyIndex = 0;
         }
-
-
 
         private void RecordMarker()
         {
@@ -216,20 +172,16 @@ namespace Game.Player
                 (bodyParts.Count + 3)
                 * historyGap;
 
-
-            if(positionHistory.Length < required)
+            if (positionHistory.Length < required)
             {
                 AllocateHistory(required * 2);
             }
 
-
             historyIndex--;
 
-
-            if(historyIndex < 0)
+            if (historyIndex < 0)
                 historyIndex =
                     positionHistory.Length - 1;
-
 
             positionHistory[historyIndex] =
                 new Marker(
@@ -237,25 +189,46 @@ namespace Game.Player
                     transform.rotation
                 );
 
-
-            if(historyCount < positionHistory.Length)
+            if (historyCount < positionHistory.Length)
                 historyCount++;
         }
 
-
-
         private Marker GetMarker(int offset)
         {
-            if(offset >= historyCount)
+            if (offset >= historyCount)
                 offset = historyCount - 1;
-
 
             int index =
                 (historyIndex + offset)
                 % positionHistory.Length;
 
-
             return positionHistory[index];
+        }
+
+        private Vector3 GetSpawnBehindHead(int index)
+        {
+            Vector3 backward =
+                -transform.up * (index + 1);
+
+            return transform.position + backward;
+        }
+        private void SpawnInitialBody()
+        {
+            for (int i = 0; i < initialBodySize; i++)
+            {
+                Vector3 spawnPos =
+                    GetSpawnBehindHead(i);
+
+
+                GameObject body =
+                    Instantiate(
+                        bodyPrefab,
+                        spawnPos,
+                        transform.rotation,
+                        tailContainer
+                    );
+                bodyParts.Add(body.transform);
+            }
         }
     }
 }
