@@ -1,12 +1,11 @@
 using UnityEngine;
 using Game.Core;
+using Game.Gameplay;
 
 [System.Serializable]
 public struct Building
 {
     public Sprite buildingSprite;
-
-    [Tooltip("Jumlah hit sebelum building ini hancur")]
     public int hitThreshold;
 }
 
@@ -14,12 +13,16 @@ public struct Building
 [RequireComponent(typeof(SpriteRenderer))]
 public class BuildingSwitcher : MonoBehaviour, IDamageable
 {
+    [Header("Only Player Bullet")]
+    [SerializeField] private Bullet playerBullet;
+
     [Header("Building")]
     public Building[] buildingPrefabs;
 
     [Header("Particle")]
     public GameObject destroyParticlePrefab;
-    
+
+
     private SpriteRenderer spriteRenderer;
 
     private int currentIndex = 0;
@@ -32,7 +35,7 @@ public class BuildingSwitcher : MonoBehaviour, IDamageable
 
     void Start()
     {
-        if (buildingPrefabs != null && buildingPrefabs.Length > 0)
+        if (buildingPrefabs.Length > 0)
         {
             spriteRenderer.sprite =
                 buildingPrefabs[currentIndex].buildingSprite;
@@ -41,9 +44,24 @@ public class BuildingSwitcher : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damage)
     {
-        hitCount++;
-        Debug.Log(gameObject.name + " terkena hit : " + hitCount);
+        // fallback
+        TakeDamage(damage, null);
+    }
 
+    public void TakeDamage(float damage, Bullet bullet)
+    {
+        // hanya bullet player
+        if (playerBullet != null && bullet != playerBullet)
+            return;
+
+
+        hitCount++;
+
+        Debug.Log(
+            gameObject.name +
+            " terkena player bullet : " +
+            hitCount
+        );
         CheckThreshold();
     }
 
@@ -77,7 +95,7 @@ public class BuildingSwitcher : MonoBehaviour, IDamageable
 
     void PlayDestroyEffect()
     {
-        if (destroyParticlePrefab == null)
+        if (!destroyParticlePrefab)
             return;
 
         GameObject effect = Instantiate(
@@ -89,7 +107,8 @@ public class BuildingSwitcher : MonoBehaviour, IDamageable
         ParticleSystem ps =
             effect.GetComponent<ParticleSystem>();
 
-        if (ps != null)
+
+        if (ps)
         {
             ps.Play();
 
