@@ -1,0 +1,63 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerObjectiveHUD : Singleton<PlayerObjectiveHUD>
+{
+    [SerializeField] private PlayerObjectiveItem itemPrefab;
+    [SerializeField] private Transform itemParent;
+
+    private readonly List<PlayerObjectiveItem> playerObjectiveItems = new();
+    private readonly Dictionary<Objective, PlayerObjectiveItem> itemLookup = new();
+
+    private void OnEnable()
+    {
+        ObjectiveManager.Instance.OnObjectiveProgress += HandleProgress;
+        ObjectiveManager.Instance.OnObjectiveCompleted += HandleCompleted;
+    }
+
+    private void OnDisable()
+    {
+        ObjectiveManager.Instance.OnObjectiveProgress -= HandleProgress;
+        ObjectiveManager.Instance.OnObjectiveCompleted -= HandleCompleted;
+    }
+
+    public void AddObjectiveItem(Objective objective)
+    {
+        if (itemLookup.ContainsKey(objective)) return;
+
+        var item = Instantiate(itemPrefab, itemParent);
+        var progress = new ObjectiveProgress(objective);
+        item.Setup(progress);
+
+        playerObjectiveItems.Add(item);
+        itemLookup[objective] = item;
+    }
+
+    private void HandleProgress(Objective objective, float currentValue)
+    {
+        if (!itemLookup.TryGetValue(objective, out var item))
+        {
+            AddObjectiveItem(objective);
+            item = itemLookup[objective];
+        }
+
+        item.GetProgress().CurrentValue = currentValue;
+        item.RefreshText();
+    }
+
+    private void HandleCompleted(Objective objective)
+    {
+        if (itemLookup.TryGetValue(objective, out var item))
+        {
+            item.TaskCompleted();
+        }
+    }
+
+    private void Update()
+    {
+        foreach (var item in playerObjectiveItems)
+        {
+            item.RefreshText();
+        }
+    }
+}
