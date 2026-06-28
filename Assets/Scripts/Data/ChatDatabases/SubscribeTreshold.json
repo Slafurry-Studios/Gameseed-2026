@@ -1,8 +1,408 @@
 {
   "messages": [
-    { "user": "LoremIpsum", "message": "More subscribers incoming!" },
-    { "user": "plzdonkillm", "message": "If i subscribe would i survived?" },
-    { "user": "plzkillmee", "message": "eat me plzzz" },
-    { "user": "subsbsf", "message": "we gonna get the ruby playy buttoonnn!" }
+    {
+      "user": "NewMemberNoel",
+      "message": "More subscribers incoming!"
+    },
+    {
+      "user": "SubGoalGalaxyGabriela",
+      "message": "If i subscribe would i survived?"
+    },
+    {
+      "user": "ChannelHypeHelena",
+      "message": "eat me plzzz"
+    },
+    {
+      "user": "BellIconBenny",
+      "message": "we gonna get the ruby playy buttoonnn!"
+    },
+    {
+      "user": "ChannelClimbCalvin",
+      "message": "SMASH THAT SUB BUTTON EVERYONE"
+    },
+    {
+      "user": "SubTierUpgradeUma",
+      "message": "the algorithm is gonna love this spike"
+    },
+    {
+      "user": "NotificationStormNash",
+      "message": "my phone is exploding with notifications rn"
+    },
+    {
+      "user": "SubGoalCrusherCody",
+      "message": "ANOTHER MILESTONE LETS GOOO"
+    },
+    {
+      "user": "LivestreamLurkerLeo",
+      "message": "platinum play button incoming, mark my words"
+    },
+    {
+      "user": "SubTrainHijackerHugo",
+      "message": "sub goal getting absolutely demolished"
+    },
+    {
+      "user": "GoldPlayButtonGwen",
+      "message": "fastest channel growth ive ever witnessed"
+    },
+    {
+      "user": "ChannelEnergyElla",
+      "message": "this clip is becoming the new thumbnail"
+    },
+    {
+      "user": "ChannelSupportSamantha",
+      "message": "the sub counter literally crashed for a sec"
+    },
+    {
+      "user": "SubBombBrandon",
+      "message": "subscribing is free, what are you waiting for"
+    },
+    {
+      "user": "SubSpikeSpartan",
+      "message": "gold play button getting dusty rn fr"
+    },
+    {
+      "user": "FollowerFlexFinn",
+      "message": "wait i just became sub number 1 million??"
+    },
+    {
+      "user": "NewSubSurpriseNina",
+      "message": "ring that bell icon too while youre at it"
+    },
+    {
+      "user": "SubAnniversaryAugust",
+      "message": "this is genuinely insane content creation"
+    },
+    {
+      "user": "AlgorithmBlessingAva",
+      "message": "all aboard the sub train, choo choo"
+    },
+    {
+      "user": "NotificationFloodFelicity",
+      "message": "monetization team is gonna be SO happy"
+    },
+    {
+      "user": "SubWaveRiderRiley",
+      "message": "the analytics dashboard is on fire right now"
+    },
+    {
+      "user": "NotificationBellBella",
+      "message": "post this to the community tab immediately"
+    },
+    {
+      "user": "NotificationOverloadOliver",
+      "message": "first time subbing, never seen content like this"
+    },
+    {
+      "user": "PlayButtonPolisherPaula",
+      "message": "happy sub anniversary to literally everyone watching"
+    },
+    {
+      "user": "ContentCreatorCarl2",
+      "message": "ruby play button when??? asking for real"
+    },
+    {
+      "user": "SubGoalSmasherSteve",
+      "message": "diamond play button is the next stop"
+    },
+    {
+      "user": "SubFlashMobFrankie",
+      "message": "this sub spike is statistically impossible"
+    },
+    {
+      "user": "ChannelClimaxCarter",
+      "message": "i turned on notifications just for this moment"
+    },
+    {
+      "user": "FirstTimeSubFrankie",
+      "message": "joining the channel membership right now too"
+    },
+    {
+      "user": "ChannelHistoryHazel",
+      "message": "even the stream snipers are subscribing now"
+    },
+    {
+      "user": "SubStreakSavannah",
+      "message": "first time subbing to anyone ever, this is history"
+    },
+    {
+      "user": "SubFloodFrancesca",
+      "message": "sub goal crushed in record time"
+    },
+    {
+      "user": "SubButtonSmasherSofia",
+      "message": "polishing the play button for the unboxing video"
+    },
+    {
+      "user": "SilverPlayButtonSilas",
+      "message": "biggest sub spike in channel history confirmed"
+    },
+    {
+      "user": "ChannelFamilyFiona",
+      "message": "the algorithm gods have blessed this stream"
+    },
+    {
+      "user": "NewSubWaveWalter",
+      "message": "upgrading my sub tier as we speak"
+    },
+    {
+      "user": "ChannelLoreLogan",
+      "message": "flexing my new sub badge in chat rn"
+    },
+    {
+      "user": "MilestoneMagnetMarco",
+      "message": "the new sub sound effect is non stop now"
+    },
+    {
+      "user": "MonetizationMike",
+      "message": "another channel milestone unlocked, lets goooo"
+    },
+    {
+      "user": "plzkillmee",
+      "message": "gifting subs to random viewers right now"
+    },
+    {
+      "user": "NewSubAlertNadia",
+      "message": "SUB BOMB INCOMING EVERYONE BRACE YOURSELVES"
+    },
+    {
+      "user": "SubGoalGuardianGus",
+      "message": "been here since day one, subbing right now"
+    },
+    {
+      "user": "LoyalViewerLucy",
+      "message": "hijacking the sub train for one more stop"
+    },
+    {
+      "user": "ChannelRiseRowan",
+      "message": "this channel is becoming an actual legend"
+    },
+    {
+      "user": "SubCounterCrasher",
+      "message": "notification overload, my phone needs a break"
+    },
+    {
+      "user": "CommunityTabCarmen",
+      "message": "watching the sub counter like its a stock ticker"
+    },
+    {
+      "user": "ChannelGrowthGary",
+      "message": "this might break a platform record honestly"
+    },
+    {
+      "user": "AlgorithmAddictAlex",
+      "message": "the growth graph looks like a hockey stick"
+    },
+    {
+      "user": "SubChainReactionRex",
+      "message": "supporting this channel till the end of time"
+    },
+    {
+      "user": "ChannelTrendTrevor",
+      "message": "silver play button already feels outdated now"
+    },
+    {
+      "user": "ChannelAnalyticsAnna",
+      "message": "this is trending on every platform now"
+    },
+    {
+      "user": "ChannelBoostBeatrice",
+      "message": "another wave of new subs just hit"
+    },
+    {
+      "user": "MilestonePartyMason",
+      "message": "welcome to the family, new subscribers"
+    },
+    {
+      "user": "ChannelClimaxClinton",
+      "message": "threshold triggered, something big is coming"
+    },
+    {
+      "user": "ThumbnailThiefTina",
+      "message": "this is a milestone moment for sure"
+    },
+    {
+      "user": "SubCounterClimberClyde",
+      "message": "smashing every sub goal set today"
+    },
+    {
+      "user": "SubCounterWatcherWendy",
+      "message": "channel boost activated, lets keep it going"
+    },
+    {
+      "user": "subsbsf",
+      "message": "the counter is climbing faster than i can read"
+    },
+    {
+      "user": "SubRushReggie",
+      "message": "flood of notifications, my battery is dying"
+    },
+    {
+      "user": "SubGoalSniperSam",
+      "message": "setting a new personal record right now"
+    },
+    {
+      "user": "ChannelMilestoneMarcus",
+      "message": "the hype for this channel is unreal rn"
+    },
+    {
+      "user": "plzdonkillm",
+      "message": "celebrating my sub anniversary with this exact moment"
+    },
+    {
+      "user": "NotificationNinjaNico",
+      "message": "predicting the next play button in 2 weeks"
+    },
+    {
+      "user": "NotificationGremlinNoah",
+      "message": "this surge is gonna be studied by marketers"
+    },
+    {
+      "user": "NewSubCelebrationCeline",
+      "message": "this feels like the climax of the whole stream"
+    },
+    {
+      "user": "SubTrainConductorTony",
+      "message": "becoming a member right after this sub"
+    },
+    {
+      "user": "MilestoneManiacMia",
+      "message": "chain reaction of subs happening live"
+    },
+    {
+      "user": "SubSpreeSelena",
+      "message": "the channel energy is absolutely electric"
+    },
+    {
+      "user": "PlayButtonPredictorPriya",
+      "message": "this feels like a sub flash mob honestly"
+    },
+    {
+      "user": "ChannelPulseQuinn",
+      "message": "throwing a milestone party in chat right now"
+    },
+    {
+      "user": "SubAnniversarySadie",
+      "message": "this moment is going straight into channel lore"
+    },
+    {
+      "user": "PlayButtonPrepperPenny",
+      "message": "smashing the sub button repeatedly just for fun"
+    },
+    {
+      "user": "FreeSubscriptionFred",
+      "message": "stealth subscribing like a ninja right now"
+    },
+    {
+      "user": "NewSubNovaNoor",
+      "message": "watching this channel climb the charts live"
+    },
+    {
+      "user": "ChannelHistoryHarold",
+      "message": "guarding this sub goal till it hits max"
+    },
+    {
+      "user": "ChannelMembershipMandy",
+      "message": "you can feel the channel pulse rising rn"
+    },
+    {
+      "user": "SubRecordSetterRoy",
+      "message": "riding this sub wave straight to the top"
+    },
+    {
+      "user": "MilestoneMagicMabel",
+      "message": "new sub alert, my OBS is melting down"
+    },
+    {
+      "user": "RubyButtonRicky",
+      "message": "this channel is a milestone magnet today"
+    },
+    {
+      "user": "GiftSubGiverGigi",
+      "message": "longest sub streak of the year right here"
+    },
+    {
+      "user": "NewSubNotifyNolan",
+      "message": "calling it now, this clip blows up tomorrow"
+    },
+    {
+      "user": "ChannelBoomBaxter",
+      "message": "already prepping the unboxing setup"
+    },
+    {
+      "user": "SubSpikeStatistician",
+      "message": "the sub rush is not slowing down at all"
+    },
+    {
+      "user": "PlatinumPlayButtonPam",
+      "message": "writing this down in the channel history book"
+    },
+    {
+      "user": "ChannelClimaxClara",
+      "message": "notification storm hitting every device rn"
+    },
+    {
+      "user": "NewSubNotifierNed",
+      "message": "momentum building toward the next big milestone"
+    },
+    {
+      "user": "LoremIpsum",
+      "message": "absolute flood of subs, the dashboard cant keep up"
+    },
+    {
+      "user": "DiamondPlayButtonDan",
+      "message": "the legacy of this channel just got bigger"
+    },
+    {
+      "user": "SubTrendTrackerTara",
+      "message": "celebrating every single new sub right now"
+    },
+    {
+      "user": "ChannelLegacyLiam",
+      "message": "boosting this channel with everything ive got"
+    },
+    {
+      "user": "PlatformRecordPete",
+      "message": "trending upward faster than anyone expected"
+    },
+    {
+      "user": "SubThresholdTriggerTrent",
+      "message": "marking this exact moment as a milestone"
+    },
+    {
+      "user": "MilestoneMarkerMaya",
+      "message": "going on a full subscribing spree right now"
+    },
+    {
+      "user": "ChannelLegendLena",
+      "message": "this is the climax of the whole subscriber arc"
+    },
+    {
+      "user": "SubBoostBarry",
+      "message": "the notify sound is basically a song now"
+    },
+    {
+      "user": "xX_SubBotSlayer_Xx",
+      "message": "sub goal reaching galaxy levels today"
+    },
+    {
+      "user": "SubSurgeSimon",
+      "message": "channel booming louder than the explosions onscreen"
+    },
+    {
+      "user": "StreamSnipersStacy",
+      "message": "pure milestone magic happening right now"
+    },
+    {
+      "user": "SubGrowthGraphGreta",
+      "message": "this spike deserves its own highlight reel"
+    },
+    {
+      "user": "MilestoneMomentMolly",
+      "message": "watching this channel rise in real time"
+    },
+    {
+      "user": "MilestoneMomentumMira",
+      "message": "exploding like a supernova of new subs"
+    }
   ]
 }

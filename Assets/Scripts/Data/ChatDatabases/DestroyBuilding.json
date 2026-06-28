@@ -1,12 +1,580 @@
 {
   "messages": [
-    { "user": "LoremIpsum", "message": "Blow up another one!" },
-    { "user": "rina324", "message": "bloW what?" },
-    { "user": "officeman900", "message": "No MOre Wooorkk!" },
-    { "user": "scaredguy", "message": "type 1 if you're scared" },
-    { "user": "LoremIpsum", "message": "Watch the traffic!" },
-    { "user": "emperoployer", "message": "so this is why i got late to work today" },
-    { "user": "internetguy7", "message": "flease go do this so it would be funny" },
-    { "user": "fred43dd", "message": "insurance company left the gam" }
+    {
+      "user": "ScaffoldingScaredy",
+      "message": "Blow up another one!"
+    },
+    {
+      "user": "OfficeWorkerEscapee",
+      "message": "bloW what?"
+    },
+    {
+      "user": "BulldozerBetty",
+      "message": "No MOre Wooorkk!"
+    },
+    {
+      "user": "BuildingMaterialMarketCrash",
+      "message": "type 1 if you're scared"
+    },
+    {
+      "user": "ConcreteCrumblingCommentary",
+      "message": "Watch the traffic!"
+    },
+    {
+      "user": "BuildingOwnerLawsuit",
+      "message": "so this is why i got late to work today"
+    },
+    {
+      "user": "SkyscraperSpectatorSport",
+      "message": "flease go do this so it would be funny"
+    },
+    {
+      "user": "ElevatorMusicLover",
+      "message": "insurance company left the gam"
+    },
+    {
+      "user": "Wendy_From_Accounting",
+      "message": "BRO JUST YEETED A SKYSCRAPER"
+    },
+    {
+      "user": "HighRiseHomeless22",
+      "message": "thats literally my office building NOOO"
+    },
+    {
+      "user": "GlassCeilingBroken",
+      "message": "my stocks in real estate just crashed irl"
+    },
+    {
+      "user": "BrickByBrickBoi",
+      "message": "this is why i live in a farm, no buildings to worry"
+    },
+    {
+      "user": "BuildingCodeViolator",
+      "message": "GOBLIN MODE: BUILDING EDITION"
+    },
+    {
+      "user": "MoversAndShakersMike",
+      "message": "haiyaa this building got no respect"
+    },
+    {
+      "user": "ramenNoodleQueen",
+      "message": "i had a meeting in there in 5 minutes"
+    },
+    {
+      "user": "ConcreteConnoisseur",
+      "message": "brick by brick, gone gone gone"
+    },
+    {
+      "user": "JanitorMike_OnBreak",
+      "message": "20 years of work undone in 2 seconds"
+    },
+    {
+      "user": "DemolitionDayDelightedFan",
+      "message": "the noodle shop downstairs better be safe"
+    },
+    {
+      "user": "UrbanLandscapeAltered",
+      "message": "TOLD YALL THIS WOULD HAPPEN"
+    },
+    {
+      "user": "SkylineSilhouetteShift",
+      "message": "guess i dont need to clean that floor anymore"
+    },
+    {
+      "user": "internetguy7",
+      "message": "WHO IS GOING TO PAY FOR THIS"
+    },
+    {
+      "user": "ElectricianEli_Shocked",
+      "message": "skibidi rubble rubble"
+    },
+    {
+      "user": "LoremIpsum",
+      "message": "actually this improves the city's feng shui"
+    },
+    {
+      "user": "StructuralIntegrityRIP",
+      "message": "property value: zero"
+    },
+    {
+      "user": "Steve_TheArchitect",
+      "message": "well theres no elevator to fix now"
+    },
+    {
+      "user": "BuildingCollapseFan_99",
+      "message": "i designed that foundation, im in tears"
+    },
+    {
+      "user": "LandlordKaren_Official",
+      "message": "this fails inspection in a NEW way"
+    },
+    {
+      "user": "RealEstateRuiner",
+      "message": "good, that building owed back taxes anyway"
+    },
+    {
+      "user": "DemolitionPartyPlanner",
+      "message": "finally, that mold problem is solved"
+    },
+    {
+      "user": "FireEscapePlanFailed",
+      "message": "wrecking ball who? we got SNAKE now"
+    },
+    {
+      "user": "RebarRespecter",
+      "message": "the pigeons are filing a complaint"
+    },
+    {
+      "user": "ConstructionWorker_Joe",
+      "message": "rent was too high anyway, do it again"
+    },
+    {
+      "user": "HVACGuyHorrified",
+      "message": "that concrete didnt stand a chance"
+    },
+    {
+      "user": "FengShuiExpert99",
+      "message": "well theres no windows left to wash"
+    },
+    {
+      "user": "PenthouseOwnerPanic",
+      "message": "the fire escape plan did NOT account for this"
+    },
+    {
+      "user": "DustCloudEnthusiast",
+      "message": "can he fix it? no, no he cannot"
+    },
+    {
+      "user": "ConcreteCollapseCommentary",
+      "message": "MY BABY NOOOOO"
+    },
+    {
+      "user": "GremlinFromHR666",
+      "message": "the dust cloud alone is a 10/10"
+    },
+    {
+      "user": "rina324",
+      "message": "filing this claim is gonna take all week"
+    },
+    {
+      "user": "xX_DemolitionKing_Xx",
+      "message": "we JUST finished that one too"
+    },
+    {
+      "user": "WindowCleanerWoes",
+      "message": "no building, no property tax, genius"
+    },
+    {
+      "user": "CondoBoardCarol",
+      "message": "rubble never looked so good"
+    },
+    {
+      "user": "SteelBeamStan",
+      "message": "ducking for cover from the glass rn"
+    },
+    {
+      "user": "HighRiseHaterAccount",
+      "message": "honestly the building had bad bones anyway"
+    },
+    {
+      "user": "PlumberPete_Panicking",
+      "message": "this is NOT in the zoning plan"
+    },
+    {
+      "user": "CityInfrastructureCollapse",
+      "message": "did he even file the right permits"
+    },
+    {
+      "user": "HighRiseHero99",
+      "message": "the sound of collapse is so satisfying ngl"
+    },
+    {
+      "user": "UrbanDecayEnjoyer",
+      "message": "best excuse to skip work ever"
+    },
+    {
+      "user": "PropertyTaxRebel",
+      "message": "we had a rooftop party planned tonight wtf"
+    },
+    {
+      "user": "TaxEvaderTony",
+      "message": "structural integrity has left the chat"
+    },
+    {
+      "user": "HighRiseHistorian",
+      "message": "still paying mortgage on that building btw"
+    },
+    {
+      "user": "BuildingOwnerBroke",
+      "message": "my crane is shaking in fear rn"
+    },
+    {
+      "user": "GoblinModeActivated",
+      "message": "well it definitely violates codes NOW"
+    },
+    {
+      "user": "RooftopPartyRuined",
+      "message": "EMERGENCY TENANT MEETING CALLED"
+    },
+    {
+      "user": "ResidentialZoneRuined",
+      "message": "always said highrises were a bad idea"
+    },
+    {
+      "user": "MortgagePayerMisery",
+      "message": "the scaffolding just gave up instantly"
+    },
+    {
+      "user": "BuildingManagerBreakdown",
+      "message": "rip to the elevator music, gone forever"
+    },
+    {
+      "user": "fred43dd",
+      "message": "that foundation was a HOUSE OF CARDS apparently"
+    },
+    {
+      "user": "ConcreteCrumbleConnoisseur",
+      "message": "literally broke the glass ceiling, feminism win?"
+    },
+    {
+      "user": "TenantsAssociation22",
+      "message": "my bulldozer is jealous of this energy"
+    },
+    {
+      "user": "emperoployer",
+      "message": "open house got CANCELLED real quick"
+    },
+    {
+      "user": "SkyscraperSurvivorSupport",
+      "message": "was about to sign a lease there too"
+    },
+    {
+      "user": "ConcreteJungleCollapse",
+      "message": "my penthouse view just got a LOT shorter"
+    },
+    {
+      "user": "UrbanPlannerUgh",
+      "message": "this beats any demolition derby ive seen"
+    },
+    {
+      "user": "DemolitionDebrisDodging",
+      "message": "the zoning board is gonna have a field day"
+    },
+    {
+      "user": "LoremIpsum",
+      "message": "even the rebar couldnt save it"
+    },
+    {
+      "user": "ApartmentHunterHorror",
+      "message": "we're officially out of a job thanks to him"
+    },
+    {
+      "user": "BuildingOwnerOverwhelmed",
+      "message": "the skyline will never look the same"
+    },
+    {
+      "user": "ArchitectureCritic9",
+      "message": "construction delays just became permanent"
+    },
+    {
+      "user": "BuildingSafetyInspector2",
+      "message": "no permit was filed for THIS demolition"
+    },
+    {
+      "user": "DemolitionDayDelight",
+      "message": "honestly thats one less eyesore in the city"
+    },
+    {
+      "user": "DemolitionExpertDoubts",
+      "message": "guess i dont need to fix those pipes now"
+    },
+    {
+      "user": "uncle_rogerr",
+      "message": "the wiring is the LEAST of their problems now"
+    },
+    {
+      "user": "ArchitectAngryTweet",
+      "message": "literal movers and shakers right here"
+    },
+    {
+      "user": "CousinGreg_Stocks",
+      "message": "this is going in the HOA newsletter"
+    },
+    {
+      "user": "SkyscraperSurvivorStory",
+      "message": "steel beams snapping like twigs, brutal"
+    },
+    {
+      "user": "StructuralEngineerSob",
+      "message": "decades of urban planning, gone in seconds"
+    },
+    {
+      "user": "FoundationFanatic",
+      "message": "well theres definitely broken windows now"
+    },
+    {
+      "user": "CityPlannerPanic",
+      "message": "appraising this property just got way easier, its zero"
+    },
+    {
+      "user": "BrokenWindowTheoryGuy",
+      "message": "fire marshal is having a meltdown rn"
+    },
+    {
+      "user": "BuildingLegacyLamentation",
+      "message": "i manage that building, i quit"
+    },
+    {
+      "user": "CityWideEmergencyAlert",
+      "message": "where am i supposed to park now"
+    },
+    {
+      "user": "RealtorRuinedDay",
+      "message": "i JUST redid that roof last month"
+    },
+    {
+      "user": "BobTheBuilder_Retired",
+      "message": "the AC unit didnt even get a chance"
+    },
+    {
+      "user": "CityCouncilCryBaby",
+      "message": "10 out of 10 collapse, would watch again"
+    },
+    {
+      "user": "BuildingResidentRunaway",
+      "message": "emergency city council session in 5 minutes"
+    },
+    {
+      "user": "BuildingMaterialMourner",
+      "message": "theres goes the whole residential zone"
+    },
+    {
+      "user": "DemolitionDerbyDan",
+      "message": "commercial real estate crashing IRL style"
+    },
+    {
+      "user": "BuildingDebrisCollector",
+      "message": "the insurance company is filing for bankruptcy now"
+    },
+    {
+      "user": "CivilEngineerCrying",
+      "message": "this is more realistic than any simulator"
+    },
+    {
+      "user": "UrbanSkylineUpdateNeeded",
+      "message": "took us months to plan a demolition, he did it in 2 secs"
+    },
+    {
+      "user": "CraneOperatorCarl",
+      "message": "the concrete jungle just got a clearing"
+    },
+    {
+      "user": "PigeonsHomelessNow",
+      "message": "im officially broke now thanks sniki"
+    },
+    {
+      "user": "GregTheElevatorGuy",
+      "message": "rent control debate just got irrelevant"
+    },
+    {
+      "user": "AppraiserAnxiety",
+      "message": "4 years of college for THIS to happen"
+    },
+    {
+      "user": "RoofTopGardenGone",
+      "message": "tweeting my resignation after watching this"
+    },
+    {
+      "user": "ParkingGarageGrief",
+      "message": "guess im homeless now, thanks a lot"
+    },
+    {
+      "user": "GlassShard_Survivor",
+      "message": "calling EVERY tenant right now in panic"
+    },
+    {
+      "user": "ZoningBoardZombie",
+      "message": "this is the FASTEST code violation ive ever seen"
+    },
+    {
+      "user": "CityBudgetCrunch22",
+      "message": "infrastructure budget just got slashed in half"
+    },
+    {
+      "user": "ConstructionDelayKing",
+      "message": "should we throw a demolition party after this"
+    },
+    {
+      "user": "MoldyBasementMan",
+      "message": "my rooftop garden, MY TOMATOES"
+    },
+    {
+      "user": "BuildingCodeEnforcer",
+      "message": "no more windows, no more job, sad"
+    },
+    {
+      "user": "DemolitionPermitGuy",
+      "message": "RIP to every brick that died today"
+    },
+    {
+      "user": "DemolitionDayDocumentarian",
+      "message": "urban decay aesthetic just got REAL"
+    },
+    {
+      "user": "SkyscraperSadnessSpiral",
+      "message": "im writing my survivor story as we speak"
+    },
+    {
+      "user": "DemolitionDramaQueen",
+      "message": "selling debris as souvenirs, dm me"
+    },
+    {
+      "user": "Window_Washer_Wayne",
+      "message": "EMERGENCY ALERT SENT TO EVERY PHONE"
+    },
+    {
+      "user": "PropertyValuePlummet",
+      "message": "property value plummeting faster than the building"
+    },
+    {
+      "user": "SkyscraperSimulator",
+      "message": "well this fails EVERY safety standard now"
+    },
+    {
+      "user": "potatoFarmer42069",
+      "message": "the union is gonna have SO many questions"
+    },
+    {
+      "user": "ConstructionUnionAngry",
+      "message": "this building had so much history, RIP"
+    },
+    {
+      "user": "RoofingContractorRage",
+      "message": "best demolition day of my life, no contest"
+    },
+    {
+      "user": "InsuranceAdjusterSam",
+      "message": "lawsuit incoming, who do i even sue"
+    },
+    {
+      "user": "BuildingResidentRelocation",
+      "message": "the skyline silhouette changed in real time"
+    },
+    {
+      "user": "PropertyManagerPanic2",
+      "message": "the way it crumbles is oddly beautiful"
+    },
+    {
+      "user": "scaredguy",
+      "message": "residents running for their lives rn"
+    },
+    {
+      "user": "BuildingPermitBureaucrat",
+      "message": "city budget is gonna take a hit from this"
+    },
+    {
+      "user": "CityCouncilCrisisMeeting",
+      "message": "dodging debris like its an obstacle course"
+    },
+    {
+      "user": "Doomsday_Prepper91",
+      "message": "decades of legacy lost in an instant"
+    },
+    {
+      "user": "BuildingCollapseASMR",
+      "message": "im in a sadness spiral over this building"
+    },
+    {
+      "user": "CityPlanningCommitteePanic",
+      "message": "property tax revenue just hit zero"
+    },
+    {
+      "user": "BuildingDebrisDonationDrive",
+      "message": "documenting this collapse for the history books"
+    },
+    {
+      "user": "SkyscraperStandoffSurvivor",
+      "message": "well thats one way to do urban renewal"
+    },
+    {
+      "user": "BuildingInsuranceClaimChaos",
+      "message": "all future contracts on this building cancelled"
+    },
+    {
+      "user": "officeman900",
+      "message": "concrete stock prices crashing right now"
+    },
+    {
+      "user": "WreckingCrewWanda",
+      "message": "the DRAMA of this collapse is unmatched"
+    },
+    {
+      "user": "RubbleRouser2000",
+      "message": "support group forming for skyscraper survivors"
+    },
+    {
+      "user": "CityInfrastructureInvestor",
+      "message": "relocation services needed ASAP"
+    },
+    {
+      "user": "SkylineSadGirl",
+      "message": "the planning committee is in full panic mode"
+    },
+    {
+      "user": "CommercialRealEstateCrash",
+      "message": "providing live commentary on this collapse, 10/10 entertainment"
+    },
+    {
+      "user": "BuildingInspectorBob",
+      "message": "the claims department is gonna be SO busy"
+    },
+    {
+      "user": "SkyscraperStanAccount",
+      "message": "the entire urban landscape just changed forever"
+    },
+    {
+      "user": "skibidi_demolition",
+      "message": "filming a documentary on this exact moment"
+    },
+    {
+      "user": "FireMarshalFreakingOut",
+      "message": "this should be an olympic sport honestly"
+    },
+    {
+      "user": "UrbanRenewalUnplanned",
+      "message": "starting a donation drive for debris collectors"
+    },
+    {
+      "user": "BuildingCollapseChronicle",
+      "message": "good thing i didnt invest in that building"
+    },
+    {
+      "user": "BuildingLegacyLost",
+      "message": "the crumbling sound is strangely satisfying"
+    },
+    {
+      "user": "ConstructionContractCancelled",
+      "message": "completely overwhelmed right now, send help"
+    },
+    {
+      "user": "WreckingBallWendy",
+      "message": "google maps needs to update the skyline ASAP"
+    },
+    {
+      "user": "RentIsTooDamnHigh",
+      "message": "delighted fan of chaos right here"
+    },
+    {
+      "user": "PropertyTaxPlummeted",
+      "message": "survived the standoff, barely, what a day"
+    },
+    {
+      "user": "RentControlRebel99",
+      "message": "lamenting the loss of this iconic building"
+    },
+    {
+      "user": "BuildingInsuranceBankrupt",
+      "message": "crisis meeting called for the third time today"
+    }
   ]
 }

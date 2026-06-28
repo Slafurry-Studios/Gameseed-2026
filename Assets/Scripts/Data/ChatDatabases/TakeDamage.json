@@ -1,9 +1,408 @@
 {
   "messages": [
-    { "user": "snikifan", "message": "sniki ganbare!!" },
-    { "user": "reooo", "message": "ouch, that must hurt" },
-    { "user": "omnomman", "message": "THINK SNIKI THINK!" },
-    { "user": "Military51", "message": "Take that Big HEAD!!" },
-    { "user": "doctoral", "message": "Be safeee" }
+    {
+      "user": "PainThresholdPriya",
+      "message": "sniki ganbare!!"
+    },
+    {
+      "user": "HealthPotionHank",
+      "message": "ouch, that must hurt"
+    },
+    {
+      "user": "reooo",
+      "message": "THINK SNIKI THINK!"
+    },
+    {
+      "user": "StaggerStateStacy",
+      "message": "Take that Big HEAD!!"
+    },
+    {
+      "user": "BraveFaceBrayden",
+      "message": "Be safeee"
+    },
+    {
+      "user": "EnduranceTestEvie",
+      "message": "HIS HEALTH BAR DROPPED SO FAST"
+    },
+    {
+      "user": "ArmorBreakAaliyah",
+      "message": "NO NO NO GET UP SNIKI"
+    },
+    {
+      "user": "Military51",
+      "message": "someone get the first aid kit, FAST"
+    },
+    {
+      "user": "DefenseDownDexter",
+      "message": "thats gotta be like 500 damage minimum"
+    },
+    {
+      "user": "RecoveryTimeRowan",
+      "message": "i thought the scales were supposed to help"
+    },
+    {
+      "user": "RecoveryPushRuby",
+      "message": "the hospital bill for this would be insane"
+    },
+    {
+      "user": "BloodLossBarry",
+      "message": "calling the vet right now, hold on sniki"
+    },
+    {
+      "user": "DamageAbsorbedDamian",
+      "message": "come on regen kick in already"
+    },
+    {
+      "user": "DamageReportDexter",
+      "message": "that flinch animation hurt me too ngl"
+    },
+    {
+      "user": "BattleBruisedBowie",
+      "message": "hes in the red zone now, be careful"
+    },
+    {
+      "user": "ShockedSilenceShelby",
+      "message": "starting a prayer circle in chat rn"
+    },
+    {
+      "user": "ToughSkinTommy",
+      "message": "the emotional damage from watching this is real"
+    },
+    {
+      "user": "ToughBattleTrent",
+      "message": "that looked like a critical hit fr"
+    },
+    {
+      "user": "PrayerCircleParker",
+      "message": "is his armor breaking right now"
+    },
+    {
+      "user": "RegenDelayRomy",
+      "message": "just a flesh wound probably, hes built different"
+    },
+    {
+      "user": "HospitalBillHarold",
+      "message": "thats a lot of blood loss honestly"
+    },
+    {
+      "user": "ShieldDownSheila",
+      "message": "hes staggering, dont let them follow up"
+    },
+    {
+      "user": "EnduranceEnjoyerEli",
+      "message": "how long does recovery usually take for him"
+    },
+    {
+      "user": "RecoveryArcRebecca",
+      "message": "his defense just took a huge hit"
+    },
+    {
+      "user": "CriticalHitCarter",
+      "message": "his pain tolerance must be through the roof"
+    },
+    {
+      "user": "GuardBreakGabby",
+      "message": "that hit marker sound made me flinch too"
+    },
+    {
+      "user": "HitboxHaterHugo",
+      "message": "guard completely broken on that one"
+    },
+    {
+      "user": "RecoilReactionRiley",
+      "message": "i physically winced watching that"
+    },
+    {
+      "user": "HitMarkerHannah",
+      "message": "is that a damage over time effect now too"
+    },
+    {
+      "user": "ScarTissueSage",
+      "message": "PULL BACK PULL BACK YOURE TOO HURT"
+    },
+    {
+      "user": "ConcernedCommenterCole",
+      "message": "shield is officially down, this is dangerous"
+    },
+    {
+      "user": "PainToleranceParis",
+      "message": "hes way too vulnerable right now"
+    },
+    {
+      "user": "RegenRateRicky",
+      "message": "WHERE IS THE HEALING POTION WHEN YOU NEED IT"
+    },
+    {
+      "user": "ResilienceRespecterRon",
+      "message": "please dont get stun locked right now"
+    },
+    {
+      "user": "PainGritGiselle",
+      "message": "bruised but alive, thats my boy"
+    },
+    {
+      "user": "WoundedWarriorWanda",
+      "message": "survival instincts kicking in, come on"
+    },
+    {
+      "user": "RecoverySoonRomeo",
+      "message": "that impact zone looks brutal"
+    },
+    {
+      "user": "ToughSpotTobias",
+      "message": "good thing his skin is tough or that wouldve been worse"
+    },
+    {
+      "user": "PainfulImpactPaisley",
+      "message": "the recoil from that hit was insane"
+    },
+    {
+      "user": "DamageSpiralDante",
+      "message": "please tell me nothing is fractured"
+    },
+    {
+      "user": "ImpactSoundIsla",
+      "message": "genuinely worried for him right now"
+    },
+    {
+      "user": "FleshWoundFelix",
+      "message": "that damage spike came out of nowhere"
+    },
+    {
+      "user": "AdrenalineRushAddison",
+      "message": "his resilience is honestly impressive"
+    },
+    {
+      "user": "RecoveryPrayerRaj",
+      "message": "thats gonna leave a battle scar for sure"
+    },
+    {
+      "user": "ImpactZoneIvy",
+      "message": "my trauma response just activated watching that"
+    },
+    {
+      "user": "LowHPLeona",
+      "message": "his endurance stat carrying him hard rn"
+    },
+    {
+      "user": "DamageCounterDana",
+      "message": "pure adrenaline keeping him standing probably"
+    },
+    {
+      "user": "HangInThereHarriet",
+      "message": "that hitbox is way too generous honestly"
+    },
+    {
+      "user": "RecoveryHopeHadley",
+      "message": "come on, find that second wind sniki"
+    },
+    {
+      "user": "BattleWearyBianca",
+      "message": "that pain spike looked unbearable"
+    },
+    {
+      "user": "ToughResolveTate",
+      "message": "this might be his last stand, dont jinx it"
+    },
+    {
+      "user": "xX_HealthBarHugger_Xx",
+      "message": "watching the health bar gives me anxiety"
+    },
+    {
+      "user": "RetreatNowRex",
+      "message": "switch to a defensive stance, please"
+    },
+    {
+      "user": "ToughnessTestedTeagan",
+      "message": "praying for a fast recovery here"
+    },
+    {
+      "user": "DamageSpikeDaisy",
+      "message": "lost count of the bruises at this point"
+    },
+    {
+      "user": "TraumaResponseTara",
+      "message": "tough it out big guy, youve got this"
+    },
+    {
+      "user": "RecoveryWindowReed",
+      "message": "that impact sound alone was terrifying"
+    },
+    {
+      "user": "DefensiveStanceDana",
+      "message": "health threshold critical, somebody do something"
+    },
+    {
+      "user": "PanicPotatoPam",
+      "message": "wounded but still fighting, respect"
+    },
+    {
+      "user": "DamageControlDelaney",
+      "message": "where was the damage mitigation on that hit"
+    },
+    {
+      "user": "StunLockStuart",
+      "message": "that painful pause had me holding my breath"
+    },
+    {
+      "user": "EmergencyHealEthan",
+      "message": "this better lead to a recovery arc soon"
+    },
+    {
+      "user": "CombatFatigueCora",
+      "message": "hes in pure survival mode now"
+    },
+    {
+      "user": "DamageOverTimeDelilah",
+      "message": "hope hes not bleeding out for real"
+    },
+    {
+      "user": "FlinchFrameFreddy",
+      "message": "tough love from the universe today huh"
+    },
+    {
+      "user": "PainResponsePiper",
+      "message": "chat went silent for a second after that hit"
+    },
+    {
+      "user": "HealthCriticalHazel2",
+      "message": "regen seems delayed this time, worrying"
+    },
+    {
+      "user": "DamageMitigationMarcus",
+      "message": "pure grit and determination keeping him up"
+    },
+    {
+      "user": "StaminaDrainStella",
+      "message": "his pain threshold must be insane honestly"
+    },
+    {
+      "user": "LastStandLogan",
+      "message": "damage report coming in, not pretty"
+    },
+    {
+      "user": "ScaleArmorSkeptic",
+      "message": "combat fatigue is setting in for sure"
+    },
+    {
+      "user": "snikifan",
+      "message": "hang in there sniki, almost through this"
+    },
+    {
+      "user": "SurvivalModeSimon",
+      "message": "emergency heal needed ASAP"
+    },
+    {
+      "user": "PainfulPauseParis",
+      "message": "wounded but proud, never backing down"
+    },
+    {
+      "user": "BruiseCountBaxter",
+      "message": "adrenaline rush carrying him through this"
+    },
+    {
+      "user": "doctoral",
+      "message": "gritting through the pain like a champ"
+    },
+    {
+      "user": "FightingSpiritFinnegan",
+      "message": "please dont let this turn into a damage spiral"
+    },
+    {
+      "user": "omnomman",
+      "message": "still holding onto hope for a recovery here"
+    },
+    {
+      "user": "FractureFearFiona",
+      "message": "this is the toughest battle hes faced yet"
+    },
+    {
+      "user": "ToughItOutTina",
+      "message": "thats gonna add to the scar collection"
+    },
+    {
+      "user": "HealthThresholdHarvey",
+      "message": "wincing right alongside him over here"
+    },
+    {
+      "user": "HealthBarAnxietyAva",
+      "message": "this is a real endurance test for him"
+    },
+    {
+      "user": "PainSpikePenny",
+      "message": "looking battle weary but still standing"
+    },
+    {
+      "user": "VulnerabilityVera",
+      "message": "his pain response is honestly terrifying to watch"
+    },
+    {
+      "user": "PainfulStruggleParker2",
+      "message": "push through, recovery is close"
+    },
+    {
+      "user": "VetOnCallVicky",
+      "message": "hope some of that damage got absorbed at least"
+    },
+    {
+      "user": "WinceWatcherWill",
+      "message": "hes in a really tough spot right now"
+    },
+    {
+      "user": "WincingWitnessWyatt",
+      "message": "wound care needed the second this fight ends"
+    },
+    {
+      "user": "GritAndDeterminationGreta",
+      "message": "stamina draining fast after that hit"
+    },
+    {
+      "user": "ToughLoveTheo",
+      "message": "putting on a brave face despite the pain"
+    },
+    {
+      "user": "WoundCareWillow",
+      "message": "health is genuinely critical right now"
+    },
+    {
+      "user": "EmotionalDamageEmma",
+      "message": "fighting spirit still burning bright though"
+    },
+    {
+      "user": "AdrenalineAdaAlly",
+      "message": "theres a small recovery window, take it"
+    },
+    {
+      "user": "WoundedButProudWesley",
+      "message": "that impact looked painfully real"
+    },
+    {
+      "user": "SurvivalInstinctSam",
+      "message": "resolve still strong despite the damage"
+    },
+    {
+      "user": "BleedOutBrody",
+      "message": "battle bruised but far from finished"
+    },
+    {
+      "user": "FirstAidFanaticFred",
+      "message": "enduring through the pain like a true champion"
+    },
+    {
+      "user": "EnduringEverettE",
+      "message": "recovery has to come soon, please"
+    },
+    {
+      "user": "BattleScarBrenda",
+      "message": "damage control mode activated now"
+    },
+    {
+      "user": "BruisedButAliveBella",
+      "message": "this is a painful struggle to watch honestly"
+    },
+    {
+      "user": "SecondWindSofia",
+      "message": "toughness being tested to the absolute limit"
+    }
   ]
 }

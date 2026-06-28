@@ -1,10 +1,1464 @@
 {
   "messages": [
-    { "user": "LoremIpsu", "message": "Things just got serious." },
-    { "user": "Rooftop24m", "message": "YOu know what else serious? Your mom" },
-    { "user": "MillitarryOfficial", "message": "This is millitary and we tell you to stop!" },
-    { "user": "talung", "message": "Fnally, A WORTHY OPPONENT!" },
-    { "user": "legendnevahdah", "message": "THIS BATTLE WOULD BE LEGENDARY!" },
-    { "user": "crimisd", "message": "Yo seem not understands, this city isnt your to conquer" }
+    {
+      "user": "snekvictorious_humble",
+      "message": "Things just got serious."
+    },
+    {
+      "user": "tacticalnerd",
+      "message": "YOu know what else serious? Your mom"
+    },
+    {
+      "user": "militarycommand_lessons",
+      "message": "This is millitary and we tell you to stop!"
+    },
+    {
+      "user": "groundcrew_eternalpeace",
+      "message": "Fnally, A WORTHY OPPONENT!"
+    },
+    {
+      "user": "warzonehistoric_day",
+      "message": "THIS BATTLE WOULD BE LEGENDARY!"
+    },
+    {
+      "user": "militaryreport_pending",
+      "message": "Yo seem not understands, this city isnt your to conquer"
+    },
+    {
+      "user": "warzoneover_finally",
+      "message": "bro thinks hes top gun"
+    },
+    {
+      "user": "chopperburning_final",
+      "message": "this is the matchup of the century"
+    },
+    {
+      "user": "newsreporter22",
+      "message": "those blades are NOT gonna cut him lol"
+    },
+    {
+      "user": "militarylegacy_finalclose2",
+      "message": "the sky has eyes today"
+    },
+    {
+      "user": "chopperpilots_safe",
+      "message": "i washed out of flight school for this exact scenario"
+    },
+    {
+      "user": "chopperash_legacy",
+      "message": "MISSILES INCOMING DODGE DODGE"
+    },
+    {
+      "user": "warzonepeacefinal_secured",
+      "message": "stay calm sniki you got this"
+    },
+    {
+      "user": "warzonefinal_thatsallfolks",
+      "message": "WHY IS THERE A HELICOPTER"
+    },
+    {
+      "user": "warzonehistoric_finalchapter",
+      "message": "my taxes paying for THIS chopper smh"
+    },
+    {
+      "user": "machinegunhead",
+      "message": "ground control to major tom, snek is too big"
+    },
+    {
+      "user": "victorylap_snek",
+      "message": "20 years flying and ive never seen this"
+    },
+    {
+      "user": "snekcounter_attack",
+      "message": "radar just gave up and quit"
+    },
+    {
+      "user": "pilotwannabe",
+      "message": "thats the biggest target ive ever seen"
+    },
+    {
+      "user": "rotorblade_snap",
+      "message": "that thing cant even out turn him"
+    },
+    {
+      "user": "snekherofinal_crownmoment",
+      "message": "BRRRRRRT incoming"
+    },
+    {
+      "user": "panicattack44",
+      "message": "release the flares!!"
+    },
+    {
+      "user": "chopperfinal_tribute2",
+      "message": "leave my boy alone you metal bird"
+    },
+    {
+      "user": "warzonecleanup",
+      "message": "this is what 500 billion dollars buys you"
+    },
+    {
+      "user": "snekfanatic44",
+      "message": "watching from the ground is terrifying"
+    },
+    {
+      "user": "civilianstream_clip",
+      "message": "MORE EXPLOSIONS PLEASE"
+    },
+    {
+      "user": "warzonecredits_roll",
+      "message": "the wind from those blades alone could kill me"
+    },
+    {
+      "user": "snekrespect_max",
+      "message": "RUN ITS SHOOTING AT US TOO"
+    },
+    {
+      "user": "groundview_celebration_final",
+      "message": "i feel the need... the need for speed"
+    },
+    {
+      "user": "topgunparody",
+      "message": "scales better hold up against those bullets"
+    },
+    {
+      "user": "chopperdefeat_legendary",
+      "message": "this just in: snake vs military chopper, live"
+    },
+    {
+      "user": "skyonfirefan",
+      "message": "he needs to flank from below"
+    },
+    {
+      "user": "snekvsmissile2",
+      "message": "best dogfight ive seen and one of them isnt even a plane"
+    },
+    {
+      "user": "warzonecommentary",
+      "message": "sir the target is too large to engage normally"
+    },
+    {
+      "user": "militaryembarrassed_final",
+      "message": "comms are jammed, repeat, comms jammed"
+    },
+    {
+      "user": "backupcalled",
+      "message": "the sky is basically confetti rn but deadly"
+    },
+    {
+      "user": "militaryunit_disgraced",
+      "message": "SNIKI DODGE LEFT DODGE LEFT"
+    },
+    {
+      "user": "civilianapplause22",
+      "message": "this is exactly what the recruitment ad didnt show"
+    },
+    {
+      "user": "snekherofinal_crown",
+      "message": "feels like a warzone, love that for us"
+    },
+    {
+      "user": "civilianjoyful_ending",
+      "message": "refuel the chopper its not enough"
+    },
+    {
+      "user": "snekherostatus_sealed",
+      "message": "no way one chopper does this alone"
+    },
+    {
+      "user": "civilianbet22",
+      "message": "they calling for backup, more choppers incoming"
+    },
+    {
+      "user": "civilianawe_struck",
+      "message": "biology vs machinery, place your bets"
+    },
+    {
+      "user": "lastpilotstanding",
+      "message": "filming this for the insurance claim"
+    },
+    {
+      "user": "warzonepeacetime_begins",
+      "message": "wait doesnt HE have a machine gun too"
+    },
+    {
+      "user": "smokeandmirrors22",
+      "message": "gun vs gun, how fitting"
+    },
+    {
+      "user": "snekherofinal_bow",
+      "message": "the tension is literally explosive"
+    },
+    {
+      "user": "newsanchor_live",
+      "message": "if those blades hit him im scared"
+    },
+    {
+      "user": "chopperblade_clipped",
+      "message": "someone queue the epic battle music"
+    },
+    {
+      "user": "battlemusicguy",
+      "message": "ROOOOOAAAARRRR"
+    },
+    {
+      "user": "warzonepeacereturns_again",
+      "message": "pilot is sweating through the headset rn"
+    },
+    {
+      "user": "warzonefinalwords22",
+      "message": "shoot it down shoot it down shoot it down"
+    },
+    {
+      "user": "chopperlegacy_gone",
+      "message": "well that chopper just earned its paycheck"
+    },
+    {
+      "user": "militaryfunding_questioned",
+      "message": "civilians please evacuate the area immediately"
+    },
+    {
+      "user": "civiliankids_amazed",
+      "message": "hes mad now, this isnt good for the chopper"
+    },
+    {
+      "user": "civilianoverjoyed_final",
+      "message": "are those armor piercing rounds??"
+    },
+    {
+      "user": "groundview44",
+      "message": "never seen the sky this chaotic before"
+    },
+    {
+      "user": "chopperremains_smoking",
+      "message": "this is not in the flight manual"
+    },
+    {
+      "user": "chopperspin_out",
+      "message": "the music just changed, its go time"
+    },
+    {
+      "user": "militaryhonor_lost",
+      "message": "reporting live from absolute chaos"
+    },
+    {
+      "user": "chopperpilot_regret",
+      "message": "thats his last missile, make it count"
+    },
+    {
+      "user": "warzonereporter_final",
+      "message": "SNIKI SNIKI SNIKI SNIKI"
+    },
+    {
+      "user": "civiliansafe_now",
+      "message": "command, requesting immediate withdrawal"
+    },
+    {
+      "user": "snekvscopter_finale",
+      "message": "the crowd below is actually cheering for the snake"
+    },
+    {
+      "user": "bossfightenjoyer",
+      "message": "thats a tactical retreat if ive ever seen one"
+    },
+    {
+      "user": "groundview_dustcloud",
+      "message": "the rotor is smoking thats not good for them"
+    },
+    {
+      "user": "warzonebet_winner",
+      "message": "did he just try to BITE the helicopter"
+    },
+    {
+      "user": "talung",
+      "message": "pilot is panicking, mayday mayday"
+    },
+    {
+      "user": "chopperdefeat_final2",
+      "message": "thats gonna leave a crater"
+    },
+    {
+      "user": "rotorenvy",
+      "message": "this is goty material ngl"
+    },
+    {
+      "user": "snekherolegend_finalseal",
+      "message": "front page news for sure"
+    },
+    {
+      "user": "civilianstream_eternal",
+      "message": "wait is this the WHOLE air force now"
+    },
+    {
+      "user": "warzonecalm_finally2",
+      "message": "more choppers, this is escalating fast"
+    },
+    {
+      "user": "taxpayer_angry",
+      "message": "hiding under my desk rn, not even joking"
+    },
+    {
+      "user": "militarycommand_disbanded",
+      "message": "command, the asset is not responding to fire"
+    },
+    {
+      "user": "rotorsmoking",
+      "message": "be the hero, pilot, be the hero"
+    },
+    {
+      "user": "civilianjoy_eternal",
+      "message": "this is what we live for, lets goooo"
+    },
+    {
+      "user": "chopperwreck_souvenir",
+      "message": "counting the damage already, gonna be expensive"
+    },
+    {
+      "user": "chopperpilot_pov",
+      "message": "the sky is literally on fire"
+    },
+    {
+      "user": "militarydesperate2",
+      "message": "chasing every explosion with my eyes"
+    },
+    {
+      "user": "chopperwreck_eternal",
+      "message": "this pilot deserves a medal for trying"
+    },
+    {
+      "user": "warzonehighlight_reel",
+      "message": "HE COUNTERED THAT WAS SICK"
+    },
+    {
+      "user": "militaryfailing",
+      "message": "its spiraling, this is bad for them"
+    },
+    {
+      "user": "radioscramble",
+      "message": "imagine the war room rn, pure chaos"
+    },
+    {
+      "user": "militarydisbanded_unit",
+      "message": "absolute dominance, no contest"
+    },
+    {
+      "user": "snekfinalblow",
+      "message": "this is going in the after action report as a disaster"
+    },
+    {
+      "user": "snekbattlecry",
+      "message": "ITS GOING DOWN ITS GOING DOWN"
+    },
+    {
+      "user": "warzonebattle_overrated",
+      "message": "take your victory lap big guy"
+    },
+    {
+      "user": "groundtroops_fleeing",
+      "message": "finally we can breathe again"
+    },
+    {
+      "user": "groundtroop_watch",
+      "message": "breaking: snake defeats military helicopter, more at 9"
+    },
+    {
+      "user": "civilianthankyou_forever",
+      "message": "earned my respect today fr"
+    },
+    {
+      "user": "militarybackup_toolate",
+      "message": "rip to the chopper, valiant effort tho"
+    },
+    {
+      "user": "civilianhope22",
+      "message": "command has gone silent, not a good sign for them"
+    },
+    {
+      "user": "MillitarryOfficial",
+      "message": "WE WON WE WON LETS GOOO"
+    },
+    {
+      "user": "warzonefinalmoment_epic",
+      "message": "cleanup crew is gonna have a long day"
+    },
+    {
+      "user": "chopperlast_stand",
+      "message": "sky is finally clear again, peace at last"
+    },
+    {
+      "user": "snekvictorious_final",
+      "message": "that was insane, my heart rate is still up"
+    },
+    {
+      "user": "civilianthankful_final",
+      "message": "theres next years military budget gone"
+    },
+    {
+      "user": "warzonejournalist",
+      "message": "screenshot this for the highlight reel"
+    },
+    {
+      "user": "groundcontrol1",
+      "message": "GG no re, chopper got cooked"
+    },
+    {
+      "user": "snekheroshot",
+      "message": "the sky just declared war on us"
+    },
+    {
+      "user": "civilianstory_telling",
+      "message": "those blades better not nick him"
+    },
+    {
+      "user": "groundcrew_finalbow",
+      "message": "felt that explosion from my house"
+    },
+    {
+      "user": "civilianstream_legend22",
+      "message": "another tax dollar gone, RIP"
+    },
+    {
+      "user": "snekvictoryfinal_cheer",
+      "message": "GO SNIKI GOOO"
+    },
+    {
+      "user": "militarylegacy_finalend",
+      "message": "this is not what they taught us in sim"
+    },
+    {
+      "user": "snekrespect_earned",
+      "message": "radio is just static now, good luck pilot"
+    },
+    {
+      "user": "civilianthankful_22",
+      "message": "praying the snake wins ngl"
+    },
+    {
+      "user": "groundview_celebration",
+      "message": "imagine being scared of a rotor blade tho"
+    },
+    {
+      "user": "chopperspin_final",
+      "message": "best fireworks show ive seen this year"
+    },
+    {
+      "user": "snekfan_replaywatcher",
+      "message": "command says fall back, fall back"
+    },
+    {
+      "user": "militaryhumor99",
+      "message": "this is the finale we deserve"
+    },
+    {
+      "user": "snekheronow_official",
+      "message": "smoke everywhere, cant see anything"
+    },
+    {
+      "user": "chopperexplodes_fan",
+      "message": "ITS LITERALLY ON FIRE LMAOOO"
+    },
+    {
+      "user": "militarydefeat_acceptance",
+      "message": "whoever planned this mission needs a new job"
+    },
+    {
+      "user": "chopperengine_smoke",
+      "message": "evacuating now, see yall after the stream"
+    },
+    {
+      "user": "civiliancelebration_huge",
+      "message": "scales holding strong so far"
+    },
+    {
+      "user": "snekvictorychant",
+      "message": "bro really thought bullets would work"
+    },
+    {
+      "user": "civilianjoy_overload",
+      "message": "this is funnier than the actual top gun"
+    },
+    {
+      "user": "snekvictorychant_lastcall",
+      "message": "and theeere goes another missile"
+    },
+    {
+      "user": "civilianthankyou22",
+      "message": "i shouldve called in sick today"
+    },
+    {
+      "user": "civilianbigwin_celebration",
+      "message": "watch out for falling debris everyone"
+    },
+    {
+      "user": "warzonecivilian_cheering2",
+      "message": "that roar gave me chills"
+    },
+    {
+      "user": "civiliansrelieved",
+      "message": "this is going in the blooper reel for sure"
+    },
+    {
+      "user": "skyclearagain",
+      "message": "did i just see a blade snap off"
+    },
+    {
+      "user": "groundcrew_cleanup2",
+      "message": "ground zero view is wild rn"
+    },
+    {
+      "user": "snekvsfirepower",
+      "message": "grabbing popcorn for this one"
+    },
+    {
+      "user": "civilianheart_racing",
+      "message": "its spinning out of control"
+    },
+    {
+      "user": "militarybudget_wasted",
+      "message": "IM SCREAMING THIS IS SO GOOD"
+    },
+    {
+      "user": "chopperpilot_prayer",
+      "message": "all units retreat immediately"
+    },
+    {
+      "user": "pilotnervous22",
+      "message": "eerie silence before the next wave"
+    },
+    {
+      "user": "civiliancheer_loud",
+      "message": "second chopper just arrived, oh no"
+    },
+    {
+      "user": "civilianhiding22",
+      "message": "two against one, not fair tbh"
+    },
+    {
+      "user": "warzonefinalpeace_arrives",
+      "message": "send the WHOLE air force why not"
+    },
+    {
+      "user": "snekvictorious_eternal",
+      "message": "i almost got blown away by the wind"
+    },
+    {
+      "user": "warzonebattle_remembered",
+      "message": "comms just got cut, total chaos now"
+    },
+    {
+      "user": "chopperash_remains",
+      "message": "that dodge deserves a 10/10"
+    },
+    {
+      "user": "snekherolegacy_begins",
+      "message": "pilot is definitely sweating bullets rn"
+    },
+    {
+      "user": "snekvictorymusic_peak",
+      "message": "perfect photo op moment right there"
+    },
+    {
+      "user": "militarybudgetfan",
+      "message": "this is going viral for sure"
+    },
+    {
+      "user": "chopperlastditch",
+      "message": "counter attack incoming, brace yourselves"
+    },
+    {
+      "user": "chopperlegacy_ruined2",
+      "message": "this is their last resort clearly"
+    },
+    {
+      "user": "chopperdoubter",
+      "message": "the downfall of modern warfare right here"
+    },
+    {
+      "user": "tacticalretreat9",
+      "message": "ground troops just standing there in shock"
+    },
+    {
+      "user": "chopperash_souvenir",
+      "message": "another missile, another dodge, lets gooo"
+    },
+    {
+      "user": "veteranpilot22",
+      "message": "this will be the headline tomorrow"
+    },
+    {
+      "user": "civilianvictory_final22",
+      "message": "pilot praying to every god rn"
+    },
+    {
+      "user": "chopperash_finalrest",
+      "message": "bro im betting my whole paycheck on the snake"
+    },
+    {
+      "user": "snekherolegend_complete",
+      "message": "backup is taking way too long"
+    },
+    {
+      "user": "warzonebattlecry_lastone",
+      "message": "SNI-KI SNI-KI SNI-KI"
+    },
+    {
+      "user": "radarop_99",
+      "message": "one blade completely gone now"
+    },
+    {
+      "user": "snekarmorcheck2",
+      "message": "casualty count rising, not for him tho"
+    },
+    {
+      "user": "militaryfinalreport_done",
+      "message": "everyone on the ground is panicking"
+    },
+    {
+      "user": "groundview_silence2",
+      "message": "screenshot this moment right here"
+    },
+    {
+      "user": "warzonepeacetime_finally",
+      "message": "their honor is gone after this"
+    },
+    {
+      "user": "snekfan_lastword",
+      "message": "engine smoking bad, not gonna last"
+    },
+    {
+      "user": "snekdodge_master",
+      "message": "hope is rising for our boy"
+    },
+    {
+      "user": "chopperwreckage_view",
+      "message": "VICTORY VICTORY VICTORY"
+    },
+    {
+      "user": "calmunderfire",
+      "message": "cleanup crew already on standby"
+    },
+    {
+      "user": "militaryforever_disgraced2",
+      "message": "ordering full withdrawal now"
+    },
+    {
+      "user": "civilianevac_22",
+      "message": "wait did he just eject??"
+    },
+    {
+      "user": "bossfightover_relief",
+      "message": "ground crew scrambling like crazy"
+    },
+    {
+      "user": "rotorwash_guy",
+      "message": "this looks like the final blow coming up"
+    },
+    {
+      "user": "warzonehistoric_finalentry",
+      "message": "the music is swelling, this is it"
+    },
+    {
+      "user": "warzonemusic_swell",
+      "message": "the crowd is roaring back at him"
+    },
+    {
+      "user": "civilianthankyou_eternal",
+      "message": "they know its over for them"
+    },
+    {
+      "user": "snekfan_grateful",
+      "message": "this is their last stand for sure"
+    },
+    {
+      "user": "warzonecommander_yelling",
+      "message": "im literally tearing up this is beautiful"
+    },
+    {
+      "user": "chopperfan_acceptance",
+      "message": "final ground shake before it ends"
+    },
+    {
+      "user": "bossmusic_hits",
+      "message": "this is a historic moment fr fr"
+    },
+    {
+      "user": "militaryembarrassed2",
+      "message": "everyone is clapping down here"
+    },
+    {
+      "user": "militarydefeat_accepted2",
+      "message": "their legacy ruined in one stream"
+    },
+    {
+      "user": "legendnevahdah",
+      "message": "wreckage everywhere, what a sight"
+    },
+    {
+      "user": "warzonejournalist2",
+      "message": "take your victory lap big guy"
+    },
+    {
+      "user": "civilianvictory_party",
+      "message": "and thats the end of round one folks"
+    },
+    {
+      "user": "militarylegacy_buried",
+      "message": "finally we can relax for a sec"
+    },
+    {
+      "user": "skyfullofbullets",
+      "message": "command is basically disbanded rn"
+    },
+    {
+      "user": "chopperpilot_lastwords",
+      "message": "RIP to the chopper, you tried"
+    },
+    {
+      "user": "fireworksfan9",
+      "message": "max respect earned today"
+    },
+    {
+      "user": "chopperpilot_ejected",
+      "message": "celebration starting on the ground"
+    },
+    {
+      "user": "chopperreinforce2",
+      "message": "this goes straight to the highlight reel"
+    },
+    {
+      "user": "groundview_aftermath2",
+      "message": "the cheering is SO loud right now"
+    },
+    {
+      "user": "chopperwreck_finalmonument",
+      "message": "well that budget was wasted"
+    },
+    {
+      "user": "civilianroar_back",
+      "message": "FINAL EXPLOSION LETS GOOOO"
+    },
+    {
+      "user": "warzonecleanup2",
+      "message": "that victory roar hit different"
+    },
+    {
+      "user": "warzonepeace_returns",
+      "message": "peace is returning slowly"
+    },
+    {
+      "user": "snekfan_overjoyed",
+      "message": "thank you sniki for saving us"
+    },
+    {
+      "user": "warzone_pov",
+      "message": "officially defeated, no more units left"
+    },
+    {
+      "user": "civilianpopcorn",
+      "message": "just ash and metal remains now"
+    },
+    {
+      "user": "snekvictory_roar",
+      "message": "hes officially a hero now"
+    },
+    {
+      "user": "warzonefinalcredits_roll",
+      "message": "cleanup crew got their work cut out"
+    },
+    {
+      "user": "battleoverhype",
+      "message": "the warzone is finally calming down"
+    },
+    {
+      "user": "groundview_panic",
+      "message": "party mode activated down here"
+    },
+    {
+      "user": "chopperexplosion_finale",
+      "message": "this report writes itself, what a disaster"
+    },
+    {
+      "user": "groundshake_final",
+      "message": "their helicopter legacy is officially gone"
+    },
+    {
+      "user": "groundcrew77",
+      "message": "proudest moment of the stream so far"
+    },
+    {
+      "user": "civilianpartymode",
+      "message": "history books will remember this day"
+    },
+    {
+      "user": "warzonepeacetime_eternal",
+      "message": "we are safe now, thank god"
+    },
+    {
+      "user": "snekfan_chanting",
+      "message": "wonder what their next move is"
+    },
+    {
+      "user": "groundcrew_relieved",
+      "message": "ok fine the snake won, respect"
+    },
+    {
+      "user": "warcorrespondent",
+      "message": "this music hits different after a win"
+    },
+    {
+      "user": "groundcrew_scramble",
+      "message": "throwing a party down here fr"
+    },
+    {
+      "user": "battledamage_count",
+      "message": "calm has finally returned"
+    },
+    {
+      "user": "chopperwreck_finalclose",
+      "message": "still in awe of what just happened"
+    },
+    {
+      "user": "militaryreport_final2",
+      "message": "the official report is gonna be wild"
+    },
+    {
+      "user": "skywarrior22",
+      "message": "hope the pilots made it out safe tbh"
+    },
+    {
+      "user": "airforce_dropout",
+      "message": "grateful to witness this live"
+    },
+    {
+      "user": "chopperblade_gone",
+      "message": "the aftermath is honestly insane to see"
+    },
+    {
+      "user": "groundshake99",
+      "message": "im gonna tell my grandkids about this"
+    },
+    {
+      "user": "snekherofinal_cheer",
+      "message": "budget cuts incoming after this fiasco"
+    },
+    {
+      "user": "militarydisgrace_eternal",
+      "message": "remains still smoking on the ground"
+    },
+    {
+      "user": "militarybudgetcut_incoming",
+      "message": "FINAL CHEER FOR OUR BOY"
+    },
+    {
+      "user": "chopperblade_souvenir",
+      "message": "silence finally falls over the ground"
+    },
+    {
+      "user": "militaryspending",
+      "message": "screenshotting this for history"
+    },
+    {
+      "user": "Rooftop24m",
+      "message": "joy overload right now ngl"
+    },
+    {
+      "user": "militarynextmove_unknown",
+      "message": "defeat fully accepted by command"
+    },
+    {
+      "user": "militaryfinal_disgrace",
+      "message": "an era has ended for that chopper unit"
+    },
+    {
+      "user": "civiliancheers22",
+      "message": "ONE MORE TIME, SNIKI SNIKI"
+    },
+    {
+      "user": "chopperdown_hope",
+      "message": "peacetime begins now, finally"
+    },
+    {
+      "user": "snekvictoryfinal_lastcall2",
+      "message": "huge celebration happening right now"
+    },
+    {
+      "user": "snekherofinal_legacy",
+      "message": "lesson learned the hard way for them"
+    },
+    {
+      "user": "groundview_finalshot",
+      "message": "respectfully, that chopper got cooked"
+    },
+    {
+      "user": "skydebris_watch",
+      "message": "hero status officially confirmed"
+    },
+    {
+      "user": "flarefan22",
+      "message": "ground crew finally relieved"
+    },
+    {
+      "user": "warzonebattleover_truly",
+      "message": "this battle will be remembered forever"
+    },
+    {
+      "user": "militaryembarrassed",
+      "message": "thank you again sniki, our hero"
+    },
+    {
+      "user": "snekvictorylap_final",
+      "message": "final report just got submitted, ouch"
+    },
+    {
+      "user": "explosivetension",
+      "message": "someone is gonna take a piece as a souvenir"
+    },
+    {
+      "user": "warzonebattle_finalclose",
+      "message": "and thats a wrap on this fight"
+    },
+    {
+      "user": "armorpiercing99",
+      "message": "peace returns once more"
+    },
+    {
+      "user": "explosionchaser",
+      "message": "biggest win of the year for us"
+    },
+    {
+      "user": "civilianparachute_watch",
+      "message": "that unit is officially disbanded"
+    },
+    {
+      "user": "civilianvictory_eternal2",
+      "message": "this is gonna be a history lesson someday"
+    },
+    {
+      "user": "warzonecalmdown_finally",
+      "message": "last word goes to sniki obviously"
+    },
+    {
+      "user": "chopperburning_legend",
+      "message": "ground peace fully restored now"
+    },
+    {
+      "user": "snekcounter2",
+      "message": "what an epic final moment"
+    },
+    {
+      "user": "snekdominance22",
+      "message": "my heart is still racing from that"
+    },
+    {
+      "user": "warzonefinalpeace_lastword",
+      "message": "lessons will be taught from this disaster"
+    },
+    {
+      "user": "chopperdesperate",
+      "message": "imagine keeping a blade as a trophy"
+    },
+    {
+      "user": "LoremIpsu",
+      "message": "final victory lap, well deserved"
+    },
+    {
+      "user": "militarystrategist",
+      "message": "ngl that was way better than the trailer"
+    },
+    {
+      "user": "groundimpact_fan",
+      "message": "clipping this for my friends right now"
+    },
+    {
+      "user": "skepticalvet",
+      "message": "their unit is forever disgraced now"
+    },
+    {
+      "user": "rotorblade_fear",
+      "message": "still burning, what a sight to see"
+    },
+    {
+      "user": "militaryforever_remembered",
+      "message": "his hero legacy begins today"
+    },
+    {
+      "user": "missilewatcher",
+      "message": "aftermath view is honestly insane"
+    },
+    {
+      "user": "chopperhero_wannabe",
+      "message": "final words: respect the snake"
+    },
+    {
+      "user": "chopperblade_tribute",
+      "message": "victory party starts now"
+    },
+    {
+      "user": "snekvictorious_forever2",
+      "message": "bet this report leaks online tomorrow"
+    },
+    {
+      "user": "snekheroshot2",
+      "message": "ruined legacy for the whole squadron"
+    },
+    {
+      "user": "reinforcementscome",
+      "message": "overjoyed right now, what a stream"
+    },
+    {
+      "user": "militaryreport_leaked",
+      "message": "everyone calm down, its over now"
+    },
+    {
+      "user": "militarylegacy_ruined",
+      "message": "thankful for this protector of ours"
+    },
+    {
+      "user": "militaryretreat_call",
+      "message": "next gen choppers wont be enough either"
+    },
+    {
+      "user": "snekherostatus_confirmed",
+      "message": "selling ash from the wreck, dm me"
+    },
+    {
+      "user": "snekfan_proudmoment",
+      "message": "victorious as always, our boy"
+    },
+    {
+      "user": "snekpride_moment",
+      "message": "ground crew partying with the civilians now"
+    },
+    {
+      "user": "topgunwannabe",
+      "message": "today goes down in history"
+    },
+    {
+      "user": "warroomtension",
+      "message": "first smile in hours, finally relieved"
+    },
+    {
+      "user": "militarylessonlearned",
+      "message": "command going quiet, embarrassed probably"
+    },
+    {
+      "user": "warzone_silence",
+      "message": "officially the worst day for that pilot"
+    },
+    {
+      "user": "snekfan_supreme",
+      "message": "FINAL CHEER, HES THE BEST"
+    },
+    {
+      "user": "militarydefeat_eternal",
+      "message": "peace secured for now at least"
+    },
+    {
+      "user": "chopperwreck_finalrest",
+      "message": "biggest fan of this snake right here"
+    },
+    {
+      "user": "civilianpanicking",
+      "message": "their last words probably werent good"
+    },
+    {
+      "user": "warzonefinalbattle_done",
+      "message": "tribute to the fallen blade lol"
+    },
+    {
+      "user": "snekherofinal_thelastbow",
+      "message": "last call for the victory chant"
+    },
+    {
+      "user": "snekvsairforce",
+      "message": "this is the final shot of the battle"
+    },
+    {
+      "user": "chopperblade_fan",
+      "message": "roll the credits, what a battle"
+    },
+    {
+      "user": "civilianrelief_sigh",
+      "message": "hugging strangers in celebration rn"
+    },
+    {
+      "user": "chopperengine_dying",
+      "message": "this loss will forever be remembered"
+    },
+    {
+      "user": "tacticalwithdrawal",
+      "message": "final wreckage shot, absolutely wild"
+    },
+    {
+      "user": "snekvictorychant3",
+      "message": "hero status sealed forever"
+    },
+    {
+      "user": "militarycommand_quiet",
+      "message": "one more battle cry for the road"
+    },
+    {
+      "user": "groundcelebration_party",
+      "message": "tears of joy down here ngl"
+    },
+    {
+      "user": "groundview_finalpeace2",
+      "message": "final disgrace for the squadron"
+    },
+    {
+      "user": "chopperfan_respectful",
+      "message": "still burning slowly, poetic almost"
+    },
+    {
+      "user": "snekrage_mode",
+      "message": "take your bow, you earned it"
+    },
+    {
+      "user": "snekherofinal_applause",
+      "message": "final celebration shot for the books"
+    },
+    {
+      "user": "groundzero_view",
+      "message": "peacetime is finally here, for real this time"
+    },
+    {
+      "user": "chopperburning_wreck",
+      "message": "joyful ending to a crazy fight"
+    },
+    {
+      "user": "civilianjoyful_finalclose",
+      "message": "and that legacy officially ends"
+    },
+    {
+      "user": "militarybudgetjoke",
+      "message": "salute to the chopper for trying"
+    },
+    {
+      "user": "chopperfinal_salute",
+      "message": "a legend was made today"
+    },
+    {
+      "user": "civilianrelieved_smile",
+      "message": "rolling the final credits on this one"
+    },
+    {
+      "user": "groundview_storyend",
+      "message": "forever thankful for our protector"
+    },
+    {
+      "user": "snekvschopper",
+      "message": "this defeat will be eternal"
+    },
+    {
+      "user": "skydivewatcher",
+      "message": "eternal wreckage, a monument almost"
+    },
+    {
+      "user": "snekfan_screaming",
+      "message": "his legacy grows with every fight"
+    },
+    {
+      "user": "warzonepilot_ejectseat",
+      "message": "and that's the end of this chapter"
+    },
+    {
+      "user": "chopperfan_mourning",
+      "message": "final battle officially done and dusted"
+    },
+    {
+      "user": "militaryradio_panic",
+      "message": "this stream is legendary already"
+    },
+    {
+      "user": "chopperfan_sad",
+      "message": "worst day in military record history"
+    },
+    {
+      "user": "groundcrew_partying",
+      "message": "the ashes will tell this story"
+    },
+    {
+      "user": "snekvictory_done",
+      "message": "applause for the real hero here"
+    },
+    {
+      "user": "militarybackup_fail",
+      "message": "peace finally secured for the city"
+    },
+    {
+      "user": "pilotintraining",
+      "message": "overjoyed beyond words right now"
+    },
+    {
+      "user": "chopperwreckage_final",
+      "message": "embarrassment level: maximum"
+    },
+    {
+      "user": "civilianhope_rising",
+      "message": "a legendary defeat for the ages"
+    },
+    {
+      "user": "militarywithdraw2",
+      "message": "victorious forever and always"
+    },
+    {
+      "user": "militarybudgetfan2",
+      "message": "ground crew taking their final bow too"
+    },
+    {
+      "user": "groundcamera_shaking",
+      "message": "final entry in the history books"
+    },
+    {
+      "user": "explosionlover",
+      "message": "thankful beyond measure for this protector"
+    },
+    {
+      "user": "rotorwash_victim",
+      "message": "their legacy buried with the wreckage"
+    },
+    {
+      "user": "chopperspiraling",
+      "message": "burning into legend status now"
+    },
+    {
+      "user": "skywatcher22",
+      "message": "crown this guy already, hes the king"
+    },
+    {
+      "user": "snekroar_fan",
+      "message": "final peace has arrived at last"
+    },
+    {
+      "user": "civilianhug_celebration",
+      "message": "final victory celebration starts now"
+    },
+    {
+      "user": "snekdefender3",
+      "message": "eternal disgrace for that squadron"
+    },
+    {
+      "user": "snekenjoyer_99",
+      "message": "resting in pieces, literally"
+    },
+    {
+      "user": "militarydefeat_finalseal",
+      "message": "the legend is complete now"
+    },
+    {
+      "user": "warzonehistoric_screenshot",
+      "message": "final celebration shot, what a day"
+    },
+    {
+      "user": "chopperunit_disbanded2",
+      "message": "the battle is truly over now"
+    },
+    {
+      "user": "militaryanalyst_shocked",
+      "message": "eternal joy for this victory"
+    },
+    {
+      "user": "crimisd",
+      "message": "final report: total failure"
+    },
+    {
+      "user": "chopperhistory_lesson",
+      "message": "final tribute to a brave but doomed chopper"
+    },
+    {
+      "user": "militarywithdraw",
+      "message": "victorious forever, no doubt about it"
+    },
+    {
+      "user": "civilianumbrella_useless",
+      "message": "eternal peacetime begins now"
+    },
+    {
+      "user": "commsdown22",
+      "message": "eternally thankful for our boy"
+    },
+    {
+      "user": "chopperonfire_lol",
+      "message": "their legacy is over for good"
+    },
+    {
+      "user": "groundview_finalcelebration2",
+      "message": "ashes resting finally, what a fight"
+    },
+    {
+      "user": "snekvsmachine",
+      "message": "crowning moment for our hero"
+    },
+    {
+      "user": "civilianoutrage22",
+      "message": "eternal peace for the ground crew too"
+    },
+    {
+      "user": "chopperfinal_rip",
+      "message": "final chapter of this historic battle"
+    },
+    {
+      "user": "rotorblade_guy",
+      "message": "eternal victory vibes right now"
+    },
+    {
+      "user": "chopperpilot_sweating",
+      "message": "defeat sealed forever in the records"
+    },
+    {
+      "user": "armyrecruiter9",
+      "message": "this wreck deserves a monument honestly"
+    },
+    {
+      "user": "snekvictorychant_final",
+      "message": "legend status sealed for good"
+    },
+    {
+      "user": "snekvictory_chant2",
+      "message": "last word: peace at last"
+    },
+    {
+      "user": "snekarmor_check",
+      "message": "eternal memories from this stream"
+    },
+    {
+      "user": "chopperdownfall",
+      "message": "forever disgraced, no coming back"
+    },
+    {
+      "user": "ironicfan22",
+      "message": "RIP for real this time"
+    },
+    {
+      "user": "snekfan_tears",
+      "message": "last call: VICTORY FOR SNIKI"
+    },
+    {
+      "user": "militarynextgen_warning",
+      "message": "final peace shot of the ground below"
+    },
+    {
+      "user": "militaryrecord_worst",
+      "message": "and that closes this epic battle for good"
+    },
+    {
+      "user": "civilianbiggest_fan22",
+      "message": "joyful close to a wild fight"
+    },
+    {
+      "user": "civilianvictory_tears",
+      "message": "final close to their ruined legacy"
+    },
+    {
+      "user": "snekfanatic_22",
+      "message": "final close on the smoking wreck"
+    },
+    {
+      "user": "warzoneaftermath22",
+      "message": "the last bow goes to our champion"
+    },
+    {
+      "user": "snekvstwo_choppers",
+      "message": "thats all folks, peace has returned"
+    },
+    {
+      "user": "chopperera_ended",
+      "message": "any last words pilot? tick tock"
+    },
+    {
+      "user": "snekbiteattempt",
+      "message": "this is better than any movie ive seen"
+    },
+    {
+      "user": "warzonephoto_op",
+      "message": "all units fall back NOW"
+    },
+    {
+      "user": "militarycommand_silent",
+      "message": "my camera is literally shaking from the blasts"
+    },
+    {
+      "user": "loudnoiseguy",
+      "message": "called it, snake wins every time"
+    },
+    {
+      "user": "civilianfilming2",
+      "message": "did he just clip the blade with his tail"
+    },
+    {
+      "user": "militarycommscut",
+      "message": "my umbrella is useless against shrapnel lol"
+    },
+    {
+      "user": "civilian_filming",
+      "message": "proud of him honestly, big growth"
+    },
+    {
+      "user": "civiliansafety0",
+      "message": "questioning every funding decision after this"
+    },
+    {
+      "user": "bulletproof_doubt",
+      "message": "engine's dying, you can hear it sputter"
+    },
+    {
+      "user": "flightschooldrop",
+      "message": "ground troops fleeing the scene now"
+    },
+    {
+      "user": "dogfightfan",
+      "message": "firepower means nothing against him"
+    },
+    {
+      "user": "warzonepeace_secured",
+      "message": "commander yelling into the radio, total panic"
+    },
+    {
+      "user": "warzonecasualty_count",
+      "message": "kids amazed, parents terrified, classic combo"
+    },
+    {
+      "user": "militarylegacy_overforgood",
+      "message": "final spin before it goes down"
+    },
+    {
+      "user": "militarylast_words",
+      "message": "rewatching this clip for the 10th time"
+    },
+    {
+      "user": "warzonehistoric_moment",
+      "message": "backup arrived too late, as usual"
+    },
+    {
+      "user": "warzonehistorian22",
+      "message": "dust cloud blocking the whole view now"
+    },
+    {
+      "user": "groundcrew_silentshock",
+      "message": "eject seat just activated, hes out"
+    },
+    {
+      "user": "civilianthankyou_again",
+      "message": "watching the parachute deploy, at least hes safe"
+    },
+    {
+      "user": "groundpeace_restored",
+      "message": "stays humble even after winning, respect"
+    },
+    {
+      "user": "snekvictorious_legend",
+      "message": "this unit is getting disbanded for sure"
+    },
+    {
+      "user": "snekvictorylap2",
+      "message": "analysts are gonna study this footage forever"
+    },
+    {
+      "user": "skyiseyesnek",
+      "message": "ground crew in complete silent shock"
+    },
+    {
+      "user": "militarydefeat_final",
+      "message": "cheering so loud the stream mic is clipping"
+    }
   ]
 }

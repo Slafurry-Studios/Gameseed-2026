@@ -34,7 +34,7 @@ public class StreamChatManager : Singleton<StreamChatManager>
 
         if (Input.GetKeyDown(KeyCode.Alpha1)) HandleStreamChat(StreamChatType.DESTROY_BUILDING, debugChatCount);
         if (Input.GetKeyDown(KeyCode.Alpha2)) HandleStreamChat(StreamChatType.KILL_CIVILIAN, debugChatCount);
-        if (Input.GetKeyDown(KeyCode.Alpha3)) HandleStreamChat(StreamChatType.KILl_HOSTILES, debugChatCount);
+        if (Input.GetKeyDown(KeyCode.Alpha3)) HandleStreamChat(StreamChatType.KILL_HOSTILES, debugChatCount);
         if (Input.GetKeyDown(KeyCode.Alpha4)) HandleStreamChat(StreamChatType.ADD_SEGMENTS, debugChatCount);
         if (Input.GetKeyDown(KeyCode.Alpha5)) HandleStreamChat(StreamChatType.SNAKE_BUFF, debugChatCount);
         if (Input.GetKeyDown(KeyCode.Alpha6)) HandleStreamChat(StreamChatType.WANTED_LEVEL, debugChatCount);
