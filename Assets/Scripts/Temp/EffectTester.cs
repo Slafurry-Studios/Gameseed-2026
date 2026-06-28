@@ -1,5 +1,6 @@
 using UnityEngine;
 using Game.Core; // Brings in IDamageable and IVisualEffect
+using Game.Core.Effects;
 
 namespace Game.Temp
 {

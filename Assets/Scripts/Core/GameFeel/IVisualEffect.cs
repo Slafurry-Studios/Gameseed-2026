@@ -1,4 +1,4 @@
-namespace Game.Core
+namespace Game.Core.Effects
 {
     public interface IVisualEffect
     {

@@ -10,7 +10,7 @@ public class ObjectiveManager : Singleton<ObjectiveManager>
 
     public event System.Action<Objective, float> OnObjectiveProgress;
     public event System.Action<Objective> OnObjectiveCompleted;
-
+    public event System.Action<Objective> OnObjectiveAdded;
     public void AddObjective(Objective objective)
     {
         if (objective.Channel == null)
@@ -26,20 +26,14 @@ public class ObjectiveManager : Singleton<ObjectiveManager>
         }
 
         activeObjectives.Add(objective);
-
         progress[objective] = 0f;
 
         System.Action<float> handler = amount => HandleProgress(objective, amount);
         handlers[objective] = handler;
         objective.Channel.OnRaised += handler;
 
-        if (PlayerDonationHUD.Instance != null && objective.Channel.useDonation)
-        {
-            string donationMessage = objective.Channel.donationMessage;
-            PlayerDonationHUD.Instance.UpdateDonation(donationMessage);
-        }
+        OnObjectiveAdded?.Invoke(objective);
     }
-
     public void RemoveObjective(Objective objective)
     {
         if (!activeObjectives.Contains(objective))
