@@ -1,6 +1,6 @@
 // DebugObjectiveTrigger.cs
 using UnityEngine;
-
+using Game.UI.HUD;
 public class DebugObjectiveTrigger : MonoBehaviour
 {
     [SerializeField] private EnemyDeathChannel enemyDeathChannel;

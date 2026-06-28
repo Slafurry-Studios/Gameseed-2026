@@ -28,7 +28,7 @@ public class PlayerHUD : MonoBehaviour
         
         if (playerHealth != null)
         {
-            playerHealth.OnHealthPctChanged += HandleHealthChanged;
+            playerHealth.OnHealthChanged += HandleHealthChanged;
             playerHealth.OnDied += HandlePlayerDied;
         }
     }
@@ -42,7 +42,7 @@ public class PlayerHUD : MonoBehaviour
 
         if (playerHealth != null)
         {
-            playerHealth.OnHealthPctChanged -= HandleHealthChanged;
+            playerHealth.OnHealthChanged -= HandleHealthChanged;
             playerHealth.OnDied -= HandlePlayerDied;
         }
     }
@@ -63,7 +63,7 @@ public class PlayerHUD : MonoBehaviour
        
         if (playerHealth != null) 
         {
-            HandleHealthChanged(playerHealth.GetHealthNormalized());
+            HandleHealthChanged(playerHealth.GetHealth());
         }
     }
 
