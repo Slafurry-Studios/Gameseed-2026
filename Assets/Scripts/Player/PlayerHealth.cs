@@ -1,6 +1,6 @@
 using System;
-using UnityEngine;
 using Game.Generic;
+using UnityEngine;
 
 namespace Game.Player
 {
@@ -10,6 +10,8 @@ namespace Game.Player
         [SerializeField] private Animator playerDizzyAnimator;
         [SerializeField] private PlayerMovement playerMovement;
 
+        private RigidbodyConstraints2D originalConstraints;
+
         protected override void Awake()
         {
             base.Awake();
@@ -17,52 +19,77 @@ namespace Game.Player
             {
                 playerMovement = GetComponent<PlayerMovement>();
             }
+            
+            if (playerMovement != null)
+            {
+                Rigidbody2D rb = playerMovement.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    originalConstraints = rb.constraints;
+                }
+            }
         }
 
         protected override void Die()
         {
             currentHealth = 0f;
             base.Die();
-            
+
+
             if (playerDizzyAnimator != null)
             {
                 playerDizzyAnimator.gameObject.SetActive(true);
                 playerDizzyAnimator.SetTrigger("Collide");
             }
 
-            // Hentikan movement & set stamina ke 0
             if (playerMovement != null)
             {
                 playerMovement.SetStamina(0f);
                 playerMovement.enabled = false;
+
+                Rigidbody2D rb = playerMovement.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    rb.velocity = Vector2.zero;
+                    rb.angularVelocity = 0f;
+                    rb.constraints = RigidbodyConstraints2D.FreezeAll;
+                }
+
+                Animator anim = playerMovement.GetComponent<Animator>();
+                if (anim != null)
+                {
+                    anim.speed = 0f;
+                }
             }
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            CheckBuilding(collision.gameObject);
+            CheckCollision(collision.gameObject);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            CheckBuilding(other.gameObject);
+            CheckCollision(other.gameObject);
         }
 
-        private void CheckBuilding(GameObject obj)
+        private void CheckCollision(GameObject obj)
         {
             if (isDead)
                 return;
 
-            if (obj.CompareTag("Building") || obj.CompareTag("building") || obj.name.ToLower().Contains("building"))
+
+            if (obj.CompareTag("Building") || obj.CompareTag("Body"))
             {
                 Die();
             }
         }
+
         public void ResetPlayer()
         {
-            isDead = false; 
-            
-            currentHealth = 100f; 
+            isDead = false;
+
+            currentHealth = 100f;
 
             if (playerDizzyAnimator != null)
             {
@@ -73,9 +100,19 @@ namespace Game.Player
             {
                 playerMovement.enabled = true;
                 playerMovement.SetStamina(100f);
-            }
 
-            Debug.Log("[PlayerHealth] Player has been reset and respawned!");
+                Rigidbody2D rb = playerMovement.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    rb.constraints = originalConstraints;
+                }
+
+                Animator anim = playerMovement.GetComponent<Animator>();
+                if (anim != null)
+                {
+                    anim.speed = 1f;
+                }
+            }
         }
     }
 }
