@@ -1,8 +1,9 @@
 public enum StreamChatType
 {
     DESTROY_BUILDING,
+    DESTROY_COLLISION,
     KILL_CIVILIAN,
-    KILl_HOSTILES,
+    KILL_HOSTILES,
     ADD_SEGMENTS,
     SNAKE_BUFF,
     WANTED_LEVEL,

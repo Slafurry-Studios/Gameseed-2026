@@ -1,9 +1,404 @@
 {
   "messages": [
-    { "user": "LoremIpsum", "message": "You're getting huge!" },
-    { "user": "bigbigbig", "message": "HOw did it wuld fit?" },
-    { "user": "varlong", "message": "LOOONGGGGGG" },
-    { "user": "bigbang00", "message": "Mine is bigger" },
-    { "user": "Moon tzu", "message": "he who is long is not short" }
+    {
+      "user": "tinyhuman_pov",
+      "message": "You're getting huge!"
+    },
+    {
+      "user": "snekstats_bot",
+      "message": "HOw did it wuld fit?"
+    },
+    {
+      "user": "biggestboyfan",
+      "message": "LOOONGGGGGG"
+    },
+    {
+      "user": "earthquake_guy",
+      "message": "Mine is bigger"
+    },
+    {
+      "user": "rip_basement",
+      "message": "ANOTHER ONE??"
+    },
+    {
+      "user": "snekanatomy101",
+      "message": "someone get a measuring tape"
+    },
+    {
+      "user": "panicked_pilot",
+      "message": "at this point its just a noodle"
+    },
+    {
+      "user": "measuring_unitsguy",
+      "message": "thats not how mass works"
+    },
+    {
+      "user": "loopholefinder",
+      "message": "how is it not tipping over"
+    },
+    {
+      "user": "skeptical_sam",
+      "message": "you can see him from space now"
+    },
+    {
+      "user": "guinessbook",
+      "message": "thats longer than my train commute"
+    },
+    {
+      "user": "townhall_official",
+      "message": "we calling guiness world record after this"
+    },
+    {
+      "user": "tailend_gang",
+      "message": "bro is a highway now"
+    },
+    {
+      "user": "thiccnessfan",
+      "message": "structurally this shouldnt be possible"
+    },
+    {
+      "user": "snekqueen00",
+      "message": "yo mama so- wait wrong chat"
+    },
+    {
+      "user": "longestyet",
+      "message": "is this safe for him??"
+    },
+    {
+      "user": "trafficjamfan",
+      "message": "i did not study for THIS in vet school"
+    },
+    {
+      "user": "googlemaps",
+      "message": "he could loop around the whole map fr"
+    },
+    {
+      "user": "lengthinator",
+      "message": "fake, snakes dont grow that fast"
+    },
+    {
+      "user": "loopdeloop",
+      "message": "my husband is thriving"
+    },
+    {
+      "user": "math_teacher2",
+      "message": "this violates 3 laws of biology"
+    },
+    {
+      "user": "longlongman",
+      "message": "long man long man long man"
+    },
+    {
+      "user": "buildinginspector",
+      "message": "we ran out of rulers to measure him"
+    },
+    {
+      "user": "tapemeasure9",
+      "message": "WHY IS HE STILL GROWING"
+    },
+    {
+      "user": "snekcurious2",
+      "message": "just a lil snek getting big, normal stuff"
+    },
+    {
+      "user": "sizequeen00",
+      "message": "nasa just texted me asking whats that"
+    },
+    {
+      "user": "neighborhoodwatch",
+      "message": "looking like leftover spaghetti rn"
+    },
+    {
+      "user": "drone_pilot",
+      "message": "this is better than anaconda 3"
+    },
+    {
+      "user": "yomamajoke",
+      "message": "i brought a tape measure just for this"
+    },
+    {
+      "user": "ruler_official",
+      "message": "ok but WHY does he keep growing"
+    },
+    {
+      "user": "infinitelength",
+      "message": "LONGBOI LONGBOI LONGBOI"
+    },
+    {
+      "user": "concernedcitizen",
+      "message": "this is an exponential function i fear"
+    },
+    {
+      "user": "noodlearms",
+      "message": "we dont have a cage big enough"
+    },
+    {
+      "user": "vertebraecounter",
+      "message": "he's longer than the entire subway line"
+    },
+    {
+      "user": "lowkeyscaredguy",
+      "message": "POV: ur a snake and ur having a great day"
+    },
+    {
+      "user": "lengthlord",
+      "message": "length goals honestly"
+    },
+    {
+      "user": "tailtrackerapp",
+      "message": "size is everything in this household"
+    },
+    {
+      "user": "noodlewatcher",
+      "message": "where do the extra organs go"
+    },
+    {
+      "user": "anacondamovie",
+      "message": "i would NOT want to give him a checkup"
+    },
+    {
+      "user": "longnoodleclub",
+      "message": "did the ground just shake or is it just him"
+    },
+    {
+      "user": "snekupgrade_log",
+      "message": "i lost track of where his tail even is"
+    },
+    {
+      "user": "panicroom_guy",
+      "message": "he just keeps cooking and cooking"
+    },
+    {
+      "user": "cantkeepup22",
+      "message": "sir please dont grow into my building"
+    },
+    {
+      "user": "growthwatcher9",
+      "message": "we need to reroute traffic around him"
+    },
+    {
+      "user": "varlong",
+      "message": "imagine being that small next to him"
+    },
+    {
+      "user": "snekenjoyer3",
+      "message": "my drone cant even fit him in frame anymore"
+    },
+    {
+      "user": "endcredits_guy",
+      "message": "buy my oil, keeps him slippery and shiny"
+    },
+    {
+      "user": "spaghettiking",
+      "message": "is the city council aware of this"
+    },
+    {
+      "user": "concernedmom4",
+      "message": "long cat is long, but THIS guy"
+    },
+    {
+      "user": "trainwatcher3",
+      "message": "each scale probably the size of my car"
+    },
+    {
+      "user": "longcatreference",
+      "message": "i need a second opinion on this growth"
+    },
+    {
+      "user": "satellite_view",
+      "message": "not just long, also THICC now"
+    },
+    {
+      "user": "dumbfound22",
+      "message": "rip whoever's basement is under there"
+    },
+    {
+      "user": "amazedkid7",
+      "message": "where does the food even go at this point"
+    },
+    {
+      "user": "buildingsfear",
+      "message": "im lowkey scared ngl"
+    },
+    {
+      "user": "noodleshop_owner",
+      "message": "HIGHKEY THIS IS AWESOME THO"
+    },
+    {
+      "user": "wormonastring",
+      "message": "does this guy have a length cap or nah"
+    },
+    {
+      "user": "secondopinion22",
+      "message": "worm on a string but make it apocalyptic"
+    },
+    {
+      "user": "skepticalnerd2",
+      "message": "we need a new unit of measurement at this point"
+    },
+    {
+      "user": "snekfacts_daily",
+      "message": "asking the real questions: how much does he weigh now"
+    },
+    {
+      "user": "frontend_gang",
+      "message": "google earth update just to capture him"
+    },
+    {
+      "user": "horrifiedmom2",
+      "message": "im still waiting for the tail to show up"
+    },
+    {
+      "user": "biologyhater",
+      "message": "bro the head is already 3 blocks away"
+    },
+    {
+      "user": "longboi_supporter",
+      "message": "breaking his own record every 5 minutes"
+    },
+    {
+      "user": "snikiwifeyy",
+      "message": "this does not meet code, sir"
+    },
+    {
+      "user": "endlesshallway",
+      "message": "he's giving my noodle shop free advertising"
+    },
+    {
+      "user": "bigbigbig",
+      "message": "tower this is flight 224 i see a snake the size of a runway"
+    },
+    {
+      "user": "panicattack22",
+      "message": "the inverse square law would like a word"
+    },
+    {
+      "user": "stretchyboi",
+      "message": "growth rate currently unsustainable, 10/10"
+    },
+    {
+      "user": "vetstudent01",
+      "message": "all hail the length lord"
+    },
+    {
+      "user": "snekrecordbreaker",
+      "message": "stretch armstrong could never"
+    },
+    {
+      "user": "highkeyhypeguy",
+      "message": "i need to cover my kids eyes from this"
+    },
+    {
+      "user": "snekloreaccount",
+      "message": "MOM ITS SO BIG LOOK"
+    },
+    {
+      "user": "scaleenthusiast",
+      "message": "official member of the long noodle club"
+    },
+    {
+      "user": "stillgrowing_smh",
+      "message": "he IS the traffic jam now"
+    },
+    {
+      "user": "googleearthfan",
+      "message": "patch notes: snek got longer again"
+    },
+    {
+      "user": "engineernerd",
+      "message": "no competition this guy already won"
+    },
+    {
+      "user": "snek_doubter",
+      "message": "center of mass is somewhere in another zip code"
+    },
+    {
+      "user": "bigbang00",
+      "message": "i have a new phobia now, thanks"
+    },
+    {
+      "user": "calculatorbroke",
+      "message": "longest he's ever been, screenshot this"
+    },
+    {
+      "user": "lengthcompetition",
+      "message": "someone start counting his vertebrae for science"
+    },
+    {
+      "user": "LoremIpsum",
+      "message": "current length: yes"
+    },
+    {
+      "user": "vetbutbroke",
+      "message": "he's basically an endless hallway now"
+    },
+    {
+      "user": "lengthking",
+      "message": "the camera literally cant keep up with him"
+    },
+    {
+      "user": "lostmyremote",
+      "message": "is there a length limit in the rules or nah"
+    },
+    {
+      "user": "subwaymap",
+      "message": "does he feel that or nah"
+    },
+    {
+      "user": "rulerguy",
+      "message": "buildings are visibly nervous rn"
+    },
+    {
+      "user": "scaredofnoodles",
+      "message": "the lengthinator strikes again"
+    },
+    {
+      "user": "buildingowner",
+      "message": "my snek, my rules, get longer baby"
+    },
+    {
+      "user": "donthugcacti",
+      "message": "im building a panic room just for this stream"
+    },
+    {
+      "user": "snakeoil_seller",
+      "message": "tail tracking app just crashed"
+    },
+    {
+      "user": "civilengineer1",
+      "message": "biggest boy in the multiverse confirmed"
+    },
+    {
+      "user": "physicsteacher2",
+      "message": "fun fact: he's now longer than the great wall section near me"
+    },
+    {
+      "user": "lengthsimp42",
+      "message": "my calculator gave up trying to measure this"
+    },
+    {
+      "user": "calmguy77",
+      "message": "town hall meeting called immediately"
+    },
+    {
+      "user": "zookeeper44",
+      "message": "this is canon now, screenshot for the lore"
+    },
+    {
+      "user": "physicsbroke",
+      "message": "neighborhood watch group chat is going INSANE rn"
+    },
+    {
+      "user": "smolbrain99",
+      "message": "im simping for the length fr"
+    },
+    {
+      "user": "snekcurious",
+      "message": "still growing smh my head"
+    },
+    {
+      "user": "segmentfan22",
+      "message": "this segment alone deserves end credits"
+    }
   ]
 }
