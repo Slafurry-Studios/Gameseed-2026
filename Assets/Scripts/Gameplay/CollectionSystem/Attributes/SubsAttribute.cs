@@ -4,7 +4,7 @@ using Game.Player;
 namespace Game.Gameplay.Attributes
 {
     [CreateAssetMenu(fileName = "NewOrbAttribute", menuName = "Game/Dropable/Attributes/Orb Attribute")]
-    public class OrbAttribute : AttributeData
+    public class SubsAttribute : AttributeData
     {
         public override void Apply(GameObject target, float amount)
         {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game.Core
+namespace Game.Core.Effects
 {
     public class ObjectShaker : MonoBehaviour, IVisualEffect
     {
