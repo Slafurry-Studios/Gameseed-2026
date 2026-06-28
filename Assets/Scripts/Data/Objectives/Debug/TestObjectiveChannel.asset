@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141027fb91f900da2b8a5b63b6d2efb0, type: 3}
   m_Name: TestObjectiveChannel
   m_EditorClassIdentifier: 
+  useDonation: 1
+  donationMessage: kaubidadariku donated 50$ lessggoooo

@@ -26,11 +26,18 @@ public class ObjectiveManager : Singleton<ObjectiveManager>
         }
 
         activeObjectives.Add(objective);
+
         progress[objective] = 0f;
 
         System.Action<float> handler = amount => HandleProgress(objective, amount);
         handlers[objective] = handler;
         objective.Channel.OnRaised += handler;
+
+        if (PlayerDonationHUD.Instance != null && objective.Channel.useDonation)
+        {
+            string donationMessage = objective.Channel.donationMessage;
+            PlayerDonationHUD.Instance.UpdateDonation(donationMessage);
+        }
     }
 
     public void RemoveObjective(Objective objective)
