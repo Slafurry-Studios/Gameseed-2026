@@ -1,0 +1,24 @@
+{
+  "messages": [
+    { "user": "LoremIpsum", "message": "Easy money!" },
+    { "user": "LoremIpsum", "message": "Go for it!" },
+    { "user": "UrbanChaos", "message": "These buildings are blocking the view." },
+    { "user": "UrbanChaos", "message": "Knock a few of them down!" },
+    { "user": "TicketVictim", "message": "One of those cops gave me a ticket yesterday." },
+    { "user": "Ticket Victim", "message": "Teach them a lesson!" },
+    { "user": "SpeedFreak", "message": "You're way too slow" },
+    { "user": "SpeedFreak", "message": "Use your sprint more often!" },
+    { "user": "WarWatcher", "message": "The military thinks they can stop you." },
+    { "user": "WarWatcher", "message": "Show them who's in charge!" },
+    { "user": "ChaosFan", "message": "This city still looks too peaceful." },
+    { "user": "ChaosFan", "message": "Let's make everyone panic." },
+    { "user": "RoadDestroyer", "message": "Those military trucks are annoying." },
+    { "user": "RoadDestroyer", "message": "Blow them up!" },
+    { "user": "RocketEnjoyer", "message": "Bet you can't dodge those missiles." },
+    { "user": "RocketEnjoyer", "message": "Prove me wrong." },
+    { "user": "HealthyGuy", "message": "You've been causing chaos all day." },
+    { "user": "HealthyGuy", "message": "Maybe eat something healthy." },
+    { "user": "TankHunter", "message": "Those armored carriers are still rolling." },
+    { "user": "TankHunter", "message": "Time to scrap them." }
+  ]
+}
