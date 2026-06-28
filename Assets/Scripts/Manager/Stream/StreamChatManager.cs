@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class StreamChatManager : MonoBehaviour
+public class StreamChatManager : Singleton<StreamChatManager>
 {
     [SerializeField] private StreamChatDatabase chatDatabase;
     [SerializeField] private float minChatInterval = 0.2f;
@@ -15,8 +15,9 @@ public class StreamChatManager : MonoBehaviour
 
     private StreamChatRoller chatRoller;
 
-    protected void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         chatDatabase?.Initialize();
     }
 
