@@ -20,7 +20,7 @@ public class TransitionManager : Singleton<TransitionManager>
         if (instance != this)
             return;
 
-        // Keep existing parent (don't detach from Canvas) to ensure UI Image remains renderable
+        DontDestroyOnLoad(gameObject);
 
         if (fadeImage == null)
         {
@@ -103,7 +103,7 @@ public class TransitionManager : Singleton<TransitionManager>
 
         while (timer < fadeDuration)
         {
-            timer += Time.deltaTime;
+            timer += Time.unscaledDeltaTime;
 
             float t = timer / fadeDuration;
 
