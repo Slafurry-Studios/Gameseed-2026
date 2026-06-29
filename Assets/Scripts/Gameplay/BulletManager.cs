@@ -25,7 +25,7 @@ namespace Game.Gameplay
             }
         }
 
-        public void FireBullet(Bullet prefab, Vector2 startPos, Vector2 direction, float damage, float speed, float maxDistance, LayerMask targetMask, float hitRadius)
+        public void FireBullet(Bullet prefab, Vector2 startPos, Vector2 direction, float damage, float speed, float maxDistance, LayerMask targetMask, float hitRadius, bool isExplosive, bool isRichochet)
         {
             if (prefab == null) return;
 
@@ -38,7 +38,7 @@ namespace Game.Gameplay
 
             Bullet bullet = pools[prefabID].Get();
             bullet.transform.position = startPos;
-            bullet.Setup(prefabID, damage, speed, maxDistance, direction, targetMask, hitRadius);
+            bullet.Setup(prefabID, damage, speed, maxDistance, direction, targetMask, hitRadius, isExplosive, isRichochet);
             
             activeBullets.Add(bullet);
         }

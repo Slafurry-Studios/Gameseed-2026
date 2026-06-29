@@ -88,8 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47910fdf3cd7c564c888f0e718de2bce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpgradeCards:
-  - {fileID: 11400000, guid: 630c10a9a0724243989d05d8fd234082, type: 2}
+  upgradeCards: []
 --- !u!114 &3641634936374996148
 MonoBehaviour:
   m_ObjectHideFlags: 0
