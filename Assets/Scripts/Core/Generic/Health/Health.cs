@@ -12,7 +12,7 @@ namespace Game.Generic
         public event Action OnDied;
 
         [Header("Health Settings")]
-        [SerializeField] protected float maxHealth = 100f;
+        [SerializeField] protected float maxHealth = 10f;
 
         protected float currentHealth;
         protected bool isDead;

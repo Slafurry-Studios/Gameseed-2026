@@ -10,7 +10,10 @@ namespace Game.Player
         [SerializeField] private Animator playerDizzyAnimator;
         [SerializeField] private PlayerMovement playerMovement;
 
+        [SerializeField] private float collisionDmg = 1f;
+
         private RigidbodyConstraints2D originalConstraints;
+        private bool vipSprint;
 
         protected override void Awake()
         {
@@ -63,6 +66,11 @@ namespace Game.Player
             }
         }
 
+        public void IncreaseMaxHealth(float amount)
+        {
+            maxHealth += amount;
+        }
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
             CheckCollision(collision.gameObject);
@@ -77,7 +85,6 @@ namespace Game.Player
         {
             if (isDead)
                 return;
-
 
             if (obj.CompareTag("Building") || obj.CompareTag("Body"))
             {
@@ -113,6 +120,23 @@ namespace Game.Player
                     anim.speed = 1f;
                 }
             }
+        }
+
+        public override void TakeDamage(float amount)
+        {
+            if (GetComponent<PlayerMovement>().GetSprint() && vipSprint) return;
+
+            base.TakeDamage(amount);
+        }
+
+        public void SafetyFirst()
+        {
+            collisionDmg = collisionDmg / 2;
+        }
+
+        public void VIPSprint()
+        {
+            vipSprint = true;
         }
     }
 }

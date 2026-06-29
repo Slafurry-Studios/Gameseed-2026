@@ -1,5 +1,6 @@
 using UnityEngine;
 using Game.Upgrade;
+using Game.Player;
 
 namespace Game.Upgrade.Effect
 {
@@ -8,6 +9,7 @@ namespace Game.Upgrade.Effect
     {
         public override void Apply()
         {
+            FindAnyObjectByType<PlayerHealth>().SafetyFirst();
         }
     }
 }
