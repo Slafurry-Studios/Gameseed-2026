@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3766792979929311683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 1903430247475528996}
   - component: {fileID: 3508993133548821886}
   - component: {fileID: 1470723068374729498}
+  - component: {fileID: 448980757619245937}
   m_Layer: 5
   m_Name: DonationPanel
   m_TagString: Untagged
@@ -243,6 +244,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   donationUI: {fileID: 501810679096146474}
   donationText: {fileID: 5303899002312954963}
+  donationRect: {fileID: 3766792979929311683}
+  donationCanvasGroup: {fileID: 448980757619245937}
+  showDuration: 2.5
+  fadeInDuration: 0.3
+  fadeOutDuration: 0.4
+  slideDistance: 30
+--- !u!225 &448980757619245937
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8842703221526925577}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8997625282287003710
 GameObject:
   m_ObjectHideFlags: 0

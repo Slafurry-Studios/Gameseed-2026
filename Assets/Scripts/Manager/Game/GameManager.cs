@@ -10,8 +10,9 @@ namespace Game.Manager
         public SubscriptionPointManager subsManager { get; private set; }
         public UpgradeManager upgradeManager { get; private set; }
 
-        void Start()
+        protected override void Awake()
         {
+            base.Awake();
             threatManager = FindAnyObjectByType<ThreatPointManager>();
             subsManager = FindAnyObjectByType<SubscriptionPointManager>();
             upgradeManager = FindAnyObjectByType<UpgradeManager>();
