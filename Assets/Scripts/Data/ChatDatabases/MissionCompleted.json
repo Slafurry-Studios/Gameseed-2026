@@ -1,24 +1,476 @@
 {
   "messages": [
-    { "user": "LoremIpsum", "message": "Easy money!" },
-    { "user": "LoremIpsum", "message": "Go for it!" },
-    { "user": "UrbanChaos", "message": "These buildings are blocking the view." },
-    { "user": "UrbanChaos", "message": "Knock a few of them down!" },
-    { "user": "TicketVictim", "message": "One of those cops gave me a ticket yesterday." },
-    { "user": "Ticket Victim", "message": "Teach them a lesson!" },
-    { "user": "SpeedFreak", "message": "You're way too slow" },
-    { "user": "SpeedFreak", "message": "Use your sprint more often!" },
-    { "user": "WarWatcher", "message": "The military thinks they can stop you." },
-    { "user": "WarWatcher", "message": "Show them who's in charge!" },
-    { "user": "ChaosFan", "message": "This city still looks too peaceful." },
-    { "user": "ChaosFan", "message": "Let's make everyone panic." },
-    { "user": "RoadDestroyer", "message": "Those military trucks are annoying." },
-    { "user": "RoadDestroyer", "message": "Blow them up!" },
-    { "user": "RocketEnjoyer", "message": "Bet you can't dodge those missiles." },
-    { "user": "RocketEnjoyer", "message": "Prove me wrong." },
-    { "user": "HealthyGuy", "message": "You've been causing chaos all day." },
-    { "user": "HealthyGuy", "message": "Maybe eat something healthy." },
-    { "user": "TankHunter", "message": "Those armored carriers are still rolling." },
-    { "user": "TankHunter", "message": "Time to scrap them." }
+    {
+      "user": "ReinforcementRon",
+      "message": "Easy money!"
+    },
+    {
+      "user": "ReinforcementRon",
+      "message": "Go for it!"
+    },
+    {
+      "user": "FerrisWheelFiona",
+      "message": "These buildings are blocking the view."
+    },
+    {
+      "user": "FerrisWheelFiona",
+      "message": "Knock a few of them down!"
+    },
+    {
+      "user": "ClockWatcherFan",
+      "message": "One of those cops gave me a ticket yesterday."
+    },
+    {
+      "user": "ClockWatcherFan",
+      "message": "Teach them a lesson!"
+    },
+    {
+      "user": "OilRigOllie",
+      "message": "You're way too slow"
+    },
+    {
+      "user": "OilRigOllie",
+      "message": "Use your sprint more often!"
+    },
+    {
+      "user": "ScaffoldingSue",
+      "message": "The military thinks they can stop you."
+    },
+    {
+      "user": "ScaffoldingSue",
+      "message": "Show them who's in charge!"
+    },
+    {
+      "user": "TankHunter",
+      "message": "This city still looks too peaceful."
+    },
+    {
+      "user": "TankHunter",
+      "message": "Let's make everyone panic."
+    },
+    {
+      "user": "LoremIpsum",
+      "message": "Those military trucks are annoying."
+    },
+    {
+      "user": "LoremIpsum",
+      "message": "Blow them up!"
+    },
+    {
+      "user": "FuelDepotFreak",
+      "message": "Bet you can't dodge those missiles."
+    },
+    {
+      "user": "FuelDepotFreak",
+      "message": "Prove me wrong."
+    },
+    {
+      "user": "ConvoyChaser",
+      "message": "You've been causing chaos all day."
+    },
+    {
+      "user": "ConvoyChaser",
+      "message": "Maybe eat something healthy."
+    },
+    {
+      "user": "BridgeHater99",
+      "message": "Those armored carriers are still rolling."
+    },
+    {
+      "user": "BridgeHater99",
+      "message": "Time to scrap them."
+    },
+    {
+      "user": "PierPounderPaul",
+      "message": "You've been just sitting there too long."
+    },
+    {
+      "user": "PierPounderPaul",
+      "message": "Get moving already!"
+    },
+    {
+      "user": "SearchlightSam",
+      "message": "That bridge is way too sturdy looking."
+    },
+    {
+      "user": "SearchlightSam",
+      "message": "Bring it down!"
+    },
+    {
+      "user": "UrbanChaos",
+      "message": "Stream's been slow for the last 10 minutes."
+    },
+    {
+      "user": "UrbanChaos",
+      "message": "Spice things up a bit!"
+    },
+    {
+      "user": "SignalFlareFreddy",
+      "message": "I just dropped a superchat for this."
+    },
+    {
+      "user": "SignalFlareFreddy",
+      "message": "Make it count!"
+    },
+    {
+      "user": "AlarmAllergic",
+      "message": "There's a whole vault over there."
+    },
+    {
+      "user": "AlarmAllergic",
+      "message": "Go crack it open!"
+    },
+    {
+      "user": "ChaosFan",
+      "message": "More cops just rolled in."
+    },
+    {
+      "user": "ChaosFan",
+      "message": "Send them packing!"
+    },
+    {
+      "user": "TicketVictim",
+      "message": "That radio tower keeps calling for backup."
+    },
+    {
+      "user": "TicketVictim",
+      "message": "Cut their comms!"
+    },
+    {
+      "user": "WarehouseWanda",
+      "message": "That parking garage is an eyesore."
+    },
+    {
+      "user": "WarehouseWanda",
+      "message": "Flatten it!"
+    },
+    {
+      "user": "RoadDestroyer",
+      "message": "There's a chopper circling above."
+    },
+    {
+      "user": "RoadDestroyer",
+      "message": "Don't let it get a clean shot!"
+    },
+    {
+      "user": "SubStationSam",
+      "message": "You look a little sluggish."
+    },
+    {
+      "user": "SubStationSam",
+      "message": "Pick up the pace!"
+    },
+    {
+      "user": "ArmoredColumnAndy",
+      "message": "There's a supply convoy heading downtown."
+    },
+    {
+      "user": "ArmoredColumnAndy",
+      "message": "Intercept it!"
+    },
+    {
+      "user": "ChurchBellChuck",
+      "message": "They put up barricades on the main road."
+    },
+    {
+      "user": "ChurchBellChuck",
+      "message": "Smash right through!"
+    },
+    {
+      "user": "SnipersNestNancy",
+      "message": "That searchlight keeps spotting you."
+    },
+    {
+      "user": "SnipersNestNancy",
+      "message": "Take it out before it calls more units!"
+    },
+    {
+      "user": "CivilianPanicPanda",
+      "message": "There's a fuel depot just south of here."
+    },
+    {
+      "user": "CivilianPanicPanda",
+      "message": "Light it up!"
+    },
+    {
+      "user": "GreedyGremlin",
+      "message": "There's a sniper on that rooftop."
+    },
+    {
+      "user": "GreedyGremlin",
+      "message": "Knock the whole building down!"
+    },
+    {
+      "user": "AirstrikeAmy",
+      "message": "Some VIP is trying to escape by helicopter."
+    },
+    {
+      "user": "AirstrikeAmy",
+      "message": "Don't let them get away!"
+    },
+    {
+      "user": "DemolitionDiva",
+      "message": "That construction site looks unfinished anyway."
+    },
+    {
+      "user": "DemolitionDiva",
+      "message": "Finish the job for them!"
+    },
+    {
+      "user": "ChemPlantChester",
+      "message": "That alarm has been blaring nonstop."
+    },
+    {
+      "user": "ChemPlantChester",
+      "message": "Shut it down for good!"
+    },
+    {
+      "user": "CommandCenterCarl",
+      "message": "Their radar dish keeps tracking you."
+    },
+    {
+      "user": "CommandCenterCarl",
+      "message": "Blind them!"
+    },
+    {
+      "user": "RadarDishRicky",
+      "message": "That warehouse is storing their gear."
+    },
+    {
+      "user": "RadarDishRicky",
+      "message": "Clear it out!"
+    },
+    {
+      "user": "StadiumSiegeStan",
+      "message": "Cutting the power grid would cause real chaos."
+    },
+    {
+      "user": "StadiumSiegeStan",
+      "message": "Pull the plug!"
+    },
+    {
+      "user": "DonationDan",
+      "message": "There's a helicopter pad reloading units right now."
+    },
+    {
+      "user": "DonationDan",
+      "message": "Don't let them take off!"
+    },
+    {
+      "user": "WarWatcher",
+      "message": "An armored column just rolled in from the highway."
+    },
+    {
+      "user": "WarWatcher",
+      "message": "Stop them in their tracks!"
+    },
+    {
+      "user": "BridgeBlockerBen",
+      "message": "People are starting to evacuate already."
+    },
+    {
+      "user": "BridgeBlockerBen",
+      "message": "Hurry before they all get away!"
+    },
+    {
+      "user": "WatchtowerWendy",
+      "message": "They're trying to seal off the bridge."
+    },
+    {
+      "user": "WatchtowerWendy",
+      "message": "Break through before they finish!"
+    },
+    {
+      "user": "RocketEnjoyer",
+      "message": "There's a whole unit hiding in the subway station."
+    },
+    {
+      "user": "RocketEnjoyer",
+      "message": "Flush them out!"
+    },
+    {
+      "user": "RooftopRadioRex",
+      "message": "Their command center is right behind that wall."
+    },
+    {
+      "user": "RooftopRadioRex",
+      "message": "Bring the whole thing down!"
+    },
+    {
+      "user": "BunkerBusterBeth",
+      "message": "They're calling in an airstrike on this position."
+    },
+    {
+      "user": "BunkerBusterBeth",
+      "message": "Get out of the blast zone fast!"
+    },
+    {
+      "user": "ConvoyCrasherCleo",
+      "message": "More reinforcements are inbound from the east."
+    },
+    {
+      "user": "ConvoyCrasherCleo",
+      "message": "Cut them off before they arrive!"
+    },
+    {
+      "user": "HighwayHavocHank",
+      "message": "That scaffolding is full of snipers."
+    },
+    {
+      "user": "HighwayHavocHank",
+      "message": "Bring it crashing down!"
+    },
+    {
+      "user": "PoliceHaterPete",
+      "message": "There's a chemical plant storing their supplies."
+    },
+    {
+      "user": "PoliceHaterPete",
+      "message": "Time to make it boom!"
+    },
+    {
+      "user": "DamDestroyerDave",
+      "message": "They set up a checkpoint at the toll booth."
+    },
+    {
+      "user": "DamDestroyerDave",
+      "message": "Crash right through it!"
+    },
+    {
+      "user": "EscapePodEddie",
+      "message": "There's a rooftop radio relay coordinating their attacks."
+    },
+    {
+      "user": "EscapePodEddie",
+      "message": "Smash it before they regroup!"
+    },
+    {
+      "user": "MallMassacreMia",
+      "message": "They're using the stadium as a staging ground."
+    },
+    {
+      "user": "MallMassacreMia",
+      "message": "Storm it!"
+    },
+    {
+      "user": "FactoryFloorFred",
+      "message": "That dam upstream could flood the whole valley."
+    },
+    {
+      "user": "FactoryFloorFred",
+      "message": "Let's see what happens if you crack it."
+    },
+    {
+      "user": "SignalJammer22",
+      "message": "The mall got turned into a makeshift fortress."
+    },
+    {
+      "user": "SignalJammer22",
+      "message": "Break it down!"
+    },
+    {
+      "user": "StaminaSimp",
+      "message": "Traffic is backing up the whole highway right now."
+    },
+    {
+      "user": "StaminaSimp",
+      "message": "Give them something to really panic about."
+    },
+    {
+      "user": "RailyardRaiderRita",
+      "message": "There's a whole carnival set up downtown."
+    },
+    {
+      "user": "RailyardRaiderRita",
+      "message": "Time to crash the party."
+    },
+    {
+      "user": "BarricadeBuster",
+      "message": "That offshore oil rig is funding their operation."
+    },
+    {
+      "user": "BarricadeBuster",
+      "message": "Sink it!"
+    },
+    {
+      "user": "RubbleRaiser",
+      "message": "That substation powers their whole defense grid."
+    },
+    {
+      "user": "RubbleRaiser",
+      "message": "Take it offline!"
+    },
+    {
+      "user": "PowerGridPaul",
+      "message": "Another convoy just left the base."
+    },
+    {
+      "user": "PowerGridPaul",
+      "message": "Don't let it reach the city."
+    },
+    {
+      "user": "LazyViewer22",
+      "message": "That watchtower has eyes on the whole block."
+    },
+    {
+      "user": "LazyViewer22",
+      "message": "Knock it down before they spot you."
+    },
+    {
+      "user": "HealthyGuy",
+      "message": "If that flare goes up, everyone's coming."
+    },
+    {
+      "user": "HealthyGuy",
+      "message": "Take out the shooter first."
+    },
+    {
+      "user": "SubwayStationSadie",
+      "message": "Their bunker entrance is hidden behind that wall."
+    },
+    {
+      "user": "SubwayStationSadie",
+      "message": "Break it open!"
+    },
+    {
+      "user": "SpeedFreak",
+      "message": "They're loading supplies onto the pier right now."
+    },
+    {
+      "user": "SpeedFreak",
+      "message": "Sink the whole operation."
+    },
+    {
+      "user": "ChopperPadChad",
+      "message": "That backup generator keeps their base running."
+    },
+    {
+      "user": "ChopperPadChad",
+      "message": "Pull the plug on them!"
+    },
+    {
+      "user": "ScaredySnek",
+      "message": "There's a train full of supplies at the railyard."
+    },
+    {
+      "user": "ScaredySnek",
+      "message": "Derail it!"
+    },
+    {
+      "user": "GeneratorGremlinGus",
+      "message": "They're using the bell tower as a lookout."
+    },
+    {
+      "user": "GeneratorGremlinGus",
+      "message": "Ring it one last time, the hard way."
+    },
+    {
+      "user": "TollBoothTina",
+      "message": "That factory's been producing their gear nonstop."
+    },
+    {
+      "user": "TollBoothTina",
+      "message": "Shut the whole line down."
+    }
   ]
 }

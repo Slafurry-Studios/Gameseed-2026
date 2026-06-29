@@ -9,7 +9,7 @@ namespace Game.Manager
     {
         [SerializeField] private Threshold[] subsThresholds;
         public event Action<float> OnSubsPointIncreased;
-
+        public event Action<int> OnCurrentSubsStateChanged;
         private int subsPoints = 0;
         private int currentSubsState = 0;
 
@@ -19,14 +19,14 @@ namespace Game.Manager
 
             int newThreshold = GetCurrentThreshold();
 
+            OnSubsPointIncreased?.Invoke(subsPoints);
+
             if (newThreshold > currentSubsState)
             {
                 currentSubsState = newThreshold;
 
-                OnSubsPointIncreased?.Invoke(subsPoints);
-
+                OnCurrentSubsStateChanged?.Invoke(currentSubsState);
             }
-
         }
 
         private int GetCurrentThreshold()

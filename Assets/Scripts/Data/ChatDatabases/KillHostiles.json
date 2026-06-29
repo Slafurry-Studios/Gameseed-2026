@@ -1,6 +1,424 @@
 {
   "messages": [
-    { "user": "LoremIpsum", "message": "Take them all out!" },
-    { "user": "mommylover59", "message": "Eat them mommy!" }
+    {
+      "user": "PoliceForceFullRetreat",
+      "message": "Take them all out!"
+    },
+    {
+      "user": "PoliceForceLegacyRuined",
+      "message": "Eat them mommy!"
+    },
+    {
+      "user": "PoliceForceWithdrawal",
+      "message": "EAT THE BACON BOYS"
+    },
+    {
+      "user": "PoliceForceOutOfOptions",
+      "message": "those are MY tax dollars getting deleted lol"
+    },
+    {
+      "user": "ACAB_Account_Throwaway",
+      "message": "no comment your honor"
+    },
+    {
+      "user": "PoliceForceSurrenderTalk",
+      "message": "20 years of service for THIS outcome"
+    },
+    {
+      "user": "ArmyGeneralResignLetter",
+      "message": "theres goes my best customers"
+    },
+    {
+      "user": "RiotShieldUseless",
+      "message": "is that my husbands unit oh no"
+    },
+    {
+      "user": "MilitaryDefeatAcceptedFinal",
+      "message": "good thing i dodged the draft"
+    },
+    {
+      "user": "ArmoredCarSalesman22",
+      "message": "i dropped out for a reason, this is why"
+    },
+    {
+      "user": "PoliceForceCasualtyReport",
+      "message": "this is more intense than the video game"
+    },
+    {
+      "user": "ArmyCommandSilentNow",
+      "message": "sir we need to retreat IMMEDIATELY"
+    },
+    {
+      "user": "PoliceTrainingFootage",
+      "message": "im rewriting the recruitment ads after this"
+    },
+    {
+      "user": "MilitaryUnitDecimated",
+      "message": "the riot shields aint doing much rn"
+    },
+    {
+      "user": "TankBattalionRetreat",
+      "message": "the union is gonna have SO many demands now"
+    },
+    {
+      "user": "PoliceForceMoraleLow",
+      "message": "auditing this budget is gonna be depressing"
+    },
+    {
+      "user": "TankCrewEvacuating22",
+      "message": "the whole van just got crushed like a can"
+    },
+    {
+      "user": "PoliceForceMediaBlackout",
+      "message": "im resigning effective immediately"
+    },
+    {
+      "user": "MilitaryAirSupportCalled",
+      "message": "calling in the general, this is above my pay grade"
+    },
+    {
+      "user": "TankBattalionHistoryLesson",
+      "message": "guess i need to sell more armored cars now"
+    },
+    {
+      "user": "ArmyCommandOfficiallyDone",
+      "message": "the scanner is going INSANE right now"
+    },
+    {
+      "user": "SwatTeamFinalRetreat",
+      "message": "im gonna have so much surplus to sell after this"
+    },
+    {
+      "user": "DonutShopOwnerSad",
+      "message": "those treads did NOT help them escape"
+    },
+    {
+      "user": "mommylover59",
+      "message": "0/10 riot gear, does not protect against snake"
+    },
+    {
+      "user": "ArmyTankDriverPanic",
+      "message": "this body cam footage is gonna go VIRAL"
+    },
+    {
+      "user": "TankCrewBailingOut",
+      "message": "i trained these guys for nothing apparently"
+    },
+    {
+      "user": "MilitaryBudgetAuditor",
+      "message": "negotiations clearly are not working here"
+    },
+    {
+      "user": "ArmyGeneralOverruled",
+      "message": "even the K9 unit backed off, smart dog"
+    },
+    {
+      "user": "TankCrewFinalEvacuation",
+      "message": "sir the tank is not stopping him at all"
+    },
+    {
+      "user": "MilitaryIntelAnalyst22",
+      "message": "every cruiser here is totaled now"
+    },
+    {
+      "user": "ArmyRecruiterRegret",
+      "message": "intel did NOT prepare us for this scale"
+    },
+    {
+      "user": "MilitaryDrillSergeantSob",
+      "message": "should not have breached that door honestly"
+    },
+    {
+      "user": "PoliceCruiserInsurance",
+      "message": "emergency press conference incoming"
+    },
+    {
+      "user": "TaxDollarsWellSpent99",
+      "message": "command is being overruled by reality itself"
+    },
+    {
+      "user": "PoliceCommissionerCrisis",
+      "message": "the shell literally bounced off, thats not good"
+    },
+    {
+      "user": "MilitaryRadioSilenceTotal",
+      "message": "budget getting slashed after this disaster"
+    },
+    {
+      "user": "PoliceScannerAddict",
+      "message": "hope they still get their pensions after this mess"
+    },
+    {
+      "user": "TankColumnRetreating2",
+      "message": "the helmet cam footage is wild"
+    },
+    {
+      "user": "RiotGearReviewer",
+      "message": "morale is at an all time low rn"
+    },
+    {
+      "user": "SwatTeamLegacyOver",
+      "message": "calling up the reserves, this is serious"
+    },
+    {
+      "user": "SwatLeaderInjured22",
+      "message": "the entire battalion is retreating now"
+    },
+    {
+      "user": "TankColumnDestroyed",
+      "message": "this is going in every training video from now on"
+    },
+    {
+      "user": "MilitaryHonorGuardSad",
+      "message": "no strategy accounts for a giant snake honestly"
+    },
+    {
+      "user": "GeneralOnSpeedDial",
+      "message": "the vests are doing absolutely nothing"
+    },
+    {
+      "user": "ArmyVeteranSpeechless2",
+      "message": "radio is jammed, repeat, radio jammed"
+    },
+    {
+      "user": "PoliceStandoffNegotiator",
+      "message": "medics cant keep up with this many casualties"
+    },
+    {
+      "user": "SwatHelmetCamFan",
+      "message": "the crew is bailing out of the tank right now"
+    },
+    {
+      "user": "PoliceForceEvacuateOrder",
+      "message": "ordering a full withdrawal, this is too much"
+    },
+    {
+      "user": "LoremIpsum",
+      "message": "even the honor guard is shook by this"
+    },
+    {
+      "user": "SwatVehicleFlippedOver",
+      "message": "commander has no words right now"
+    },
+    {
+      "user": "MilitaryStrategistConfused",
+      "message": "reinforcements arriving but not enough clearly"
+    },
+    {
+      "user": "TankDriverPraying",
+      "message": "ive seen combat, never seen THIS"
+    },
+    {
+      "user": "TankBattalionAnnihilated",
+      "message": "the whole column just got wiped out"
+    },
+    {
+      "user": "PoliceForceHistoryMade2",
+      "message": "standoff negotiator is out of ideas"
+    },
+    {
+      "user": "VeteranButNotProud",
+      "message": "calling in air support, finally"
+    },
+    {
+      "user": "PoliceAcademyDropout",
+      "message": "theyre out of ammo already, that was fast"
+    },
+    {
+      "user": "PoliceForceOfficialStatement",
+      "message": "demoralized doesnt even begin to describe it"
+    },
+    {
+      "user": "PoliceBodyCamFootage",
+      "message": "command is just as confused as we are"
+    },
+    {
+      "user": "PoliceForceDemoralized",
+      "message": "the driver is praying, i can see it"
+    },
+    {
+      "user": "SwatVestFailRate100",
+      "message": "this is their last stand for sure"
+    },
+    {
+      "user": "TankTreadEnthusiast",
+      "message": "general just admitted defeat live on air"
+    },
+    {
+      "user": "SwatNegotiatorFailed",
+      "message": "the team leader just got taken out"
+    },
+    {
+      "user": "PoliceForceBudgetCutNow",
+      "message": "full retreat ordered across the board"
+    },
+    {
+      "user": "MilitaryAdvisorPanic2",
+      "message": "sending the reserve tanks, last resort"
+    },
+    {
+      "user": "SwatTeamOutOfAmmo",
+      "message": "annihilated, theres no other word for it"
+    },
+    {
+      "user": "PoliceChiefResigning",
+      "message": "theyre completely out of options now"
+    },
+    {
+      "user": "PoliceBudgetSlashed99",
+      "message": "advisor is panicking on live tv rn"
+    },
+    {
+      "user": "ArmyVeteranCommentary",
+      "message": "the vehicle just got flipped like a toy"
+    },
+    {
+      "user": "MilitaryCommandEmbarrassed2",
+      "message": "is that surrender talk i hear on the radio"
+    },
+    {
+      "user": "ArmyReinforcementsTooLate2",
+      "message": "command has gone completely silent"
+    },
+    {
+      "user": "SwatTeamSimulatorFan",
+      "message": "evacuating the crew, smart move honestly"
+    },
+    {
+      "user": "SwatTeamWipedOut99",
+      "message": "casualty report coming in, not looking good"
+    },
+    {
+      "user": "PoliceForceTotalDefeat",
+      "message": "the whole unit is decimated at this point"
+    },
+    {
+      "user": "PoliceForceReinforcement",
+      "message": "operation officially marked as failed"
+    },
+    {
+      "user": "SwatBreacherRegret",
+      "message": "evacuate order given for the whole block"
+    },
+    {
+      "user": "SwatVanGotCrushed",
+      "message": "30 years of service, never seen anything like this"
+    },
+    {
+      "user": "PoliceForceLastUnitStanding",
+      "message": "the column is retreating in total disarray"
+    },
+    {
+      "user": "PoliceDogHandlerSad",
+      "message": "media blackout incoming, they dont want this out"
+    },
+    {
+      "user": "SwatBreachTeamGone",
+      "message": "HQ is in absolute panic mode rn"
+    },
+    {
+      "user": "ArmyTankReserveSent",
+      "message": "the whole team just got wiped, brutal"
+    },
+    {
+      "user": "PoliceUnionRep_Panic",
+      "message": "official statement coming soon, bet its weak"
+    },
+    {
+      "user": "MilitaryHQinPanic",
+      "message": "writing his resignation letter as we speak probably"
+    },
+    {
+      "user": "MilitarySurplusDealer",
+      "message": "is the crew literally surrendering right now"
+    },
+    {
+      "user": "ArmyMedicOverwhelmed",
+      "message": "budget cuts incoming after this embarrassment"
+    },
+    {
+      "user": "PoliceForceLastStand",
+      "message": "defeat officially accepted, no more units"
+    },
+    {
+      "user": "xX_AntiCopGremlin_Xx",
+      "message": "commander resigning on live television"
+    },
+    {
+      "user": "PoliceRadioJammed99",
+      "message": "their legacy is ruined after this disaster"
+    },
+    {
+      "user": "PoliceForceNoMoreUnits",
+      "message": "this unit is getting disbanded today for sure"
+    },
+    {
+      "user": "SwatCommanderSpeechless",
+      "message": "this will be a history lesson someday"
+    },
+    {
+      "user": "MilitaryPensionWorrier",
+      "message": "final withdrawal order given across the city"
+    },
+    {
+      "user": "ArmyCommandConfusedAF",
+      "message": "command is beyond embarrassed at this point"
+    },
+    {
+      "user": "ArmyUnitDisbandedToday",
+      "message": "team making their final retreat now"
+    },
+    {
+      "user": "SwatOperationFailed99",
+      "message": "total defeat, no other way to put it"
+    },
+    {
+      "user": "TankCrewSurrendering2",
+      "message": "general giving his final statement to press"
+    },
+    {
+      "user": "ArmyReserveCalledUp",
+      "message": "final evacuation of the crew underway"
+    },
+    {
+      "user": "TankDriverFinalWords",
+      "message": "last unit standing, and not for long"
+    },
+    {
+      "user": "ArmyGeneralFinalStatement",
+      "message": "reinforcements arriving way too late again"
+    },
+    {
+      "user": "MilitaryWifeWorried",
+      "message": "the entire breach team is gone now"
+    },
+    {
+      "user": "MilitaryDefeatFinalChapter",
+      "message": "total radio silence from command now"
+    },
+    {
+      "user": "SwatCommanderResignsNow",
+      "message": "no more units left to send, thats it"
+    },
+    {
+      "user": "PoliceForceFinalWithdrawal",
+      "message": "any final words driver? tick tock"
+    },
+    {
+      "user": "MilitaryGeneralAdmitDefeat",
+      "message": "command is officially done for today"
+    },
+    {
+      "user": "TankShellBounceback",
+      "message": "swat teams legacy here is officially over"
+    },
+    {
+      "user": "TankCommanderTrembling",
+      "message": "history made today, and not the good kind"
+    },
+    {
+      "user": "DraftDodgerDan",
+      "message": "final chapter of this defeat written"
+    }
   ]
 }

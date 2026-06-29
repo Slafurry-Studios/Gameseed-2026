@@ -1,8 +1,412 @@
 {
   "messages": [
-    { "user": "LoremIpsu", "message": "Now that's a power-up!" },
-    { "user": "dnads", "message": "SNIKI PRO MAXXX!!!" },
-    { "user": "viewacss", "message": "balanced game btw" },
-    { "user": "axaw", "message": "lessgoooooooo" }
+    {
+      "user": "CooldownCrusherCody",
+      "message": "Now that's a power-up!"
+    },
+    {
+      "user": "EliteStatusEli",
+      "message": "SNIKI PRO MAXXX!!!"
+    },
+    {
+      "user": "PowerUpPickupPenny",
+      "message": "balanced game btw"
+    },
+    {
+      "user": "dnads",
+      "message": "lessgoooooooo"
+    },
+    {
+      "user": "StatBoostStacy",
+      "message": "NERF INCOMING CALLED IT"
+    },
+    {
+      "user": "RNGBlessedRandy",
+      "message": "the balance team just quit"
+    },
+    {
+      "user": "xX_BuffGoblin_Xx",
+      "message": "this is NOT in the patch notes"
+    },
+    {
+      "user": "BuffStackerBrian",
+      "message": "broken? maybe. fun? absolutely"
+    },
+    {
+      "user": "RarityTierRiley",
+      "message": "this single handedly changes the meta"
+    },
+    {
+      "user": "PowerCapBrokenBea",
+      "message": "this would get banned in tournament play"
+    },
+    {
+      "user": "ManaPoolMandy",
+      "message": "those numbers are NOT humanely possible"
+    },
+    {
+      "user": "UpgradeUnlockerUma",
+      "message": "stat check just went off the charts"
+    },
+    {
+      "user": "ActiveSkillAndy",
+      "message": "power creep at its absolute finest"
+    },
+    {
+      "user": "AscensionAlex",
+      "message": "calling an emergency balance meeting"
+    },
+    {
+      "user": "StatRollerHarriet",
+      "message": "moving straight to S tier, no contest"
+    },
+    {
+      "user": "EnhancementEnjoyer",
+      "message": "stacking buffs like its nothing"
+    },
+    {
+      "user": "BuffDomainDexter",
+      "message": "this is genuinely game breaking"
+    },
+    {
+      "user": "ArmorStackerAmy",
+      "message": "the RNG gods have blessed him today"
+    },
+    {
+      "user": "MetaShifterMike",
+      "message": "maxed out the whole skill tree already?"
+    },
+    {
+      "user": "ESportsAnalystAnna",
+      "message": "no cooldowns, no mercy"
+    },
+    {
+      "user": "MinMaxerMolly",
+      "message": "loot goblin mode officially activated"
+    },
+    {
+      "user": "SynergySeekerSean",
+      "message": "DPS just broke my calculator"
+    },
+    {
+      "user": "RarityUpgradeRosa",
+      "message": "100% crit chance is NOT fair"
+    },
+    {
+      "user": "CritMultiplierCarmen",
+      "message": "hes basically lightning now"
+    },
+    {
+      "user": "ComboMultiplierCole",
+      "message": "armor rating is in the thousands now"
+    },
+    {
+      "user": "GearUpgradeGwen",
+      "message": "infinite mana pool detected"
+    },
+    {
+      "user": "SpeedBuffSammy",
+      "message": "leveling up faster than i can read chat"
+    },
+    {
+      "user": "PassiveBuffPenny",
+      "message": "thats a legendary drop if ive ever seen one"
+    },
+    {
+      "user": "LevelCapLeo",
+      "message": "the passive alone is busted"
+    },
+    {
+      "user": "MythicDropMia",
+      "message": "that active skill just deleted the cooldown bar"
+    },
+    {
+      "user": "BuffOverloadBecca",
+      "message": "the synergy between these buffs is unreal"
+    },
+    {
+      "user": "LootGoblinLarry",
+      "message": "is this basically god mode now"
+    },
+    {
+      "user": "TalentTreeTara",
+      "message": "i dont think anything can touch him now"
+    },
+    {
+      "user": "StatAllocationStu",
+      "message": "the scaling on this is absolutely nuts"
+    },
+    {
+      "user": "GameDevCryingRN",
+      "message": "enhancement level: maximum overdrive"
+    },
+    {
+      "user": "OverpoweredOllie",
+      "message": "unlocked an upgrade i didnt even know existed"
+    },
+    {
+      "user": "PowerOverflowPaxton",
+      "message": "thats the biggest power spike ive seen all stream"
+    },
+    {
+      "user": "AscendedAvaTier",
+      "message": "how long does this even last"
+    },
+    {
+      "user": "TierListTommy",
+      "message": "every stat just got boosted at once"
+    },
+    {
+      "user": "BalanceBoardBetty",
+      "message": "combo multiplier going through the roof"
+    },
+    {
+      "user": "StatGrindGreg2",
+      "message": "is he literally evolving right now"
+    },
+    {
+      "user": "DamageNumbersDan",
+      "message": "full transformation sequence, lets go"
+    },
+    {
+      "user": "BroknBalanceBrooke",
+      "message": "ascension arc has officially begun"
+    },
+    {
+      "user": "MaxLevelMarcus",
+      "message": "power level: its over 9000"
+    },
+    {
+      "user": "EnchantOverloadEmma",
+      "message": "collecting buff cards like its a TCG now"
+    },
+    {
+      "user": "PrestigeModePriya",
+      "message": "mythic tier buff just dropped, insane"
+    },
+    {
+      "user": "EvolutionFinalFormFelix",
+      "message": "all stat points dumped into one build, risky but cool"
+    },
+    {
+      "user": "PerkPickerPaul",
+      "message": "gear score just shot through the roof"
+    },
+    {
+      "user": "DamageMultiplierDana",
+      "message": "this build is now mathematically unbeatable"
+    },
+    {
+      "user": "BuffStackOverflowOwen",
+      "message": "absolute min maxer behavior and i love it"
+    },
+    {
+      "user": "StatSheetShockSteph",
+      "message": "that perk choice was actually genius"
+    },
+    {
+      "user": "RegenRateRachel",
+      "message": "talent tree fully unlocked already?"
+    },
+    {
+      "user": "GodModeGabby",
+      "message": "did he just unlock a whole new class"
+    },
+    {
+      "user": "CritChanceCarl",
+      "message": "prestige mode unlocked, no cap"
+    },
+    {
+      "user": "TalentMaxTeresa",
+      "message": "new ability just dropped out of nowhere"
+    },
+    {
+      "user": "GodTierGary",
+      "message": "fully enchanted, this is unfair now"
+    },
+    {
+      "user": "PowerSurgePeter",
+      "message": "buff overload, system cant even keep up"
+    },
+    {
+      "user": "BuildOptimizerBrad",
+      "message": "thats a full on power surge right there"
+    },
+    {
+      "user": "SkillTreeSarah",
+      "message": "all that grinding finally paying off big time"
+    },
+    {
+      "user": "PowerCoreUnlockedPaula",
+      "message": "is there even a level cap at this point"
+    },
+    {
+      "user": "ComboFinisherFinn",
+      "message": "that skill combo was actually insane"
+    },
+    {
+      "user": "LoremIpsu",
+      "message": "chaining buffs back to back, smart play"
+    },
+    {
+      "user": "EvoStagePhase2Ethan",
+      "message": "another power up pickup, no way"
+    },
+    {
+      "user": "DPSCounterDanny",
+      "message": "elite status unlocked, officially OP"
+    },
+    {
+      "user": "PowerLevelPeakPaige",
+      "message": "ranking up faster than the leaderboard can update"
+    },
+    {
+      "user": "StatCheckSteve",
+      "message": "damage multiplier just doubled again"
+    },
+    {
+      "user": "RarityHunterRyan",
+      "message": "resistance stats are basically maxed now"
+    },
+    {
+      "user": "BuffEffectBennett",
+      "message": "regen rate just got absolutely busted"
+    },
+    {
+      "user": "MaxStatMaverick",
+      "message": "crit multiplier going absolutely insane"
+    },
+    {
+      "user": "StatSpikeSpencer",
+      "message": "buff stack literally overflowing the UI"
+    },
+    {
+      "user": "PowerUpChainIris",
+      "message": "power core fully unlocked, this is wild"
+    },
+    {
+      "user": "ResistanceBoostRex",
+      "message": "evolution phase 2 just kicked in"
+    },
+    {
+      "user": "EnchantmentEddie",
+      "message": "mythic drop confirmed, screenshot this"
+    },
+    {
+      "user": "BuffCascadeCaleb",
+      "message": "god tier status achieved unironically"
+    },
+    {
+      "user": "ClassChangeChris",
+      "message": "the stat sheet alone is terrifying now"
+    },
+    {
+      "user": "axaw",
+      "message": "buffs are literally cascading at this point"
+    },
+    {
+      "user": "PowerScalingPriscilla",
+      "message": "power level peaking right in front of us"
+    },
+    {
+      "user": "SkillComboSofia",
+      "message": "ultimate ability finally unlocked, lets gooo"
+    },
+    {
+      "user": "RankUpRonny",
+      "message": "broken balance, send help to the devs"
+    },
+    {
+      "user": "UltimateUnlockUlysses",
+      "message": "max stats across the board, unreal"
+    },
+    {
+      "user": "TransformationTina",
+      "message": "this speedruns the whole power curve"
+    },
+    {
+      "user": "GearScoreGina",
+      "message": "officially ascended tier confirmed"
+    },
+    {
+      "user": "PatchNotesPanic",
+      "message": "buff wizard casting nonstop right now"
+    },
+    {
+      "user": "BuffSynergyBlake",
+      "message": "power scaling broke the chart entirely"
+    },
+    {
+      "user": "InvincibilityIvan",
+      "message": "enchant overload, the system is glitching"
+    },
+    {
+      "user": "BuffCardCollectorBea",
+      "message": "stat spike just rattled my screen"
+    },
+    {
+      "user": "viewacss",
+      "message": "gear just upgraded itself mid fight"
+    },
+    {
+      "user": "ScalingSimSimon",
+      "message": "combo finisher unlocked a new tier"
+    },
+    {
+      "user": "AbilityUnlockAnna2",
+      "message": "rarity upgraded twice in one stream"
+    },
+    {
+      "user": "PowerLevelPablo",
+      "message": "hes basically in his buff domain now"
+    },
+    {
+      "user": "EvolutionEnthusiast",
+      "message": "the power cap is officially broken"
+    },
+    {
+      "user": "BuffDurationBella",
+      "message": "is this the final evolution form already"
+    },
+    {
+      "user": "ExperienceFarmerErin",
+      "message": "rolled the perfect stat line, insane luck"
+    },
+    {
+      "user": "BuffWizardWesley",
+      "message": "the buff effect alone lags my screen"
+    },
+    {
+      "user": "FinalBuffFiona",
+      "message": "power up chain reaction happening live"
+    },
+    {
+      "user": "GameBreakerGreg",
+      "message": "max level reached in record time"
+    },
+    {
+      "user": "PowerCreepPaula",
+      "message": "OP status officially confirmed by chat vote"
+    },
+    {
+      "user": "BuffChainBenny",
+      "message": "talents are maxed across every tree"
+    },
+    {
+      "user": "PowerSpikePete",
+      "message": "synergy this strong should be illegal"
+    },
+    {
+      "user": "GodlikeGretchen",
+      "message": "power literally overflowing the bar"
+    },
+    {
+      "user": "SpeedrunnerSandy",
+      "message": "godlike doesnt even cover it anymore"
+    },
+    {
+      "user": "OPStatusOctavia",
+      "message": "is that the FINAL buff in the pool"
+    }
   ]
 }
