@@ -69,7 +69,9 @@ namespace Game.AI
                         bulletSpeed, 
                         bulletMaxDistance, 
                         targetMask, 
-                        bulletHitRadius
+                        bulletHitRadius,
+                        false,
+                        false
                     );
                 }
                 else
