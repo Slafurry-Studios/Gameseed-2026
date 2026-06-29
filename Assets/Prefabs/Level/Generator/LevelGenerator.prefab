@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9128184965542508974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4016166453176487220}
+  - component: {fileID: 4670171064504329192}
+  m_Layer: 0
+  m_Name: LevelGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4016166453176487220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128184965542508974}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1620288, y: -20.12607, z: -0.48737472}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4670171064504329192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128184965542508974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250f9e9b4fced0144a03a392aa0a0d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 120
+  height: 60
+  minBlockSize: 10
+  maxBlockSize: 25
+  stopDividingChance: 0.1
+  deadEndChance: 0.2
+  marginLeftRange: {x: 2, y: 5}
+  marginRightRange: {x: 2, y: 5}
+  marginBottomRange: {x: 1, y: 1}
+  marginTopRange: {x: 1, y: 3}
+  bgTilemap: {fileID: 0}
+  roadTilemap: {fileID: 0}
+  bgRuleTile: {fileID: 11400000, guid: 21e55714d7185544aa2071308509ad5f, type: 2}
+  roadRuleTile: {fileID: 11400000, guid: 575e54845802ea04fb59d9957ba05250, type: 2}
+  largeBuildings:
+  - {fileID: 5398375568961534747, guid: ff4456f47b0190e47a2d19ae35d6a220, type: 3}
+  - {fileID: 6206908649285805218, guid: de59401ee75441d4bb485c52d6684090, type: 3}
+  - {fileID: 279694350136992588, guid: 0dcf613222486a545a05c8ee77ec8147, type: 3}
+  - {fileID: 1999314171020843392, guid: 838259ceb2c87b540b4e5f2bb91290d7, type: 3}
+  - {fileID: 7178440261986189834, guid: cfec774fc9ee16f498abd752dc660166, type: 3}
+  mediumBuildings:
+  - {fileID: 8783792209048939217, guid: c5e9474e39627834cae61b9f8fc7a335, type: 3}
+  - {fileID: 8370704668778762501, guid: d2d2eb738f0d57640ace9ffc923039f6, type: 3}
+  - {fileID: 1487362049162404025, guid: 959a27b1ad8a1c44fba2da1c152f8e58, type: 3}
+  - {fileID: 8822202631964834699, guid: 54166f7e604417d43b3b11aabb48ae9c, type: 3}
+  - {fileID: 2491733599425041944, guid: 67b35ca2e6d56604081fa7777ac4f724, type: 3}
+  - {fileID: 5824946582643473316, guid: 8f538e6510c1f3c40845fa1affaa3af8, type: 3}
+  - {fileID: 3395691104848570656, guid: d1b0ababaa0ebd3439876322efec8c2f, type: 3}
+  - {fileID: 2851258835729364982, guid: 24ef3ec6d6c5ee648b20857ab4325a1d, type: 3}
+  smallBuildings:
+  - {fileID: 8005792738082797078, guid: ad9d3b1ee0a2371438583fb1d3d04136, type: 3}
+  - {fileID: 5416794805173567339, guid: ca32ef9de73ae9e4a98695e2dfe34eed, type: 3}
+  - {fileID: 322584192736616865, guid: 979253f78e6b9d840aa9318277d583c3, type: 3}
+  - {fileID: 3577364668643556489, guid: d71d9733fb786fc45b394c35660aa277, type: 3}
+  largeSize: {x: 4, y: 4}
+  mediumSize: {x: 3, y: 3}
+  smallSize: {x: 2, y: 2}
