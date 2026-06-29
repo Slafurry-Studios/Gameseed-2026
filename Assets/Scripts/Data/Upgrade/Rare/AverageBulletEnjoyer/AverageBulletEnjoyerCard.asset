@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dcbb32065945b77e840d31d8eb94941, type: 3}
+  m_Name: AverageBulletEnjoyerCard
+  m_EditorClassIdentifier: 
+  UpgradeCardData:
+    UpgradeBg: {fileID: 21300000, guid: fa96b3d25768c07ad945dbebaba4ab8c, type: 3}
+    Weight: 40
+  Prequesities:
+  - {fileID: 11400000, guid: ca63de28ac8fe2b54a96d0de146ecec3, type: 2}
+  effect: {fileID: 11400000, guid: d2354034c88697eef967dcb118bb3bca, type: 2}

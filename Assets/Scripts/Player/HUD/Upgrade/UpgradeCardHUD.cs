@@ -12,9 +12,6 @@ namespace Game.UI.HUD
     {
         private UpgradeCard upgradeCard;
         [SerializeField] private Image cardBg;
-        [SerializeField] private Image cardIcon;
-        [SerializeField] private TextMeshProUGUI cardTitle;
-        [SerializeField] private TextMeshProUGUI cardDesc;
         [SerializeField] private Button cardButton;
 
         private void OnEnable()
@@ -39,18 +36,6 @@ namespace Game.UI.HUD
         private void SetUI()
         {
             cardBg.sprite = upgradeCard.UpgradeCardData.UpgradeBg;
-            cardIcon.sprite = upgradeCard.UpgradeCardData.UpgradeIcon;
-
-            cardTitle.text = upgradeCard.UpgradeCardData.UpgradeName;
-
-            string builder = upgradeCard.UpgradeCardData.UpgradeDesc[0];
-
-            foreach (string descLine in upgradeCard.UpgradeCardData.UpgradeDesc)
-            {
-                if (descLine == upgradeCard.UpgradeCardData.UpgradeDesc[0]) continue;
-
-                builder += "\n" + descLine;
-            }
         }
 
         private void SetOnClick()
