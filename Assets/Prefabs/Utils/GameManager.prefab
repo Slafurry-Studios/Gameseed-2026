@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2907966027946246481}
   - component: {fileID: 5892815206215686878}
+  - component: {fileID: 3366780398479834264}
   - component: {fileID: 1474413651686578673}
   - component: {fileID: 7101958945764350957}
-  - component: {fileID: 3366780398479834264}
   - component: {fileID: 3641634936374996148}
   - component: {fileID: 937571056604835971}
+  - component: {fileID: 1732273435638356492}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,6 +50,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6acb2b91299f0efa85b3b007c9224b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3366780398479834264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4747456712980624973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47910fdf3cd7c564c888f0e718de2bce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeCards:
+  - {fileID: 11400000, guid: ca63de28ac8fe2b54a96d0de146ecec3, type: 2}
+  - {fileID: 11400000, guid: a3e8c7678bfba31dca52a16f679ddb4f, type: 2}
+  - {fileID: 11400000, guid: 9503c3989d1d710e5b66f7cfa3dbd566, type: 2}
+  - {fileID: 11400000, guid: c80149c4a8a8b5fa9b685ebcd3769e9b, type: 2}
+  - {fileID: 11400000, guid: d6d995cddfa4307de80f3898f64ab5ec, type: 2}
+  - {fileID: 11400000, guid: dd63ef174966cd561b3306a467011d46, type: 2}
+  - {fileID: 11400000, guid: dba93a1b5149fd84b871e6581ad5a5b8, type: 2}
+  - {fileID: 11400000, guid: 76f62996e20cf25d4949bb34783a9275, type: 2}
+  - {fileID: 11400000, guid: e94fef43e951d8ec28f101f9106cb45e, type: 2}
+  - {fileID: 11400000, guid: 13da21329a5cd11b7b9afe3cd5f17981, type: 2}
+  - {fileID: 11400000, guid: 740e947614bb3c142b5f767037006ea3, type: 2}
+  - {fileID: 11400000, guid: b75088cefbf69adf8b635f6e7fb2b56f, type: 2}
+  - {fileID: 11400000, guid: 4c50d970f37f8817cb590b96404e5227, type: 2}
+  - {fileID: 11400000, guid: 50d733e590c31c131a7a9a37628a6afb, type: 2}
+  - {fileID: 11400000, guid: c9c94252a907bb3e58b683063c23616b, type: 2}
 --- !u!114 &1474413651686578673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2207fc7e60c7a02d4956aaab7ffdd840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subsThresholds: []
+  subsThresholds:
+  - Name: 
+    Level: 0
+    ThresholdValue: 0
 --- !u!114 &7101958945764350957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,19 +108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxPoint: 5000
   threatThresholds: []
---- !u!114 &3366780398479834264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4747456712980624973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47910fdf3cd7c564c888f0e718de2bce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upgradeCards: []
 --- !u!114 &3641634936374996148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,3 +138,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc1bcd30a1b6db488ad9c438ecb658b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1732273435638356492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4747456712980624973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59385ffe274fdefbfa9b4c22f94b50ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBuckets:
+  - {fileID: 11400000, guid: d91a0d304b38b0ec193df78582c78b8d, type: 2}
