@@ -9,7 +9,9 @@ namespace Game.Manager
     {
         [SerializeField] private int MaxPoint = 5000;
         [SerializeField] private Threshold[] threatThresholds;
-        public event Action<float> OnThreatPointIncreased;
+        public event Action<float, float> OnThreatPointIncreased;
+        public event Action<int> OnCurrentThreatStateChanged;
+
 
         private int threatPoints = 0;
         private int currentThreatState = 0;
@@ -20,14 +22,14 @@ namespace Game.Manager
 
             int newThreshold = GetCurrentThreshold();
 
+            OnThreatPointIncreased?.Invoke(threatPoints, MaxPoint);
+
             if (newThreshold > currentThreatState)
             {
                 currentThreatState = newThreshold;
 
-                OnThreatPointIncreased?.Invoke(threatPoints);
-
+                OnCurrentThreatStateChanged?.Invoke(currentThreatState);
             }
-
         }
 
         private int GetCurrentThreshold()
