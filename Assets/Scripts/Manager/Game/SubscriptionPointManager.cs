@@ -12,9 +12,17 @@ namespace Game.Manager
         public event Action<int> OnCurrentSubsStateChanged;
         private int subsPoints = 0;
         private int currentSubsState = 0;
+        private bool isContentCreator = false;
 
         public void IncreasePoints(int amount)
         {
+            int add = amount;
+
+            if (isContentCreator)
+            {
+                add = Mathf.RoundToInt(add * 1.2f);
+            }
+
             subsPoints += amount;
 
             int newThreshold = GetCurrentThreshold();
@@ -47,6 +55,11 @@ namespace Game.Manager
         public int GetPoint()
         {
             return subsPoints;
+        }
+
+        public void ContentCreator()
+        {
+            isContentCreator = true;
         }
     }
 }

@@ -8,6 +8,7 @@ namespace Game.Upgrade
     public class UpgradeCard : ScriptableObject
     {
         public UpgradeCardData UpgradeCardData;
+        public UpgradeCard[] Prequesities;
         public UpgradeCardEffect effect;
         public void OnSelected()
         {
@@ -17,12 +18,8 @@ namespace Game.Upgrade
     [System.Serializable]
     public struct UpgradeCardData
     {
-        public string UpgradeName;
-        public string[] UpgradeDesc;
-        public UpgradeType upgradeType;
         public Sprite UpgradeBg;
-        public Sprite UpgradeIcon;
-
+        
         [Tooltip("Drop Weight")]
         public float Weight;
     }

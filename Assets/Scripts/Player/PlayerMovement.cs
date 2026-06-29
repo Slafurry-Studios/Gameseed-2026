@@ -163,5 +163,20 @@ namespace Game.Player
                 return forwardSpeed * (isSprinting ? sprintMultiplier : 1f); 
             } 
         }
+
+        public bool GetSprint()
+        {
+            return isSprinting;
+        }
+
+        public void InfiniteCardio()
+        {
+            maxStamina = maxStamina * 1.1f;
+        }
+
+        public void LegDay()
+        {
+            sprintMultiplier = sprintMultiplier * 1.15f;
+        }
     }
 }
