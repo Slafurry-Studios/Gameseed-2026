@@ -96,7 +96,7 @@ namespace Game.AI
                 lastFireTime = Time.time;
             }
         }
-        public override void ExitState(EntityBrain brain) 
+        public override void ExitState(EntityBrain brain)
         {
             if (brain.aiAnimation != null && !string.IsNullOrEmpty(attackAnim))
             {

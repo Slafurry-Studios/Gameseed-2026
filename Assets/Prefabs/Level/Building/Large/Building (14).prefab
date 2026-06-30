@@ -9,10 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3695419435211436579}
+  - component: {fileID: 627821201499179649}
   - component: {fileID: 5144695346155054685}
-  - component: {fileID: 3221194072945499758}
   - component: {fileID: 6998369482126663580}
-  m_Layer: 0
+  - component: {fileID: 3905302972741207237}
+  - component: {fileID: -1159013452730653710}
+  - component: {fileID: 1952672369556690054}
+  - component: {fileID: -7711425088251694814}
+  m_Layer: 12
   m_Name: Building (14)
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -34,6 +38,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &627821201499179649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999314171020843392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ec4676b0adede79a5de5a3f4d1b7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 16
+  ThreatPointValue: 500
+  SubsPointValue: 400
 --- !u!114 &5144695346155054685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,56 +76,13 @@ MonoBehaviour:
     hitThreshold: 15
   - buildingSprite: {fileID: -663206100, guid: 63fde1f540023404c96b6747ddba2178, type: 3}
     hitThreshold: 15
-  destroyParticlePrefab: {fileID: 0}
---- !u!60 &3221194072945499758
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999314171020843392}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.76, y: 0.7}
-    newSize: {x: 0.76, y: 0.7}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.38, y: 0.35}
-      - {x: -0.38, y: -0.35}
-      - {x: 0.38, y: -0.35}
-      - {x: 0.38, y: 0.35}
-  m_UseDelaunayMesh: 0
+  destroyParticlePrefab:
+  - {fileID: 361650000866826754, guid: 964e9252443a2b64d9b255cd6a5df882, type: 3}
+  - {fileID: 7845984922608424465, guid: cb10364ee3e0e13e28f0fc94c0ab7869, type: 3}
+  - {fileID: 4255063372578977299, guid: 4453eb2eb9637fe61b9d474e32ff2694, type: 3}
+  - {fileID: 7536573669859555480, guid: c9ed59985218784d29a4f7910bfe0e3a, type: 3}
+  - {fileID: 1394588935794710173, guid: 4ccd10a91d7b232faa7ab8e1b6999799, type: 3}
+  - {fileID: 2945522813581111875, guid: 4f48ff02b429a7415bc24441b549feb5, type: 3}
 --- !u!212 &6998369482126663580
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -145,8 +121,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1565190731
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -1461298640, guid: 63fde1f540023404c96b6747ddba2178, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -159,3 +135,96 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3905302972741207237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999314171020843392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ee90fc35fbd5a4eae59f09e9002dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.2
+  intensity: 0.2
+  dampening: 1
+  shakeX: 1
+  shakeY: 1
+  shakeZ: 0
+--- !u!114 &-1159013452730653710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999314171020843392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7429e632178f194098dfc9dc5c143cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkColor: {r: 1, g: 1, b: 1, a: 1}
+  blinkDuration: 0.1
+  includeChildren: 1
+--- !u!61 &1952672369556690054
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999314171020843392}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.19137858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.76, y: 0.7}
+    newSize: {x: 0.76, y: 0.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.76, y: 0.3172429}
+  m_EdgeRadius: 0
+--- !u!114 &-7711425088251694814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999314171020843392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de6809b99a12164ea21b60d6dc5aaa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropData: {fileID: 11400000, guid: d563d61d117f7c5569a03d042c20b66c, type: 2}
+  scatterRadius: 1
+  dropOnDestroy: 1
