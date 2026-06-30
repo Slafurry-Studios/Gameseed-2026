@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 2
-  bossMarginRange: {x: 10, y: 10}
+  bossMarginRange: {x: 20, y: 20}
   bossSize: {x: 4, y: 4}
   bossBuildings:
   - {fileID: 7178440261986189834, guid: cfec774fc9ee16f498abd752dc660166, type: 3}
@@ -459,7 +459,7 @@ MonoBehaviour:
   - {fileID: 8005792738082797078, guid: ad9d3b1ee0a2371438583fb1d3d04136, type: 3}
   - {fileID: 5416794805173567339, guid: ca32ef9de73ae9e4a98695e2dfe34eed, type: 3}
   - {fileID: 322584192736616865, guid: 979253f78e6b9d840aa9318277d583c3, type: 3}
-  - {fileID: 3577364668643556489, guid: d71d9733fb786fc45b394c35660aa277, type: 3}
+  - {fileID: 322584192736616865, guid: 27331a7f17769711b972bb71ab99b170, type: 3}
   buildingSize: {x: 2, y: 2}
   marginLeftRange: {x: 0, y: 0}
   marginRightRange: {x: 0, y: 0}
