@@ -18,7 +18,7 @@ namespace Game.UI.HUD
 
         public void UpdateSubscriber(int amount)
         {
-            subsText.text = "Subsciber: " + amount;
+            subsText.text = "Subs: " + amount;
         }
     }
 

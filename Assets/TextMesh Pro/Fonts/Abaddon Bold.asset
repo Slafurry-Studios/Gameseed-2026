@@ -60,9 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Abaddon Bold
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 911190150
   material: {fileID: -2588252151474741333}
-  materialHashCode: 0
+  materialHashCode: -1140650906
   m_Version: 1.1.0
   m_SourceFontFileGUID: 0e48e6a515fcb99358318ef4438a902d
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 0e48e6a515fcb99358318ef4438a902d, type: 3}
