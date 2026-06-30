@@ -424,6 +424,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2888300774316468385, guid: 1039221f47789f14bb4a2b70317c0e20, type: 3}
+      propertyPath: bossMarginRange.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888300774316468385, guid: 1039221f47789f14bb4a2b70317c0e20, type: 3}
+      propertyPath: bossMarginRange.y
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4016166453176487220, guid: 1039221f47789f14bb4a2b70317c0e20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
