@@ -92,9 +92,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subsThresholds:
-  - Name: 
-    Level: 0
+  - Name: First Time Starting
+    Level: 1
     ThresholdValue: 0
+  - Name: 500 Subs
+    Level: 2
+    ThresholdValue: 500
+  - Name: 1500 Subs
+    Level: 3
+    ThresholdValue: 1500
+  - Name: 2000 Subs
+    Level: 4
+    ThresholdValue: 2000
+  - Name: 2500 Subs
+    Level: 5
+    ThresholdValue: 2500
+  - Name: 3000 Subs
+    Level: 6
+    ThresholdValue: 3000
 --- !u!114 &7101958945764350957
 MonoBehaviour:
   m_ObjectHideFlags: 0
