@@ -46,3 +46,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3511493183
+    locked: 0
+  - name: Road
+    uniqueID: 3291616713
+    locked: 0
+  - name: Decorations
+    uniqueID: 3668281367
+    locked: 0
+  - name: Player
+    uniqueID: 4291780581
+    locked: 0
+  - name: Entity
+    uniqueID: 3028078579
+    locked: 0
+  - name: Bullet
+    uniqueID: 2876440453
+    locked: 0
+  - name: Building
+    uniqueID: 1565190731
+    locked: 0
