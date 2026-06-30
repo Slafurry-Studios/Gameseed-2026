@@ -31,11 +31,9 @@ namespace Game.AI.Boss
         public override bool CheckConditions(EntityBrain brain)
         {
             BossHealth health = brain.GetComponent<BossHealth>();
-            if (health != null && health.IsDead) return false;
+            if (health == null || health.IsDead) return false;
 
             if (isExecutingLanding) return true;
-
-            if (health == null) return false;
 
             if (health.ActiveSupportBuildings == null || health.ActiveSupportBuildings.Count == 0) return false;
 
@@ -57,7 +55,7 @@ namespace Game.AI.Boss
         public override void UpdateState(EntityBrain brain)
         {
             BossHealth health = brain.GetComponent<BossHealth>();
-            if (health == null || health.ActiveSupportBuildings.Count == 0)
+            if (health == null || health.IsDead || health.ActiveSupportBuildings.Count == 0)
             {
                 FinishLandingRoutine(brain);
                 return;
@@ -77,7 +75,7 @@ namespace Game.AI.Boss
                 if (distance <= landingRadius)
                 {
                     isLanded = true;
-                    brain.Movement.SetMovement(Vector2.zero, 0f);
+                    if (brain.Movement != null) brain.Movement.SetMovement(Vector2.zero, 0f);
 
                     landEndTime = Time.time + landingDuration;
                     Debug.Log($"[BossLandState] Landed on {targetBuilding.name} for {landingDuration} seconds!");
@@ -90,12 +88,12 @@ namespace Game.AI.Boss
                         : 5f;
                     float speed = baseSpeed * retreatSpeedMultiplier;
 
-                    brain.Movement.SetMovement(direction, speed);
+                    if (brain.Movement != null) brain.Movement.SetMovement(direction, speed);
                 }
             }
             else
             {
-                brain.Movement.SetMovement(Vector2.zero, 0f);
+                if (brain.Movement != null) brain.Movement.SetMovement(Vector2.zero, 0f);
 
                 if (Time.time >= landEndTime)
                 {

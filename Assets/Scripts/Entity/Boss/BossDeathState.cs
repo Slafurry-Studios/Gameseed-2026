@@ -1,17 +1,26 @@
 using UnityEngine;
+using Game.AI;
 
 namespace Game.AI.Boss
 {
+    /// <summary>
+    /// AI state activated when BossHealth reaches 0 HP.
+    /// Immediately halts all movement and attacking, plays explosion/death effects, and destroys the boss GameObject.
+    /// Place this state at Index 0 (Top Priority) in the stateList on BossBrain.
+    /// </summary>
     public class BossDeathState : EntityState
     {
-        [Header("Death Effects Setup")]
-        [Tooltip("Optional particle effect prefab spawned when the boss dies (e.g. big explosion).")]
+        [Header("Death Configuration")]
+        [Tooltip("Delay in seconds before destroying the boss GameObject after death. Default: 3s.")]
+        public float deathDelay = 3f;
+
+        [Tooltip("Optional particle or explosion effect prefab spawned at boss position upon death.")]
         public GameObject deathEffectPrefab;
 
-        [Tooltip("Time delay (in seconds) before the boss GameObject is destroyed after dying. Default: 3 seconds.")]
-        public float destroyDelay = 3f;
+        [Tooltip("If checked, disables all colliders on death so player projectiles or body don't collide with the dying corpse.")]
+        public bool disableCollidersOnDeath = true;
 
-        private bool hasEnteredDeath = false;
+        private bool hasExecutedDeath = false;
 
         public override bool CheckConditions(EntityBrain brain)
         {
@@ -21,33 +30,41 @@ namespace Game.AI.Boss
 
         public override void EnterState(EntityBrain brain)
         {
-            if (hasEnteredDeath) return;
-            hasEnteredDeath = true;
+            if (hasExecutedDeath) return;
+            hasExecutedDeath = true;
 
-            Debug.Log($"[BossDeathState] Boss has died! Stopping all movement and combat.");
+            Debug.Log($"[BossDeathState] Boss has died! Halting all movement and combat.");
 
+            // Stop all movement immediately
             if (brain.Movement != null)
             {
                 brain.Movement.SetMovement(Vector2.zero, 0f);
             }
 
-            Collider2D[] colliders = brain.GetComponents<Collider2D>();
-            foreach (var col in colliders)
+            // Disable colliders so dead boss doesn't block player or take extra hits
+            if (disableCollidersOnDeath)
             {
-                col.enabled = false;
+                Collider2D[] colliders = GetComponents<Collider2D>();
+                foreach (var c in colliders)
+                {
+                    c.enabled = false;
+                }
             }
 
+            // Spawn visual death effect
             if (deathEffectPrefab != null)
             {
                 GameObject effect = Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
-                Destroy(effect, destroyDelay + 1f);
+                Destroy(effect, deathDelay + 1f);
             }
 
-            Destroy(brain.gameObject, destroyDelay);
+            // Schedule final GameObject destruction
+            Destroy(gameObject, deathDelay);
         }
 
         public override void UpdateState(EntityBrain brain)
         {
+            // Ensure boss stays completely frozen while dying
             if (brain.Movement != null)
             {
                 brain.Movement.SetMovement(Vector2.zero, 0f);

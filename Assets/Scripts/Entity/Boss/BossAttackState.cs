@@ -93,10 +93,10 @@ namespace Game.AI.Boss
 
         public override bool CheckConditions(EntityBrain brain)
         {
+            if (brain.Target == null) return false;
+
             BossHealth health = brain.GetComponent<BossHealth>();
             if (health != null && health.IsDead) return false;
-
-            if (brain.Target == null) return false;
 
             float distance = Vector2.Distance(transform.position, brain.Target.position);
             if (distance > attackRadius) return false;
@@ -123,9 +123,15 @@ namespace Game.AI.Boss
         {
             if (brain.Target == null || activeProfile == null) return;
 
+            BossHealth health = brain.GetComponent<BossHealth>();
+            if (health != null && health.IsDead)
+            {
+                if (brain.Movement != null) brain.Movement.SetMovement(Vector2.zero, 0f);
+                return;
+            }
+
             Vector2 aimDirection = (brain.Target.position - transform.position).normalized;
 
-            // Maintain standoff distance while attacking
             if (brain.Movement != null)
             {
                 Game.Player.PlayerMovement player = brain.Target.GetComponent<Game.Player.PlayerMovement>();

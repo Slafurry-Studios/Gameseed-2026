@@ -17,10 +17,10 @@ namespace Game.AI.Boss
 
         public override bool CheckConditions(EntityBrain brain)
         {
+            if (brain.Target == null) return false;
+
             BossHealth health = brain.GetComponent<BossHealth>();
             if (health != null && health.IsDead) return false;
-
-            if (brain.Target == null) return false;
 
             float distance = Vector2.Distance(transform.position, brain.Target.position);
             return distance <= detectionRadius;
@@ -33,6 +33,13 @@ namespace Game.AI.Boss
         public override void UpdateState(EntityBrain brain)
         {
             if (brain.Target == null || brain.Movement == null) return;
+
+            BossHealth health = brain.GetComponent<BossHealth>();
+            if (health != null && health.IsDead)
+            {
+                brain.Movement.SetMovement(Vector2.zero, 0f);
+                return;
+            }
 
             PlayerMovement player = brain.Target.GetComponent<PlayerMovement>();
             float playerSpeed = (player != null) ? player.CurrentSpeed : 5f;

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4826231044227504489}
   - component: {fileID: 1129639596615729485}
   - component: {fileID: 8334751573877120168}
+  - component: {fileID: 2459231381044262577}
   m_Layer: 13
   m_Name: HeliBoss
   m_TagString: Boss
@@ -76,6 +77,7 @@ MonoBehaviour:
   - {fileID: 7728893559492850159}
   - {fileID: 4826231044227504489}
   - {fileID: 3902733686513751270}
+  - {fileID: 2459231381044262577}
 --- !u!114 &599493099235066254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +242,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.85066175}
   m_EdgeRadius: 0
+--- !u!114 &2459231381044262577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4331285232013777745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08388beec60e2204883e2d10973dfcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathDelay: 3
+  deathEffectPrefab: {fileID: 0}
+  disableCollidersOnDeath: 1
 --- !u!1 &4689291240695308687
 GameObject:
   m_ObjectHideFlags: 0

@@ -52,25 +52,6 @@ namespace Game.AI
 
         private void EvaluateStates()
         {
-            Game.Generic.Health health = GetComponent<Game.Generic.Health>();
-            if (health != null && health.IsDead)
-            {
-                // Check if an explicit death state is present in stateList
-                foreach (EntityState state in stateList)
-                {
-                    if (state != null && state.CheckConditions(this))
-                    {
-                        if (currentState != state) ChangeState(state);
-                        return;
-                    }
-                }
-
-                // If no state handles death, stop all movement and exit current state
-                if (currentState != null) ChangeState(null);
-                if (Movement != null) Movement.SetMovement(Vector2.zero, 0f);
-                return;
-            }
-
             foreach (EntityState state in stateList)
             {
                 if (state != null && state.CheckConditions(this))
