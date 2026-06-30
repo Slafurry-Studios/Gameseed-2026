@@ -8,7 +8,7 @@ namespace Game.Manager
     public class SubscriptionPointManager : MonoBehaviour
     {
         [SerializeField] private Threshold[] subsThresholds;
-        public event Action<float> OnSubsPointIncreased;
+        public event Action<int> OnSubsPointIncreased;
         public event Action<int> OnCurrentSubsStateChanged;
         private int subsPoints = 0;
         private int currentSubsState = 0;
@@ -23,7 +23,7 @@ namespace Game.Manager
                 add = Mathf.RoundToInt(add * 1.2f);
             }
 
-            subsPoints += amount;
+            subsPoints += add;
 
             int newThreshold = GetCurrentThreshold();
 

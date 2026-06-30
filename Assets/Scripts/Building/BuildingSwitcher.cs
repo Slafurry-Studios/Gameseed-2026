@@ -1,6 +1,5 @@
 using UnityEngine;
-using Game.Core;
-using Game.Gameplay;
+using Game.Generic;
 
 [System.Serializable]
 public struct Building
@@ -9,28 +8,36 @@ public struct Building
     public int hitThreshold;
 }
 
-
 [RequireComponent(typeof(SpriteRenderer))]
-public class BuildingSwitcher : MonoBehaviour, IDamageable
+[RequireComponent(typeof(BuildingHealth))]
+public class BuildingSwitcher : MonoBehaviour
 {
-    [Header("Only Player Bullet")]
-    [SerializeField] private Bullet playerBullet;
-
     [Header("Building")]
     public Building[] buildingPrefabs;
 
     [Header("Particle")]
-    public GameObject destroyParticlePrefab;
+    public GameObject[] destroyParticlePrefab;
 
-
+    private BuildingHealth buildingHealth;
     private SpriteRenderer spriteRenderer;
 
     private int currentIndex = 0;
-    private int hitCount = 0;
+    private float hitCount = 0f;
 
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        buildingHealth = GetComponent<BuildingHealth>();
+    }
+
+    void OnEnable()
+    {
+        buildingHealth.OnDamaged += HandleDamaged;
+    }
+
+    void OnDisable()
+    {
+        buildingHealth.OnDamaged -= HandleDamaged;
     }
 
     void Start()
@@ -42,24 +49,13 @@ public class BuildingSwitcher : MonoBehaviour, IDamageable
         }
     }
 
-    public void TakeDamage(float damage)
+    void HandleDamaged(float amount)
     {
-        // fallback
-        TakeDamage(damage, null);
-    }
-
-    public void TakeDamage(float damage, Bullet bullet)
-    {
-        // hanya bullet player
-        if (playerBullet != null && bullet != playerBullet)
-            return;
-
-
-        hitCount++;
+        hitCount += amount;
 
         Debug.Log(
             gameObject.name +
-            " terkena player bullet : " +
+            " total damage : " +
             hitCount
         );
         CheckThreshold();
@@ -87,26 +83,27 @@ public class BuildingSwitcher : MonoBehaviour, IDamageable
             spriteRenderer.sprite =
                 buildingPrefabs[currentIndex].buildingSprite;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 
     void PlayDestroyEffect()
     {
-        if (!destroyParticlePrefab)
+        if (destroyParticlePrefab == null || destroyParticlePrefab.Length == 0)
+            return;
+
+        int randomIndex = Random.Range(0, destroyParticlePrefab.Length);
+        GameObject prefab = destroyParticlePrefab[randomIndex];
+
+        if (!prefab)
             return;
 
         GameObject effect = Instantiate(
-            destroyParticlePrefab,
+            prefab,
             transform.position,
             Quaternion.identity
         );
 
         ParticleSystem ps =
             effect.GetComponent<ParticleSystem>();
-
 
         if (ps)
         {
