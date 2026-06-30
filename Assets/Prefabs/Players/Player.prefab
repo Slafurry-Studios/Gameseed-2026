@@ -290,14 +290,18 @@ MonoBehaviour:
   rotationOffset: -90
   shootAction: {fileID: 1120369429361536294, guid: 487d6f98c21f58d4c8a0d99e91627e36, type: 3}
   bulletPrefab: {fileID: 1338399822672591885, guid: d0db26803bb1d2a4a802f8857098a4be, type: 3}
+  bulletNormalRadius: 0.2
+  bulletBiggerDakkaPrefab: {fileID: 1338399822672591885, guid: 1d8dd80b3dcc433f993e82d5007fb973, type: 3}
+  bulletBiggerDakkaRadius: 0.5
+  bulletAverageBulletEnjoyerPrefab: {fileID: 1338399822672591885, guid: e487876fa4565be2a94ddc49cb57d005, type: 3}
+  bulletAverageBulletEnjoyerPrefabRadius: 1
   fireRate: 0.5
-  bulletDamage: 10
+  bulletDamage: 6
   bulletSpeed: 20
   maxShootDistance: 10
   targetMask:
     serializedVersion: 2
     m_Bits: 12288
-  hitRadius: 0.2
 --- !u!114 &8351684795539557676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +318,7 @@ MonoBehaviour:
   tailPrefab: {fileID: 3017174187755660583, guid: 144379c316e13924aad82de38ff12ef1, type: 3}
   initialBodySize: 1
   minRecordDistance: 0.02
-  historyGap: 9
+  historyGap: 20
 --- !u!114 &-8338949141181473109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +372,7 @@ MonoBehaviour:
   maxHealth: 100
   playerDizzyAnimator: {fileID: 0}
   playerMovement: {fileID: 6872822171515884240}
+  collisionDmg: 1
 --- !u!1 &8265279299031505708
 GameObject:
   m_ObjectHideFlags: 0

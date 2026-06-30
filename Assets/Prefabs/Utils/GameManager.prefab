@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3641634936374996148}
   - component: {fileID: 937571056604835971}
   - component: {fileID: 1732273435638356492}
+  - component: {fileID: 8065942031380492402}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -91,9 +92,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subsThresholds:
-  - Name: 
-    Level: 0
+  - Name: First Time Starting
+    Level: 1
     ThresholdValue: 0
+  - Name: 500 Subs
+    Level: 2
+    ThresholdValue: 500
+  - Name: 1500 Subs
+    Level: 3
+    ThresholdValue: 1500
+  - Name: 2000 Subs
+    Level: 4
+    ThresholdValue: 2000
+  - Name: 2500 Subs
+    Level: 5
+    ThresholdValue: 2500
+  - Name: 3000 Subs
+    Level: 6
+    ThresholdValue: 3000
 --- !u!114 &7101958945764350957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,3 +168,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBuckets:
   - {fileID: 11400000, guid: d91a0d304b38b0ec193df78582c78b8d, type: 2}
+--- !u!114 &8065942031380492402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4747456712980624973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70bafd4abfc5d994a9ba4f37ec16470f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

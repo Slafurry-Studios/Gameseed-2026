@@ -9,10 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6412580768721000069}
+  - component: {fileID: 5173125056379929225}
   - component: {fileID: 1608854734789512930}
   - component: {fileID: 6485807279120083808}
   - component: {fileID: 3425423626353750903}
-  m_Layer: 0
+  - component: {fileID: -4351207069496758117}
+  - component: {fileID: 86903890945949573}
+  m_Layer: 12
   m_Name: Building (5)
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -34,6 +37,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5173125056379929225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783792209048939217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ec4676b0adede79a5de5a3f4d1b7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 11
+  ThreatPointValue: 500
+  SubsPointValue: 400
 --- !u!114 &1608854734789512930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,7 +73,13 @@ MonoBehaviour:
     hitThreshold: 5
   - buildingSprite: {fileID: 647254595, guid: 590e04270a58d304c9ed50f801d0199d, type: 3}
     hitThreshold: 10
-  destroyParticlePrefab: {fileID: 0}
+  destroyParticlePrefab:
+  - {fileID: 361650000866826754, guid: 964e9252443a2b64d9b255cd6a5df882, type: 3}
+  - {fileID: 7845984922608424465, guid: cb10364ee3e0e13e28f0fc94c0ab7869, type: 3}
+  - {fileID: 4255063372578977299, guid: 4453eb2eb9637fe61b9d474e32ff2694, type: 3}
+  - {fileID: 7536573669859555480, guid: c9ed59985218784d29a4f7910bfe0e3a, type: 3}
+  - {fileID: 1394588935794710173, guid: 4ccd10a91d7b232faa7ab8e1b6999799, type: 3}
+  - {fileID: 2945522813581111875, guid: 4f48ff02b429a7415bc24441b549feb5, type: 3}
 --- !u!60 &6485807279120083808
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -157,3 +181,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4351207069496758117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783792209048939217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ee90fc35fbd5a4eae59f09e9002dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.2
+  intensity: 0.2
+  dampening: 1
+  shakeX: 1
+  shakeY: 1
+  shakeZ: 0
+--- !u!114 &86903890945949573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783792209048939217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7429e632178f194098dfc9dc5c143cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkColor: {r: 1, g: 1, b: 1, a: 1}
+  blinkDuration: 0.1
+  includeChildren: 1
