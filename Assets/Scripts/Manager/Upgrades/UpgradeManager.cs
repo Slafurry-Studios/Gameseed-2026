@@ -33,7 +33,6 @@ namespace Game.Upgrade
 
         private void SetNewUpgrades(int threshold)
         {
-            Debug.Log("[UpgradeManager] listened");
             List<UpgradeCard> rolled = RollUniqueCards(3);
 
             if (rolled.Count == 0)

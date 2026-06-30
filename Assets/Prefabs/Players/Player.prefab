@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720944781073663458}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_ConstrainProportionsScale: 1
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 0.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3010827601464262802}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4945326036448420087
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -3186715
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -124,7 +124,6 @@ Transform:
   m_Children:
   - {fileID: 7748659725532356106}
   - {fileID: 5121607882258503389}
-  - {fileID: 4236434970009435774}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9012625788964980658
@@ -165,8 +164,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -3186715
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -238,7 +237,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.03445342}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -249,7 +248,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7176204, y: 0.93109316}
+  m_Size: {x: 0.7176204, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &6872822171515884240
 MonoBehaviour:
@@ -291,18 +290,14 @@ MonoBehaviour:
   rotationOffset: -90
   shootAction: {fileID: 1120369429361536294, guid: 487d6f98c21f58d4c8a0d99e91627e36, type: 3}
   bulletPrefab: {fileID: 1338399822672591885, guid: d0db26803bb1d2a4a802f8857098a4be, type: 3}
-  bulletNormalRadius: 0.2
-  bulletBiggerDakkaPrefab: {fileID: 1338399822672591885, guid: 1d8dd80b3dcc433f993e82d5007fb973, type: 3}
-  bulletBiggerDakkaRadius: 0.5
-  bulletAverageBulletEnjoyerPrefab: {fileID: 1338399822672591885, guid: e487876fa4565be2a94ddc49cb57d005, type: 3}
-  bulletAverageBulletEnjoyerPrefabRadius: 1
   fireRate: 0.5
-  bulletDamage: 6
+  bulletDamage: 10
   bulletSpeed: 20
   maxShootDistance: 10
   targetMask:
     serializedVersion: 2
     m_Bits: 12288
+  hitRadius: 0.2
 --- !u!114 &8351684795539557676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,7 +314,7 @@ MonoBehaviour:
   tailPrefab: {fileID: 3017174187755660583, guid: 144379c316e13924aad82de38ff12ef1, type: 3}
   initialBodySize: 1
   minRecordDistance: 0.02
-  historyGap: 20
+  historyGap: 9
 --- !u!114 &-8338949141181473109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,7 +368,6 @@ MonoBehaviour:
   maxHealth: 100
   playerDizzyAnimator: {fileID: 0}
   playerMovement: {fileID: 6872822171515884240}
-  collisionDmg: 1
 --- !u!1 &8265279299031505708
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +395,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.2, y: 6.2, z: 6.2}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3010827601464262802}
@@ -444,10 +438,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -3186715
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 50
-  m_Sprite: {fileID: 2045519943, guid: 5b709324e10afaf4fb319e069d6cd6ed, type: 3}
+  m_Sprite: {fileID: -1333303275, guid: c1f04176b955afb4d85514d32b2afb46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

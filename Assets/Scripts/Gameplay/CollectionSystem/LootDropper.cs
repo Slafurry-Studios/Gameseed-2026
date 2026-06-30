@@ -43,18 +43,9 @@ namespace Game.Gameplay
                     for (int i = 0; i < drop.amount; i++)
                     {
                         Vector2 randomOffset = Random.insideUnitCircle * scatterRadius;
-                        Vector3 targetPos = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0f);
+                        Vector3 spawnPos = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0f);
 
-                        GameObject droppedItem = Instantiate(drop.prefabToDrop, transform.position, Quaternion.identity);
-
-                        if (droppedItem.TryGetComponent<LootLauncher>(out var launcher))
-                        {
-                            launcher.Launch(transform.position, targetPos);
-                        }
-                        else
-                        {
-                            droppedItem.transform.position = targetPos;
-                        }
+                        GameObject droppedItem = Instantiate(drop.prefabToDrop, spawnPos, Quaternion.identity);
                     }
                 }
             }

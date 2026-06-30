@@ -6,13 +6,13 @@ namespace Game.AI
     {
         [Header("Chase Settings")]
         public float chaseRadius = 15f;
-
-        public float speedMultiplier = 0.8f;
-
+        
+        public float speedMultiplier = 0.8f; 
+        
         public override bool CheckConditions(EntityBrain brain)
         {
             if (brain.Target == null) return false;
-
+            
             return Vector2.Distance(transform.position, brain.Target.position) <= chaseRadius;
         }
 

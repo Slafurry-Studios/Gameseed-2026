@@ -1,11 +1,11 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+ 
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance;
-
+ 
     [SerializeField]
     private MusicLibrary musicLibrary;
     [SerializeField]
@@ -21,9 +21,7 @@ public class MusicManager : MonoBehaviour
     [Header("Scene Music")]
     [SerializeField]
     private SceneTrack[] sceneTracks;
-
-    private Coroutine currentFadeCoroutine;
-
+ 
     private void Awake()
     {
         if (Instance != null)
@@ -64,12 +62,13 @@ public class MusicManager : MonoBehaviour
             trackToPlay = scene.name;
         }
 
+        // Only play if the clip exists
         if (musicLibrary != null && musicLibrary.GetClipFromName(trackToPlay) != null)
         {
             PlayMusic(trackToPlay);
         }
     }
-
+ 
     public void PlayMusic(string trackName, float fadeDuration = 0.5f)
     {
         if (musicLibrary == null)
@@ -77,8 +76,8 @@ public class MusicManager : MonoBehaviour
             return;
         }
 
-        MusicTrack track = musicLibrary.GetTrack(trackName);
-        if (track.clip == null)
+        AudioClip clip = musicLibrary.GetClipFromName(trackName);
+        if (clip == null)
         {
             return;
         }
@@ -88,37 +87,28 @@ public class MusicManager : MonoBehaviour
             return;
         }
 
-        if (currentFadeCoroutine != null)
-        {
-            StopCoroutine(currentFadeCoroutine);
-        }
-
-        currentFadeCoroutine = StartCoroutine(AnimateMusicCrossfade(track.clip, track.volume, fadeDuration));
+        StartCoroutine(AnimateMusicCrossfade(clip, fadeDuration));
     }
-
-    IEnumerator AnimateMusicCrossfade(AudioClip nextTrack, float targetVolume, float fadeDuration = 0.5f)
+ 
+    IEnumerator AnimateMusicCrossfade(AudioClip nextTrack, float fadeDuration = 0.5f)
     {
-        float startVolume = musicSource.volume;
         float percent = 0;
         while (percent < 1)
         {
             percent += Time.deltaTime * 1 / fadeDuration;
-            musicSource.volume = Mathf.Lerp(startVolume, 0, percent);
+            musicSource.volume = Mathf.Lerp(1f, 0, percent);
             yield return null;
         }
-
+ 
         musicSource.clip = nextTrack;
         musicSource.Play();
-
+ 
         percent = 0;
         while (percent < 1)
         {
             percent += Time.deltaTime * 1 / fadeDuration;
-            musicSource.volume = Mathf.Lerp(0, targetVolume, percent);
+            musicSource.volume = Mathf.Lerp(0, 1f, percent);
             yield return null;
         }
-
-        musicSource.volume = targetVolume;
-        currentFadeCoroutine = null;
     }
 }
