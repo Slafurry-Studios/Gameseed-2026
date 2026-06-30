@@ -1,17 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.AI
+namespace Game.AI 
 {
+    /// <summary>
+    /// Core AI State Machine Controller. Evaluates attached state scripts in priority order
+    /// every frame and runs the highest-priority state whose conditions are met.
+    /// </summary>
     [RequireComponent(typeof(NPCMovement))]
     public class EntityBrain : MonoBehaviour
     {
         [Header("Universal References")]
-        public Transform Target;
-        public Animator aiAnimation;
-
+        [Tooltip("The main target (usually the Player) that this AI tracks, chases, or attacks. If left blank, it automatically finds the Player by tag.")]
+        public Transform Target; 
+        
         [Header("State Priority List (Top = Highest)")]
-        [Tooltip("The brain checks this list from top to bottom. The first state whose conditions are met will run!")]
+        [Tooltip("List of attached EntityState scripts ordered by priority. Every frame, the brain checks from index 0 downward. The FIRST state whose CheckConditions returns true will be activated!")]
         public List<EntityState> stateList = new List<EntityState>();
 
         public NPCMovement Movement { get; private set; }
@@ -20,27 +24,15 @@ namespace Game.AI
         private void Awake()
         {
             Movement = GetComponent<NPCMovement>();
-            if (aiAnimation == null) aiAnimation = GetComponentInChildren<Animator>();
         }
 
-        private void Update()
+        private void Start()
         {
-            EvaluateStates();
-
-            if (currentState != null)
-            {
-                currentState.UpdateState(this);
-            }
-        }
-
-        private void Start() // Move logic here
-        {
-            if (Target == null && PlayerManager.PlayerTransform != null)
+            if (Target == null && PlayerManager.PlayerTransform != null) 
             {
                 Target = PlayerManager.PlayerTransform;
             }
-
-            // Safety fallback if PlayerManager wasn't ready
+        
             if (Target == null)
             {
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -48,18 +40,27 @@ namespace Game.AI
             }
         }
 
+        private void Update()
+        {
+            EvaluateStates();
+            
+            if (currentState != null) 
+            {
+                currentState.UpdateState(this);
+            }
+        }
+
         private void EvaluateStates()
         {
             foreach (EntityState state in stateList)
             {
-                if (state.CheckConditions(this))
+                if (state != null && state.CheckConditions(this))
                 {
                     if (currentState != state)
                     {
                         ChangeState(state);
                     }
-
-                    return;
+                    return; 
                 }
             }
         }
