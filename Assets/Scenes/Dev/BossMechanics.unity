@@ -621,10 +621,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeliBoss
       objectReference: {fileID: 0}
-    - target: {fileID: 4826231044227504489, guid: fa835c208e272b141b3f942d73b321ab, type: 3}
-      propertyPath: burstBulletProfile.bulletPrefab
-      value: 
-      objectReference: {fileID: -2552241777892693065, guid: 52bb9acbdebc3a9419750a35cbc48558, type: 3}
     - target: {fileID: 9079271936822371706, guid: fa835c208e272b141b3f942d73b321ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
