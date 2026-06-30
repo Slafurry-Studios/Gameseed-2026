@@ -3,10 +3,6 @@ using UnityEngine;
 
 namespace Game.AI
 {
-    /// <summary>
-    /// Core AI State Machine Controller. Evaluates attached state scripts in priority order
-    /// every frame and runs the highest-priority state whose conditions are met.
-    /// </summary>
     [RequireComponent(typeof(NPCMovement))]
     public class EntityBrain : MonoBehaviour
     {
@@ -15,7 +11,7 @@ namespace Game.AI
         public Animator aiAnimation;
 
         [Header("State Priority List (Top = Highest)")]
-        [Tooltip("List of attached EntityState scripts ordered by priority. Every frame, the brain checks from index 0 downward. The FIRST state whose CheckConditions returns true will be activated!")]
+        [Tooltip("The brain checks this list from top to bottom. The first state whose conditions are met will run!")]
         public List<EntityState> stateList = new List<EntityState>();
 
         public NPCMovement Movement { get; private set; }
@@ -52,27 +48,18 @@ namespace Game.AI
             }
         }
 
-        private void Update()
-        {
-            EvaluateStates();
-            
-            if (currentState != null) 
-            {
-                currentState.UpdateState(this);
-            }
-        }
-
         private void EvaluateStates()
         {
             foreach (EntityState state in stateList)
             {
-                if (state != null && state.CheckConditions(this))
+                if (state.CheckConditions(this))
                 {
                     if (currentState != state)
                     {
                         ChangeState(state);
                     }
-                    return; 
+
+                    return;
                 }
             }
         }
