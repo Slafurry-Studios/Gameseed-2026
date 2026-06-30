@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8767370496622623177}
   - component: {fileID: 2565840035987450615}
   - component: {fileID: 5258765051013294816}
+  - component: {fileID: 6468097146657476020}
   - component: {fileID: 5371209041317557490}
   - component: {fileID: -5058249278270435970}
   - component: {fileID: 3724045307559031885}
@@ -80,6 +81,21 @@ MonoBehaviour:
   - {fileID: 7536573669859555480, guid: c9ed59985218784d29a4f7910bfe0e3a, type: 3}
   - {fileID: 1394588935794710173, guid: 4ccd10a91d7b232faa7ab8e1b6999799, type: 3}
   - {fileID: 2945522813581111875, guid: 4f48ff02b429a7415bc24441b549feb5, type: 3}
+--- !u!114 &6468097146657476020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416794805173567339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de6809b99a12164ea21b60d6dc5aaa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropData: {fileID: 11400000, guid: be194de35e1dd02ebbb89a4cfa360c42, type: 2}
+  scatterRadius: 1
+  dropOnDestroy: 1
 --- !u!212 &5371209041317557490
 SpriteRenderer:
   m_ObjectHideFlags: 0

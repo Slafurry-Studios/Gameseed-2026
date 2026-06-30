@@ -123,7 +123,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxPoint: 5000
-  threatThresholds: []
+  threatThresholds:
+  - Name: Another normal day
+    Level: 1
+    ThresholdValue: 100
+  - Name: Where is the army?
+    Level: 2
+    ThresholdValue: 1500
+  - Name: We need reinforcements!
+    Level: 3
+    ThresholdValue: 3000
+  - Name: Oh shit!
+    Level: 4
+    ThresholdValue: 5000
 --- !u!114 &3641634936374996148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBuckets:
   - {fileID: 11400000, guid: d91a0d304b38b0ec193df78582c78b8d, type: 2}
+  - {fileID: 11400000, guid: c51bb3d2aeb37f252aac1a71025008ea, type: 2}
 --- !u!114 &8065942031380492402
 MonoBehaviour:
   m_ObjectHideFlags: 0

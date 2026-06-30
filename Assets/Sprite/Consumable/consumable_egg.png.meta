@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4bd8a13b02a5706efa9a513f01a242cc
+guid: fd1b281db405cfe28aa54fbea435e207
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: objective_windows_0
+      name: consumable_egg_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 144
-        height: 112
+        y: 17
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,29 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03b9778c85e1b100bbc0c716129be6ae
-      internalID: 669413302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: objective_windows_1
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 144
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d71cb234a91d7bf88b2897d07472330
-      internalID: 1258791756
+      spriteID: afcbf75991fb6d339a7df6830257e9d2
+      internalID: 1234063598
       vertices: []
       indices: 
       edges: []
@@ -175,8 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      objective_windows_0: 669413302
-      objective_windows_1: 1258791756
+      consumable_egg_0: 1234063598
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de6809b99a12164ea21b60d6dc5aaa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropData: {fileID: 11400000, guid: cea658c392da2514c8434f496c32f6f1, type: 2}
+  dropData: {fileID: 11400000, guid: be194de35e1dd02ebbb89a4cfa360c42, type: 2}
   scatterRadius: 1
   dropOnDestroy: 0
 --- !u!212 &457482382
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de6809b99a12164ea21b60d6dc5aaa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropData: {fileID: 11400000, guid: 69e29f1ad154a224bbe2c15715c57a46, type: 2}
+  dropData: {fileID: 11400000, guid: d563d61d117f7c5569a03d042c20b66c, type: 2}
   scatterRadius: 1
   dropOnDestroy: 0
 --- !u!212 &1659265092
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de6809b99a12164ea21b60d6dc5aaa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropData: {fileID: 11400000, guid: 69e29f1ad154a224bbe2c15715c57a46, type: 2}
+  dropData: {fileID: 11400000, guid: da03fb19b52643436a7cf80664789928, type: 2}
   scatterRadius: 1
   dropOnDestroy: 0
 --- !u!212 &1792549174

@@ -9,7 +9,7 @@ namespace Game.Gameplay.Attributes
     {
         public override void Apply(GameObject target, float amount)
         {
-            GameManager.Instance.AddThreat((int) Math.Round(amount));
+            GameManager.Instance.AddSubs((int) Math.Round(amount));
         }
     }
 }

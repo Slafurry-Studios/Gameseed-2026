@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7007400120374677933}
   - component: {fileID: -1249072998357995968}
   - component: {fileID: 4501986542362410752}
+  - component: {fileID: 7947430145822469218}
   m_Layer: 12
   m_Name: Building (7)
   m_TagString: Building
@@ -210,3 +211,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.27925012, y: 0.21674144}
   m_EdgeRadius: 0
+--- !u!114 &7947430145822469218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487362049162404025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de6809b99a12164ea21b60d6dc5aaa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropData: {fileID: 0}
+  scatterRadius: 1
+  dropOnDestroy: 1
