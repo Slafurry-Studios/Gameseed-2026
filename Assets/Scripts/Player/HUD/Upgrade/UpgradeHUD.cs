@@ -25,6 +25,7 @@ namespace Game.UI.HUD
         public void Show(bool status)
         {
             UpgradePanel.SetActive(status);
+            Time.timeScale = status ? 0f : 1f;
         }
 
         private void SetCard1(UpgradeCard card)
@@ -33,11 +34,11 @@ namespace Game.UI.HUD
         }
         private void SetCard2(UpgradeCard card)
         {
-            card1.SetUpgradeCard(card);
+            card2.SetUpgradeCard(card);
         }
         private void SetCard3(UpgradeCard card)
         {
-            card1.SetUpgradeCard(card);
+            card3.SetUpgradeCard(card);
         }
     }
 }
