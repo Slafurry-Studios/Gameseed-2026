@@ -1,14 +1,14 @@
 using UnityEngine;
- 
+
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
- 
+
     [SerializeField]
     private SoundLibrary sfxLibrary;
     [SerializeField]
     private AudioSource sfx2DSource;
- 
+
     private void Awake()
     {
         if (Instance != null)
@@ -21,26 +21,36 @@ public class SoundManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
- 
-    public void PlaySound3D(AudioClip clip, Vector3 pos)
+
+    public void PlaySound3D(AudioClip clip, Vector3 pos, float volume = 1f)
     {
         if (clip != null)
         {
-            AudioSource.PlayClipAtPoint(clip, pos);
+            AudioSource.PlayClipAtPoint(clip, pos, volume);
         }
     }
- 
+
     public void PlaySound3D(string soundName, Vector3 pos)
     {
-        PlaySound3D(sfxLibrary.GetClipFromName(soundName), pos);
+        SoundEffect sfx = sfxLibrary.GetSoundEffect(soundName);
+        if (sfx.clips != null && sfx.clips.Length > 0)
+        {
+            AudioClip clip = sfx.clips[Random.Range(0, sfx.clips.Length)];
+            PlaySound3D(clip, pos, sfx.volume);
+        }
+        else
+        {
+            Debug.LogWarning($"[SoundManager] Sound '{soundName}' tidak ditemukan di SoundLibrary.");
+        }
     }
- 
+
     public void PlaySound2D(string soundName)
     {
-        AudioClip clip = sfxLibrary.GetClipFromName(soundName);
-        if (clip != null)
+        SoundEffect sfx = sfxLibrary.GetSoundEffect(soundName);
+        if (sfx.clips != null && sfx.clips.Length > 0)
         {
-            sfx2DSource.PlayOneShot(clip);
+            AudioClip clip = sfx.clips[Random.Range(0, sfx.clips.Length)];
+            sfx2DSource.PlayOneShot(clip, sfx.volume);
         }
         else
         {
