@@ -1,14 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.AI 
+namespace Game.AI
 {
     [RequireComponent(typeof(NPCMovement))]
     public class EntityBrain : MonoBehaviour
     {
         [Header("Universal References")]
-        public Transform Target; 
-        
+        public Transform Target;
+        public Animator aiAnimation;
+
         [Header("State Priority List (Top = Highest)")]
         [Tooltip("The brain checks this list from top to bottom. The first state whose conditions are met will run!")]
         public List<EntityState> stateList = new List<EntityState>();
@@ -19,13 +20,14 @@ namespace Game.AI
         private void Awake()
         {
             Movement = GetComponent<NPCMovement>();
+            if (aiAnimation == null) aiAnimation = GetComponentInChildren<Animator>();
         }
 
         private void Update()
         {
             EvaluateStates();
-            
-            if (currentState != null) 
+
+            if (currentState != null)
             {
                 currentState.UpdateState(this);
             }
@@ -33,11 +35,11 @@ namespace Game.AI
 
         private void Start() // Move logic here
         {
-            if (Target == null && PlayerManager.PlayerTransform != null) 
+            if (Target == null && PlayerManager.PlayerTransform != null)
             {
                 Target = PlayerManager.PlayerTransform;
             }
-        
+
             // Safety fallback if PlayerManager wasn't ready
             if (Target == null)
             {
@@ -57,7 +59,7 @@ namespace Game.AI
                         ChangeState(state);
                     }
 
-                    return; 
+                    return;
                 }
             }
         }
