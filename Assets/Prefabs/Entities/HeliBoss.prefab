@@ -157,7 +157,7 @@ MonoBehaviour:
     hitRadius: 0.75
   burstBulletProfile:
     weaponName: BURST BULLET
-    bulletPrefab: {fileID: -2552241777892693065, guid: 08428ee9197696c48bfee866f03866c4, type: 3}
+    bulletPrefab: {fileID: -2552241777892693065, guid: 52bb9acbdebc3a9419750a35cbc48558, type: 3}
     shotsPerCycle: 5
     cycleDuration: 1.2
     intervalBetweenShots: 0.15
