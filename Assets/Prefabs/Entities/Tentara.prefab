@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  dieAnim: Death
 --- !u!114 &3987714821460101945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,6 +198,7 @@ MonoBehaviour:
     m_Bits: 64
   rayCount: 9
   rayAngle: 90
+  chaseBool: Chase
 --- !u!114 &6784798830675087970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
+  aiAnimation: {fileID: 9104131450738580442}
   stateList:
   - {fileID: 5724307664491267123}
   - {fileID: 8043073496683345044}
@@ -259,6 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRadius: 10
   fireRate: 0.5
+  attackAnim: Attack
   bulletPrefab: {fileID: 2891568854193911666, guid: 38ef8fdfe9fea02438cc2868250bead0, type: 3}
   firePoint: {fileID: 3903954259805431894}
   bulletDamage: 1
