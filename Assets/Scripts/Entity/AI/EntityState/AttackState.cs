@@ -81,6 +81,7 @@ namespace Game.AI
                     // Trigger attack hanya saat menembak
                     if (brain.aiAnimation != null && !string.IsNullOrEmpty(attackAnim))
                     {
+                        brain.aiAnimation.ResetTrigger(attackAnim);
                         brain.aiAnimation.SetTrigger(attackAnim);
                     }
                 }

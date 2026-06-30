@@ -26,7 +26,6 @@ public class NPCMovement : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-
     public void FaceDirection(Vector2 direction)
     {
         if (spriteRenderer != null)

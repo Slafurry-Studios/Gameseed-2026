@@ -6,11 +6,23 @@ public class ExampleEntityHealth : Health
 {
     private EntityBrain entityBrain;
     [SerializeField] private string dieAnim;
+    [SerializeField] private string hitAnim;
 
     protected override void Awake()
     {
         base.Awake();
         entityBrain = GetComponent<EntityBrain>();
+    }
+
+    public override void TakeDamage(float amount)
+    {
+        // Hit bullet selalu dihitung 1 HP
+        base.TakeDamage(1f);
+
+        if (!isDead && entityBrain != null && entityBrain.aiAnimation != null && !string.IsNullOrEmpty(hitAnim))
+        {
+            entityBrain.aiAnimation.SetTrigger(hitAnim);
+        }
     }
 
     protected override void Die()
@@ -19,11 +31,21 @@ public class ExampleEntityHealth : Health
 
         Debug.Log("[ExampleEntityHealth] Entity has died!");
 
-        if (entityBrain != null &&
-            entityBrain.aiAnimation != null &&
-            !string.IsNullOrEmpty(dieAnim))
+        if (entityBrain != null)
         {
-            entityBrain.aiAnimation.Play(dieAnim, 0, 0f);
+            if (entityBrain.aiAnimation != null && !string.IsNullOrEmpty(dieAnim))
+            {
+                entityBrain.aiAnimation.Play(dieAnim, 0, 0f);
+            }
+
+            // Memastikan entitas diam dan tidak bisa menembak saat mati
+            if (entityBrain.Movement != null)
+            {
+                entityBrain.Movement.SetMovement(Vector2.zero, 0f);
+                entityBrain.Movement.enabled = false;
+            }
+
+            entityBrain.enabled = false;
         }
     }
 }
