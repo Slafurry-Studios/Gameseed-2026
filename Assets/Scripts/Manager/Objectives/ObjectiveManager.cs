@@ -65,6 +65,7 @@ public class ObjectiveManager : Singleton<ObjectiveManager>
     private void CompleteObjective(Objective objective)
     {
         OnObjectiveCompleted?.Invoke(objective);
+        objective.Channel.OnCompleted();
         RemoveObjective(objective);
     }
 

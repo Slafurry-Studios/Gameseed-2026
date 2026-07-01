@@ -7,6 +7,14 @@ namespace Game.Player
     [RequireComponent(typeof(PlayerAim))]
     public class PlayerShoot : MonoBehaviour
     {
+        private enum ShotMode
+        {
+            Single,
+            Double,
+            Triple,
+            Five
+        }
+
         [Header("Shooting Settings")]
         [SerializeField] private Bullet bulletPrefab;
         [SerializeField] private float bulletNormalRadius = 0.2f;
@@ -20,11 +28,13 @@ namespace Game.Player
         [SerializeField] private float maxShootDistance = 10f;
         [SerializeField] private LayerMask targetMask;
 
+        [Header("Multi-Shot Settings")]
+        [Tooltip("Jarak antar sudul tembakan (kelipatan 5).")]
+        [SerializeField] private float angleSpacing = 5f;
+
         private PlayerAim playerAim;
         private float nextFireTime;
-        private bool doubleBullet;
-        private bool tripleBullet;
-        private bool fiveBullet;
+        private ShotMode shotMode = ShotMode.Single;
         private bool isExplosive = false;
         private bool isRichochet = false;
 
@@ -44,46 +54,38 @@ namespace Game.Player
                 Shoot();
             }
         }
+
         private void Shoot()
         {
             Vector3 currentAimDirection = playerAim.CurrentAimDirection;
             if (currentAimDirection == Vector3.zero) return;
 
-            if (!doubleBullet && !tripleBullet && !fiveBullet)
+            foreach (float angle in GetShotAngles())
             {
-                SpawnBullet(currentAimDirection);
+                Vector3 dir = Quaternion.Euler(0, angle, 0) * currentAimDirection;
+                SpawnBullet(dir);
             }
-            else if (doubleBullet)
-            {
-                Vector3 leftDir = Quaternion.Euler(0, -5f, 0) * currentAimDirection;
-                Vector3 rightDir = Quaternion.Euler(0, 5f, 0) * currentAimDirection;
+        }
 
-                SpawnBullet(leftDir);
-                SpawnBullet(rightDir);
-            }
-            else if (tripleBullet)
+        private float[] GetShotAngles()
+        {
+            switch (shotMode)
             {
-                Vector3 leftDir = Quaternion.Euler(0, -5f, 0) * currentAimDirection;
-                Vector3 midDir = Quaternion.Euler(0, 0f, 0) * currentAimDirection;
-                Vector3 rightDir = Quaternion.Euler(0, 5f, 0) * currentAimDirection;
-
-                SpawnBullet(leftDir);
-                SpawnBullet(midDir);
-                SpawnBullet(rightDir);
-            }
-            else if (fiveBullet)
-            {
-                Vector3 leftDir = Quaternion.Euler(0, -10f, 0) * currentAimDirection;
-                Vector3 midLeftDir = Quaternion.Euler(0, -5f, 0) * currentAimDirection;
-                Vector3 midDir = Quaternion.Euler(0, 0f, 0) * currentAimDirection;
-                Vector3 midRightDir = Quaternion.Euler(0, 5f, 0) * currentAimDirection;
-                Vector3 rightDir = Quaternion.Euler(0, 10f, 0) * currentAimDirection;
-
-                SpawnBullet(leftDir);
-                SpawnBullet(midLeftDir);
-                SpawnBullet(midDir);
-                SpawnBullet(midRightDir);
-                SpawnBullet(rightDir);
+                case ShotMode.Five:
+                    return new float[]
+                    {
+                        -angleSpacing * 2f,
+                        -angleSpacing,
+                        0f,
+                        angleSpacing,
+                        angleSpacing * 2f
+                    };
+                case ShotMode.Triple:
+                    return new float[] { -angleSpacing, 0f, angleSpacing };
+                case ShotMode.Double:
+                    return new float[] { -angleSpacing, angleSpacing };
+                default:
+                    return new float[] { 0f };
             }
         }
 
@@ -111,13 +113,12 @@ namespace Game.Player
 
         public void MoreDakka()
         {
-            doubleBullet = true;
+            shotMode = ShotMode.Double;
         }
 
         public void DakkaEverywhere()
         {
-            doubleBullet = false;
-            tripleBullet = true;
+            shotMode = ShotMode.Triple;
         }
 
         public void MoreEspresso()
@@ -148,9 +149,7 @@ namespace Game.Player
 
         public void ApocalypseStream()
         {
-            fiveBullet = true;
-            tripleBullet = false;
-            doubleBullet = false;
+            shotMode = ShotMode.Five;
             fireRate = fireRate * 1.5f;
         }
     }

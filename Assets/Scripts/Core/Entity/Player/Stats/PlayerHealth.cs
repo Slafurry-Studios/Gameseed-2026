@@ -38,7 +38,6 @@ namespace Game.Player
             currentHealth = 0f;
             base.Die();
 
-
             if (playerDizzyAnimator != null)
             {
                 playerDizzyAnimator.gameObject.SetActive(true);

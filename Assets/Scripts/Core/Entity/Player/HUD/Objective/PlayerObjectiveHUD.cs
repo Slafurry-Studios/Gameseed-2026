@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.UI.HUD
 {
-    public class PlayerObjectiveHUD : Singleton<PlayerObjectiveHUD>
+    public class PlayerObjectiveHUD : MonoBehaviour
     {
         [SerializeField] private PlayerObjectiveItem itemPrefab;
         [SerializeField] private Transform itemParent;
@@ -11,14 +11,17 @@ namespace Game.UI.HUD
         private readonly List<PlayerObjectiveItem> playerObjectiveItems = new();
         private readonly Dictionary<Objective, PlayerObjectiveItem> itemLookup = new();
 
-        private void OnEnable()
+        private System.Collections.IEnumerator Start()
         {
+            yield return new WaitUntil(() => ObjectiveManager.Instance != null);
+            ObjectiveManager.Instance.OnObjectiveAdded += AddObjectiveItem;
             ObjectiveManager.Instance.OnObjectiveProgress += HandleProgress;
             ObjectiveManager.Instance.OnObjectiveCompleted += HandleCompleted;
         }
 
         private void OnDisable()
         {
+            ObjectiveManager.Instance.OnObjectiveAdded -= AddObjectiveItem;
             ObjectiveManager.Instance.OnObjectiveProgress -= HandleProgress;
             ObjectiveManager.Instance.OnObjectiveCompleted -= HandleCompleted;
         }

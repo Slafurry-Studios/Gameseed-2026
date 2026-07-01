@@ -33,7 +33,7 @@ public class DebugObjectiveTrigger : MonoBehaviour
         };
 
         ObjectiveManager.Instance.AddObjective(objective);
-        PlayerObjectiveHUD.Instance.AddObjectiveItem(objective);
+        // PlayerObjectiveHUD.Instance.AddObjectiveItem(objective);
 
         Debug.Log($"Objective '{objective.DisplayName}' ditambahkan.");
     }

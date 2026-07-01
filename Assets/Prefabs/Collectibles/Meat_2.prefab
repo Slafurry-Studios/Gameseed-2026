@@ -139,8 +139,7 @@ MonoBehaviour:
   - attribute: {fileID: 11400000, guid: 871123eb775517842ae0926cc83c69bc, type: 2}
     amount: 3
   duration: 0.5
-  pullDistance: 2
-  audioClipName: Collection_Point
+  pullDistance: 4
 --- !u!114 &6692932212412667942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,4 +168,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchDuration: 0.4
   launchHeight: 0.7
-  audioClipName: ConsumableDrop
+  audioClipName: Consumable_Drop
