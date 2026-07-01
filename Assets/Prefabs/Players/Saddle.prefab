@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7724496807086647891}
   - component: {fileID: 956670007771396231}
   m_Layer: 0
-  m_Name: Body
+  m_Name: Saddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -3186715
   m_SortingLayer: 4
   m_SortingOrder: 1
-  m_Sprite: {fileID: 391869112, guid: 5b709324e10afaf4fb319e069d6cd6ed, type: 3}
+  m_Sprite: {fileID: 771751089, guid: 5b709324e10afaf4fb319e069d6cd6ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6777440370276220844}
   m_Layer: 0
   m_Name: Collide
-  m_TagString: Body
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
