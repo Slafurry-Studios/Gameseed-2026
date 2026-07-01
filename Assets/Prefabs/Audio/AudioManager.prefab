@@ -192,9 +192,140 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundEffects:
-  - groupID: Button
+  - groupID: Building_Destroyed
     clips:
-    - {fileID: 8300000, guid: e0e4fb1289cf5a444a7b15236ba654d7, type: 3}
+    - {fileID: 8300000, guid: ffb76ddceabd3d3da9aecbbd9f120549, type: 3}
+    volume: 4.65
+  - groupID: Building_Half_Destroyed
+    clips:
+    - {fileID: 8300000, guid: f09b72aee410467a285c2bb942068fe8, type: 3}
+    volume: 4.65
+  - groupID: Consumable_Drop
+    clips:
+    - {fileID: 8300000, guid: 53f50c9523b492ed0ad1cb3d37eb80e9, type: 3}
+    volume: 4.65
+  - groupID: Orb_Drop
+    clips:
+    - {fileID: 8300000, guid: 0736a65c430de8158b09ae260714ac9b, type: 3}
+    volume: 4.65
+  - groupID: Police_Death
+    clips:
+    - {fileID: 8300000, guid: 90ff7114979d548008ec5f3602de7187, type: 3}
+    volume: 4.65
+  - groupID: Police_Reports
+    clips:
+    - {fileID: 8300000, guid: c9ab60684353ea0afaa66ed6e94ff5aa, type: 3}
+    - {fileID: 8300000, guid: 3196e391598f8e8c5b247069f2fa9a3c, type: 3}
+    - {fileID: 8300000, guid: 8b035392b594696a693ae2a0ba5a0748, type: 3}
+    - {fileID: 8300000, guid: d65f0440f28b8801bbf91cf65923d9e6, type: 3}
+    volume: 4.65
+  - groupID: Soldier_Death
+    clips:
+    - {fileID: 8300000, guid: 06c49e8bc1e2658b3b8f4f994a75faf7, type: 3}
+    volume: 4.65
+  - groupID: Gun_Shoot
+    clips:
+    - {fileID: 8300000, guid: 3e80b1a4de04d33b7967363b8b76dd7a, type: 3}
+    volume: 4.65
+  - groupID: Missile_Launch
+    clips:
+    - {fileID: 8300000, guid: d7e97dd851768f4899425fab49652efb, type: 3}
+    volume: 4.65
+  - groupID: Helicopter_Rotor
+    clips:
+    - {fileID: 8300000, guid: 54627e42d9f9429c0887e6445017a57e, type: 3}
+    volume: 4.65
+  - groupID: Civilian_Death
+    clips:
+    - {fileID: 8300000, guid: 737f34b1dd7833d68b19363aea30d8e9, type: 3}
+    - {fileID: 8300000, guid: 705a37a9bf4df8b63a068d4d5e99eb22, type: 3}
+    - {fileID: 8300000, guid: 82b52e5236b7fd033a8d517251c12b1f, type: 3}
+    - {fileID: 8300000, guid: 0122eb6c7cd517d0a8c48248e2abb15e, type: 3}
+    volume: 4.65
+  - groupID: Crowd_Scream
+    clips:
+    - {fileID: 8300000, guid: f3aa282ddca4a9558a414139ee606eba, type: 3}
+    volume: 4.65
+  - groupID: People_Startled
+    clips:
+    - {fileID: 8300000, guid: ff292fc6e8179bbe58f8d38da5337734, type: 3}
+    volume: 4.65
+  - groupID: Button_Press
+    clips:
+    - {fileID: 8300000, guid: 8228a3fb31f5c1cde8e5e743c04d39e9, type: 3}
+    volume: 4.65
+  - groupID: Button_Choose
+    clips:
+    - {fileID: 8300000, guid: 43e23d5fa53190bcb98a34d0b4e207d0, type: 3}
+    volume: 4.65
+  - groupID: Card_Choose
+    clips:
+    - {fileID: 8300000, guid: f530eb161ff5ea2ef823fb2f5e8513e7, type: 3}
+    volume: 4.65
+  - groupID: Card_Swipe
+    clips:
+    - {fileID: 8300000, guid: 788040fe14395cf7cbdf5e4757577e08, type: 3}
+    volume: 4.65
+  - groupID: Pause
+    clips:
+    - {fileID: 8300000, guid: ed5186f49e8d46c1488c1374a4156ccf, type: 3}
+    volume: 4.65
+  - groupID: Upgrade
+    clips:
+    - {fileID: 8300000, guid: 9ed6f03f1f04699cfa0ce20016d8caec, type: 3}
+    volume: 4.65
+  - groupID: Bullet_Deflect
+    clips:
+    - {fileID: 8300000, guid: b6995318c0be6d8c5b8c75b3d7f57280, type: 3}
+    volume: 4.65
+  - groupID: Bullet_HIt_Human
+    clips:
+    - {fileID: 8300000, guid: 3d164f52ae0650a5fbb109fd70b6e7de, type: 3}
+    volume: 4.65
+  - groupID: Chat
+    clips:
+    - {fileID: 8300000, guid: 285720b683a417a1aa3e765425e9f5b5, type: 3}
+    volume: 4.65
+  - groupID: Collection_Point
+    clips:
+    - {fileID: 8300000, guid: ede59832d10f933b3af2939c815933e6, type: 3}
+    volume: 4.65
+  - groupID: Concussion
+    clips:
+    - {fileID: 8300000, guid: ea945270f48e0eb77a292ab7e535bc98, type: 3}
+    volume: 4.65
+  - groupID: Explosion
+    clips:
+    - {fileID: 8300000, guid: 0f31e84aeb53058d9b5be07b5615c846, type: 3}
+    volume: 4.65
+  - groupID: Objective_Complete
+    clips:
+    - {fileID: 8300000, guid: 79fd940b5e1fde9ec943a8b21bf4b8d2, type: 3}
+    volume: 4.65
+  - groupID: Shotgun_Punchy
+    clips:
+    - {fileID: 8300000, guid: 0f890c3d4b93425589bc27f208ff3f85, type: 3}
+    volume: 4.65
+  - groupID: Snake_Eating
+    clips:
+    - {fileID: 8300000, guid: 67be32f8fba8ebbfb94bd2241ec45e58, type: 3}
+    volume: 4.65
+  - groupID: Sub_Point
+    clips:
+    - {fileID: 8300000, guid: 07f7d051c14e9ea16b00d453af0c06a9, type: 3}
+    volume: 4.65
+  - groupID: Superchat
+    clips:
+    - {fileID: 8300000, guid: 93ad8e4ecbb0471b497e36ce2bd88907, type: 3}
+    volume: 4.65
+  - groupID: Take_Damage
+    clips:
+    - {fileID: 8300000, guid: a88a302dd907b33c9a2759034dc94d48, type: 3}
+    volume: 4.65
+  - groupID: Warning
+    clips:
+    - {fileID: 8300000, guid: c333c5b425d1bf35ebb2668ca9c3478e, type: 3}
+    volume: 4.65
 --- !u!114 &8909342392608283633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,8 +341,12 @@ MonoBehaviour:
   musicLibrary: {fileID: 5954240970161171775}
   musicSource: {fileID: 1603872102981061051}
   sceneTracks:
-  - sceneName: MenuTesting
-    trackName: MenuTesting
+  - sceneName: MainMenu
+    trackName: Main_Menu
+  - sceneName: GameScene
+    trackName: Stage_1_Loop
+  - sceneName: GameOver
+    trackName: Game_Over
 --- !u!114 &5954240970161171775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,8 +360,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tracks:
-  - trackName: MenuTesting
-    clip: {fileID: 8300000, guid: 4585ced56c334bc49b4cd33b3474bb7d, type: 3}
+  - trackName: Main_Menu
+    clip: {fileID: 8300000, guid: 39895c1d1c0068243b7f473ad5984b47, type: 3}
+    volume: 3.66
+  - trackName: Stage_1_Intro
+    clip: {fileID: 8300000, guid: 4ac198fe2f2ae02218817669a039d3e9, type: 3}
+    volume: 3.66
+  - trackName: Stage_1_Loop
+    clip: {fileID: 8300000, guid: 7fc66d52671194d469240dc0e446e0d9, type: 3}
+    volume: 3.66
+  - trackName: Game_Over
+    clip: {fileID: 8300000, guid: e88a11da3a7488c57b1ddfc2c91ff91a, type: 3}
+    volume: 3.66
 --- !u!1 &8845713312415210880
 GameObject:
   m_ObjectHideFlags: 0
