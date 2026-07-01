@@ -10,4 +10,6 @@ public abstract class BaseObjectiveChannel : ScriptableObject
     {
         OnRaised?.Invoke(amount);
     }
+
+    public abstract void OnCompleted();
 }
