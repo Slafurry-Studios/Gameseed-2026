@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -4576999662370123741}
   - component: {fileID: 5331131359529216310}
   - component: {fileID: -5177869952185008117}
+  - component: {fileID: -5579582661138877949}
   m_Layer: 12
   m_Name: Building (11)
   m_TagString: Building
@@ -51,8 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 16
-  ThreatPointValue: 500
-  SubsPointValue: 400
+  ThreatPointValue: 100
+  SubsPointValue: 0
+  destroyChannel:
+  - {fileID: 11400000, guid: b33d7556fdf30298fb4efe9847b34b07, type: 2}
+  - {fileID: 11400000, guid: 3ca9f5900133a070ba835504ed431a80, type: 2}
 --- !u!114 &5480271150844802884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7429e632178f194098dfc9dc5c143cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blinkColor: {r: 1, g: 1, b: 1, a: 1}
+  blinkColor: {r: 1, g: 0.5682776, b: 0.5682776, a: 1}
   blinkDuration: 0.1
   includeChildren: 1
 --- !u!61 &5331131359529216310
@@ -226,3 +230,16 @@ MonoBehaviour:
   dropData: {fileID: 11400000, guid: d563d61d117f7c5569a03d042c20b66c, type: 2}
   scatterRadius: 1
   dropOnDestroy: 1
+--- !u!114 &-5579582661138877949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6206908649285805218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7597e1b39d7137fef8cb644d58b6dde7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: b33d7556fdf30298fb4efe9847b34b07, type: 2}

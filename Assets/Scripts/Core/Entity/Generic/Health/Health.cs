@@ -86,7 +86,7 @@ namespace Game.Generic
 
             OnDied?.Invoke();
 
-            Debug.Log($"{gameObject.name} died.");
+            // Debug.Log($"{gameObject.name} died.");
         }
     }
 }

@@ -1,12 +1,13 @@
 using Game.UI.HUD;
 using UnityEngine;
+using System;
 
 namespace Game.Dialog
 {
     public class DialogManager : MonoBehaviour
     {
         [SerializeField] private DialogBucket[] dialogBuckets;
-
+        public Action<bool> OnDialogHUDReady;
         private DialogHUD dialogHUD;
         private DialogBucket currentBucket;
         private int currentIndex;
@@ -15,7 +16,10 @@ namespace Game.Dialog
         {
             dialogHUD = FindAnyObjectByType<DialogHUD>();
 
-            // StartDialog("tutorial");
+            if (dialogHUD != null)
+            {
+                OnDialogHUDReady?.Invoke(true);
+            }
         }
 
         public void StartDialog(string id)

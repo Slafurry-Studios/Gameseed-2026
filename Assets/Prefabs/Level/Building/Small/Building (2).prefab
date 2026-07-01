@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -5058249278270435970}
   - component: {fileID: 3724045307559031885}
   - component: {fileID: 2365997447589005159}
+  - component: {fileID: 6258072143267611546}
   m_Layer: 12
   m_Name: Building (2)
   m_TagString: Building
@@ -51,8 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 6
-  ThreatPointValue: 500
-  SubsPointValue: 400
+  ThreatPointValue: 10
+  SubsPointValue: 0
+  destroyChannel:
+  - {fileID: 11400000, guid: b33d7556fdf30298fb4efe9847b34b07, type: 2}
+  - {fileID: 11400000, guid: 3ca9f5900133a070ba835504ed431a80, type: 2}
 --- !u!114 &5258765051013294816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7429e632178f194098dfc9dc5c143cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blinkColor: {r: 1, g: 1, b: 1, a: 1}
+  blinkColor: {r: 1, g: 0.5682776, b: 0.5682776, a: 1}
   blinkDuration: 0.1
   includeChildren: 1
 --- !u!61 &2365997447589005159
@@ -226,3 +230,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.45, y: 0.1532351}
   m_EdgeRadius: 0
+--- !u!114 &6258072143267611546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5416794805173567339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7597e1b39d7137fef8cb644d58b6dde7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: b33d7556fdf30298fb4efe9847b34b07, type: 2}

@@ -53,11 +53,11 @@ public class BuildingSwitcher : MonoBehaviour
     {
         hitCount += amount;
 
-        Debug.Log(
-            gameObject.name +
-            " total damage : " +
-            hitCount
-        );
+        // Debug.Log(
+        //     gameObject.name +
+        //     " total damage : " +
+        //     hitCount
+        // );
         CheckThreshold();
     }
 

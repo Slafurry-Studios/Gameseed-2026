@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 namespace Game.UI.HUD
@@ -7,7 +8,7 @@ namespace Game.UI.HUD
     public class PlayerDonationHUD : MonoBehaviour
     {
         [SerializeField] private GameObject donationUI;
-        [SerializeField] private TextMeshProUGUI donationText;
+        [SerializeField] private Image donationImage;
         [SerializeField] private RectTransform donationRect;
         [SerializeField] private CanvasGroup donationCanvasGroup;
 
@@ -27,8 +28,9 @@ namespace Game.UI.HUD
             originalPos = donationRect.anchoredPosition;
         }
 
-        private void OnEnable()
+        private IEnumerator Start()
         {
+            yield return new WaitUntil(() => ObjectiveManager.Instance != null);
             ObjectiveManager.Instance.OnObjectiveAdded += HandleObjectiveAdded;
         }
 
@@ -41,13 +43,13 @@ namespace Game.UI.HUD
         {
             if (objective.Channel != null && objective.Channel.useDonation)
             {
-                UpdateDonation(objective.Channel.donationMessage);
+                UpdateDonation(objective.Channel.donationSprite);
             }
         }
 
-        public void UpdateDonation(string donation)
+        public void UpdateDonation(Sprite donationSprite)
         {
-            donationText.text = donation;
+            donationImage.sprite = donationSprite;
 
             if (currentRoutine != null)
                 StopCoroutine(currentRoutine);
@@ -58,7 +60,7 @@ namespace Game.UI.HUD
         private IEnumerator ShowDonationRoutine()
         {
             donationUI.SetActive(true);
-
+            SoundManager.Instance.PlaySound2D("Superchat");
             Vector2 startPos = originalPos - new Vector2(0f, slideDistance);
             donationRect.anchoredPosition = startPos;
             donationCanvasGroup.alpha = 0f;
@@ -66,25 +68,25 @@ namespace Game.UI.HUD
             float t = 0f;
             while (t < fadeInDuration)
             {
-                t += Time.deltaTime;
+                t += Time.unscaledDeltaTime;
                 float p = Mathf.Clamp01(t / fadeInDuration);
                 float eased = 1f - Mathf.Pow(1f - p, 3f);
 
                 donationCanvasGroup.alpha = eased;
                 donationRect.anchoredPosition = Vector2.Lerp(startPos, originalPos, eased);
-
+ 
                 yield return null;
             }
 
             donationCanvasGroup.alpha = 1f;
             donationRect.anchoredPosition = originalPos;
 
-            yield return new WaitForSeconds(showDuration);
+            yield return new WaitForSecondsRealtime(showDuration);
 
             t = 0f;
             while (t < fadeOutDuration)
             {
-                t += Time.deltaTime;
+                t += Time.unscaledDeltaTime;
                 float p = Mathf.Clamp01(t / fadeOutDuration);
                 donationCanvasGroup.alpha = 1f - p;
                 yield return null;
