@@ -1,10 +1,13 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Channels/OrdinaryKidChannel")]
-public class OrdinaryKidChannel : BaseObjectiveChannel 
+public class OrdinaryKidChannel : BaseObjectiveChannel
 {
     public override void OnCompleted()
     {
-        // Implementation for when enemy is killed
+        Debug.Log("OrdinaryKidChannel completed");
+        FindAnyObjectByType<IntroCutscene>().NextCutscene();
+        FindAnyObjectByType<IntroCutscene>().NextCutscene();
+
     }
 }

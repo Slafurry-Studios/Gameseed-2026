@@ -292,7 +292,7 @@ MonoBehaviour:
   bulletAverageBulletEnjoyerPrefab: {fileID: 1338399822672591885, guid: e487876fa4565be2a94ddc49cb57d005, type: 3}
   bulletAverageBulletEnjoyerPrefabRadius: 1
   fireRate: 0.1
-  bulletDamage: 10
+  bulletDamage: 1
   bulletSpeed: 20
   maxShootDistance: 10
   targetMask:

@@ -9,6 +9,13 @@ public class PlayerManager : MonoBehaviour
     private GameObject playerPrefab;
     public static Transform PlayerTransform;
 
+    public GameObject StatHUD;
+    public GameObject ChatHUD;
+    public GameObject ObjectiveHUD;
+    public GameObject ThreatHUD;
+    public GameObject PauseHUD;
+    public GameObject DonationHUD;
+
     private void Start()
     {
         Instance = this;

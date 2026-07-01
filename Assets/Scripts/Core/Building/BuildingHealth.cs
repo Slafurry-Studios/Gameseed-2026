@@ -10,6 +10,10 @@ public class BuildingHealth : Health
     [SerializeField] private int SubsPointValue;
 
     private IVisualEffect[] effects;
+
+
+    [SerializeField] private BaseObjectiveChannel[] destroyChannel;
+
     protected override void Start()
     {
         base.Start();
@@ -31,7 +35,13 @@ public class BuildingHealth : Health
         GameManager.Instance.AddThreat(ThreatPointValue);
         GameManager.Instance.AddSubs(SubsPointValue);
         base.Die();
-        Destroy(gameObject);
         SoundManager.Instance.PlaySound2D("Building_Destroyed");
+
+        foreach (BaseObjectiveChannel channel in destroyChannel)
+        {
+            channel.Raise(1);
+        }
+
+        Destroy(gameObject);
     }
 }

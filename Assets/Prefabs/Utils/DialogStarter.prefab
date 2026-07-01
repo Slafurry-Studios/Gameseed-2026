@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 730501848895683175}
-  - component: {fileID: 440205601985274130}
+  - component: {fileID: 2700915721001067296}
   m_Layer: 0
   m_Name: DialogStarter
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &440205601985274130
+--- !u!114 &2700915721001067296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 1884444373965647590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4beef684a50357db8706c0966cb7e4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 09ef202194b3daa438949cdf497ea96d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogBucket: intro
+  firstDialogBucket: intro_1
+  secondDialogBucket: intro_2
+  thirdDialogBucket: intro_3
+  fourthDialogBucket: intro_4
+  firstObjective:
+    DisplayName: Destroy Building
+    Channel: {fileID: 11400000, guid: b33d7556fdf30298fb4efe9847b34b07, type: 2}
+    ObjectiveThreshold: 1
+    ObjectiveType: 0
+    IsMainMission: 0
+  mainObjectives:
+  - DisplayName: Reach Maximum Threat
+    Channel: {fileID: 11400000, guid: 22e59adf54cb913f7b1962f637301c87, type: 2}
+    ObjectiveThreshold: 5000
+    ObjectiveType: 2
+    IsMainMission: 1
+  - DisplayName: Destroy HQ Building
+    Channel: {fileID: 11400000, guid: ddd7e5e272123b2078deab362f38c49e, type: 2}
+    ObjectiveThreshold: 1
+    ObjectiveType: 0
+    IsMainMission: 1
+  - DisplayName: Defeat Helicopter
+    Channel: {fileID: 11400000, guid: 44ad14524f7cd03759ecdb115f8f9dd6, type: 2}
+    ObjectiveThreshold: 1
+    ObjectiveType: 5
+    IsMainMission: 1
+  CurrentSequence: 0

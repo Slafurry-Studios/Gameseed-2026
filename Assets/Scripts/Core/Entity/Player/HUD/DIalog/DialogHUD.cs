@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Game.Dialog;
+using System;
 
 namespace Game.UI.HUD
 {
@@ -29,6 +30,7 @@ namespace Game.UI.HUD
 
         private string currentDialog;
         private Coroutine typingCoroutine;
+        public Action OnDialogEnd;
 
         private void Start()
         {
@@ -46,6 +48,7 @@ namespace Game.UI.HUD
         {
             Time.timeScale = 1f;
             PlayerManager.Instance.Resume();
+            OnDialogEnd?.Invoke();
             dialogUIPrefab.SetActive(false);
         }
 

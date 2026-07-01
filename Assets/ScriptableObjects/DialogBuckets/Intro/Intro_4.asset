@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 733d0064b3af99f9e8e90499c246c2fa, type: 3}
-  m_Name: After Shoot Tutorial Bucket
+  m_Name: Intro_4
   m_EditorClassIdentifier: 
-  id: tutorial
+  id: intro_4
   dialogs:
   - faceShotSprite: {fileID: 0}
     name: Citizen 1

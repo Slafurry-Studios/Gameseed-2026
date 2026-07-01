@@ -181,7 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBuckets:
   - {fileID: 11400000, guid: d91a0d304b38b0ec193df78582c78b8d, type: 2}
-  - {fileID: 11400000, guid: c51bb3d2aeb37f252aac1a71025008ea, type: 2}
+  - {fileID: 11400000, guid: e3210e3a9b37b31eea6f7f47412d724c, type: 2}
+  - {fileID: 11400000, guid: f284328001b82bd3c875d6b5ef0c94d4, type: 2}
 --- !u!114 &8065942031380492402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,3 +207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f086c8105de9c48847ddc26fabe90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StatHUD: {fileID: 0}
+  ChatHUD: {fileID: 0}
+  ObjectiveHUD: {fileID: 0}
+  ThreatHUD: {fileID: 0}
+  PauseHUD: {fileID: 0}
+  DonationHUD: {fileID: 0}
