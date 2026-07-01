@@ -127,6 +127,7 @@ namespace Game.Player
             if (GetComponent<PlayerMovement>().GetSprint() && vipSprint) return;
 
             base.TakeDamage(amount);
+            SoundManager.Instance.PlaySound2D("Take_Damage");
         }
 
         public void SafetyFirst()

@@ -4,26 +4,10 @@ using Game.Gameplay;
 
 namespace Game.Player
 {
-    public class PlayerAim : MonoBehaviour
+    [RequireComponent(typeof(PlayerAim))]
+    public class PlayerShoot : MonoBehaviour
     {
-        [Header("Aim Settings")]
-        [Tooltip("Assign the indicator or weapon object that will orbit the center.")]
-        [SerializeField] private Transform aimIndicator;
-
-        [Tooltip("The center point of the orbit. Usually the player's center. If empty, uses this object's transform.")]
-        [SerializeField] private Transform orbitCenter;
-
-        [Tooltip("Distance from the center point to the aim indicator.")]
-        [SerializeField] private float orbitRadius = 1.5f;
-
-        [Tooltip("Should the indicator also rotate to face the aim direction?")]
-        [SerializeField] private bool rotateIndicator = true;
-
-        [Tooltip("Offset rotation in degrees if the indicator's sprite doesn't point correctly. Example: -90 if sprite faces UP.")]
-        [SerializeField] private float rotationOffset = -90f;
-
         [Header("Shooting Settings")]
-        [SerializeField] private InputActionReference shootAction;
         [SerializeField] private Bullet bulletPrefab;
         [SerializeField] private float bulletNormalRadius = 0.2f;
         [SerializeField] private Bullet bulletBiggerDakkaPrefab;
@@ -36,9 +20,8 @@ namespace Game.Player
         [SerializeField] private float maxShootDistance = 10f;
         [SerializeField] private LayerMask targetMask;
 
-        private Camera mainCamera;
+        private PlayerAim playerAim;
         private float nextFireTime;
-        private Vector3 currentAimDirection;
         private bool doubleBullet;
         private bool tripleBullet;
         private bool fiveBullet;
@@ -47,51 +30,26 @@ namespace Game.Player
 
         private void Awake()
         {
-            mainCamera = Camera.main;
-
-            if (orbitCenter == null)
-            {
-                orbitCenter = transform;
-            }
-
-            if (aimIndicator == null)
-            {
-                aimIndicator = transform;
-            }
-        }
-
-        private void OnEnable()
-        {
-            if (shootAction != null) shootAction.action.Enable();
-        }
-
-        private void OnDisable()
-        {
-            if (shootAction != null) shootAction.action.Disable();
+            playerAim = GetComponent<PlayerAim>();
         }
 
         private void Update()
         {
-            AimAtCursor();
-            HandleShooting();
-        }
+            if (bulletPrefab == null || BulletManager.Instance == null)
+                return;
 
-        private void HandleShooting()
-        {
-            if (shootAction == null || bulletPrefab == null || BulletManager.Instance == null) return;
-
-            if (shootAction.action.IsPressed() && Time.time >= nextFireTime)
+            if (Mouse.current.leftButton.isPressed && Time.time >= nextFireTime)
             {
                 nextFireTime = Time.time + fireRate;
                 Shoot();
             }
         }
-
         private void Shoot()
         {
+            Vector3 currentAimDirection = playerAim.CurrentAimDirection;
             if (currentAimDirection == Vector3.zero) return;
 
-            if (!doubleBullet && !tripleBullet)
+            if (!doubleBullet && !tripleBullet && !fiveBullet)
             {
                 SpawnBullet(currentAimDirection);
             }
@@ -133,7 +91,7 @@ namespace Game.Player
         {
             BulletManager.Instance.FireBullet(
                 bulletPrefab,
-                aimIndicator.position,
+                playerAim.AimIndicatorPosition,
                 dir,
                 bulletDamage,
                 bulletSpeed,
@@ -142,30 +100,7 @@ namespace Game.Player
                 bulletNormalRadius,
                 isExplosive,
                 isRichochet);
-        }
-
-        private void AimAtCursor()
-        {
-            if (mainCamera == null || aimIndicator == null || orbitCenter == null) return;
-            if (Mouse.current == null) return;
-            Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
-
-            Vector3 mouseWorldPos = mainCamera.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, mainCamera.nearClipPlane));
-            mouseWorldPos.z = orbitCenter.position.z;
-
-            Vector3 aimDirection = (mouseWorldPos - orbitCenter.position).normalized;
-            currentAimDirection = aimDirection;
-
-            if (aimDirection != Vector3.zero)
-            {
-                aimIndicator.position = orbitCenter.position + aimDirection * orbitRadius;
-
-                if (rotateIndicator)
-                {
-                    float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-                    aimIndicator.rotation = Quaternion.Euler(0, 0, angle + rotationOffset);
-                }
-            }
+            SoundManager.Instance.PlaySound2D("Shotgun_Punchy");
         }
 
         public void BiggerDakka()
@@ -194,6 +129,7 @@ namespace Game.Player
         {
             fireRate = fireRate * 1.3f;
         }
+
         public void AverageBulletEnjoyer()
         {
             bulletPrefab = bulletAverageBulletEnjoyerPrefab;

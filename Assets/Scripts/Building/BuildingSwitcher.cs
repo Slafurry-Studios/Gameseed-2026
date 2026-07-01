@@ -82,6 +82,7 @@ public class BuildingSwitcher : MonoBehaviour
         {
             spriteRenderer.sprite =
                 buildingPrefabs[currentIndex].buildingSprite;
+            SoundManager.Instance.PlaySound2D("Building_Half_Destroyed");
         }
     }
 

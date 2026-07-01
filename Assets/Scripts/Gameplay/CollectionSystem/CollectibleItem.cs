@@ -13,7 +13,6 @@ namespace Game.Gameplay
         [Header("Consume Animation Settings")]
         [SerializeField] private float duration = 0.5f;
         [SerializeField] private float pullDistance = 2f;
-
         private SpriteRenderer spriteRenderer;
         private bool isConsumed = false;
         private Collider2D eatableCollider;

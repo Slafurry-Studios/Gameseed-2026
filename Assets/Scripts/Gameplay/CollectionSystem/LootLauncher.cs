@@ -11,6 +11,7 @@ namespace Game.Gameplay
 
         private Coroutine launchRoutine;
         private FloatingMovement floatingMovement;
+        [SerializeField] private string audioClipName = "Loot_Launch";
 
         private void Awake()
         {
@@ -19,7 +20,6 @@ namespace Game.Gameplay
 
         public void Launch(Vector3 startPos, Vector3 endPos)
         {
-            // Matikan floating dulu biar nggak rebutan posisi
             if (floatingMovement != null)
                 floatingMovement.enabled = false;
 
@@ -28,6 +28,7 @@ namespace Game.Gameplay
             if (launchRoutine != null)
                 StopCoroutine(launchRoutine);
 
+            SoundManager.Instance.PlaySound2D(audioClipName);
             launchRoutine = StartCoroutine(LaunchRoutine(startPos, endPos));
         }
 

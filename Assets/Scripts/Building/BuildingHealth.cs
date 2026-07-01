@@ -32,5 +32,6 @@ public class BuildingHealth : Health
         GameManager.Instance.AddSubs(SubsPointValue);
         base.Die();
         Destroy(gameObject);
+        SoundManager.Instance.PlaySound2D("Building_Destroyed");
     }
 }

@@ -16,6 +16,7 @@ namespace Game.Manager
 
         public void IncreasePoints(int amount)
         {
+            SoundManager.Instance.PlaySound2D("Collection_Point");
             int add = amount;
 
             if (isContentCreator)

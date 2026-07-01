@@ -6,28 +6,69 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField]
     private SoundLibrary sfxLibrary;
+
+    [Header("Pool Settings")]
     [SerializeField]
-    private AudioSource sfx2DSource;
+    private int poolSize = 16;
+
+    private AudioSource[] pool;
+    private int oldestIndex = 0;
 
     private void Awake()
     {
         if (Instance != null)
         {
             Destroy(gameObject);
+            return;
         }
-        else
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+        InitPool();
+    }
+
+    private void InitPool()
+    {
+        pool = new AudioSource[poolSize];
+        for (int i = 0; i < poolSize; i++)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            GameObject go = new GameObject($"SFX_Source_{i}");
+            go.transform.SetParent(transform);
+            pool[i] = go.AddComponent<AudioSource>();
+            pool[i].playOnAwake = false;
         }
     }
 
+    private AudioSource GetAvailableSource()
+    {
+        // Cari yang idle dulu
+        foreach (var source in pool)
+        {
+            if (!source.isPlaying)
+            {
+                return source;
+            }
+        }
+
+        // Kalau semua sibuk, steal yang paling lama
+        AudioSource stolen = pool[oldestIndex];
+        stolen.Stop();
+        oldestIndex = (oldestIndex + 1) % poolSize;
+        return stolen;
+    }
+
+    // ── 3D ──────────────────────────────────────────────
+
     public void PlaySound3D(AudioClip clip, Vector3 pos, float volume = 1f)
     {
-        if (clip != null)
-        {
-            AudioSource.PlayClipAtPoint(clip, pos, volume);
-        }
+        if (clip == null) return;
+
+        AudioSource source = GetAvailableSource();
+        source.transform.position = pos;
+        source.spatialBlend = 1f;
+        source.clip = clip;
+        source.volume = volume;
+        source.Play();
     }
 
     public void PlaySound3D(string soundName, Vector3 pos)
@@ -44,13 +85,27 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    // ── 2D ──────────────────────────────────────────────
+
+    public void PlaySound2D(AudioClip clip, float volume = 1f)
+    {
+        if (clip == null) return;
+
+        AudioSource source = GetAvailableSource();
+        source.transform.position = Vector3.zero;
+        source.spatialBlend = 0f;
+        source.clip = clip;
+        source.volume = volume;
+        source.Play();
+    }
+
     public void PlaySound2D(string soundName)
     {
         SoundEffect sfx = sfxLibrary.GetSoundEffect(soundName);
         if (sfx.clips != null && sfx.clips.Length > 0)
         {
             AudioClip clip = sfx.clips[Random.Range(0, sfx.clips.Length)];
-            sfx2DSource.PlayOneShot(clip, sfx.volume);
+            PlaySound2D(clip, sfx.volume);
         }
         else
         {

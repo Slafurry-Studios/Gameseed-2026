@@ -12,6 +12,7 @@ namespace Game.Gameplay.Attributes
             if (health != null)
             {
                 health.Heal(amount);
+                SoundManager.Instance.PlaySound2D("Collection_Point");
             }
         }
     }

@@ -9,7 +9,8 @@ namespace Game.Gameplay.Attributes
     {
         public override void Apply(GameObject target, float amount)
         {
-            GameManager.Instance.AddThreat((int) Math.Round(amount));
+            GameManager.Instance.AddThreat((int)Math.Round(amount));
+            SoundManager.Instance.PlaySound2D("Collection_Point");
         }
     }
 }

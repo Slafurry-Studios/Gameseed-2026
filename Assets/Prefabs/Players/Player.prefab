@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1266888717
+  m_SortingLayer: 5
   m_SortingOrder: 70
   m_Sprite: {fileID: -1882965702, guid: 5b709324e10afaf4fb319e069d6cd6ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 1852039860184836932}
   - component: {fileID: 5368762320555165210}
   - component: {fileID: 6872822171515884240}
+  - component: {fileID: 1407290619429894367}
   - component: {fileID: 7977524004125337865}
   - component: {fileID: 8351684795539557676}
   - component: {fileID: -8338949141181473109}
@@ -124,6 +125,7 @@ Transform:
   m_Children:
   - {fileID: 7748659725532356106}
   - {fileID: 5121607882258503389}
+  - {fileID: 4236434970009435774}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9012625788964980658
@@ -271,6 +273,31 @@ MonoBehaviour:
   staminaRegenDelay: 1
   moveAction: {fileID: -1680190386980627800, guid: 487d6f98c21f58d4c8a0d99e91627e36, type: 3}
   sprintAction: {fileID: -7471211009204490832, guid: 487d6f98c21f58d4c8a0d99e91627e36, type: 3}
+--- !u!114 &1407290619429894367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942693537167940922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55313ea9c15837cb08d3477084c32351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1338399822672591885, guid: d0db26803bb1d2a4a802f8857098a4be, type: 3}
+  bulletNormalRadius: 0.2
+  bulletBiggerDakkaPrefab: {fileID: 1338399822672591885, guid: 1d8dd80b3dcc433f993e82d5007fb973, type: 3}
+  bulletBiggerDakkaRadius: 0.5
+  bulletAverageBulletEnjoyerPrefab: {fileID: 1338399822672591885, guid: e487876fa4565be2a94ddc49cb57d005, type: 3}
+  bulletAverageBulletEnjoyerPrefabRadius: 1
+  fireRate: 0.1
+  bulletDamage: 10
+  bulletSpeed: 20
+  maxShootDistance: 10
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 20480
 --- !u!114 &7977524004125337865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,24 +311,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimIndicator: {fileID: 5121607882258503389}
-  orbitCenter: {fileID: 3010827601464262802}
-  orbitRadius: 1.5
+  orbitCenter: {fileID: 4236434970009435774}
+  orbitRadius: 0
   rotateIndicator: 1
   rotationOffset: -90
-  shootAction: {fileID: 1120369429361536294, guid: 487d6f98c21f58d4c8a0d99e91627e36, type: 3}
-  bulletPrefab: {fileID: 1338399822672591885, guid: d0db26803bb1d2a4a802f8857098a4be, type: 3}
-  bulletNormalRadius: 0.2
-  bulletBiggerDakkaPrefab: {fileID: 0}
-  bulletBiggerDakkaRadius: 0.5
-  bulletAverageBulletEnjoyerPrefab: {fileID: 0}
-  bulletAverageBulletEnjoyerPrefabRadius: 1
-  fireRate: 0.5
-  bulletDamage: 6
-  bulletSpeed: 20
-  maxShootDistance: 10
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 12288
 --- !u!114 &8351684795539557676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,9 +330,9 @@ MonoBehaviour:
   bodyPrefab: {fileID: 2488826902731729857, guid: deeca6ea89224e440afe02bf3652cc38, type: 3}
   tailPrefab: {fileID: 3017174187755660583, guid: 144379c316e13924aad82de38ff12ef1, type: 3}
   saddlePrefab: {fileID: 2488826902731729857, guid: d834381d95cb3f38c9da07f6b91345bf, type: 3}
-  initialBodySize: 1
+  initialBodySize: 3
   minRecordDistance: 0.02
-  segmentSpacing: 0.7
+  segmentSpacing: 0.5
   saddlePositionRatio: 1
   baseSortingOrder: 100
 --- !u!114 &-8338949141181473109

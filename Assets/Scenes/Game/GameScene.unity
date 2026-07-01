@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ====== HUD ======
       objectReference: {fileID: 0}
+    - target: {fileID: 908396315217867583, guid: a6e51e57f56454fe19060ebdf1e5bccf, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3080164281350710431, guid: a6e51e57f56454fe19060ebdf1e5bccf, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -12,6 +12,7 @@ namespace Game.Gameplay.Attributes
             if (growth != null)
             {
                 growth.AddGrowPoints(Mathf.RoundToInt(amount));
+                SoundManager.Instance.PlaySound2D("Collection_Point");
             }
         }
     }

@@ -159,7 +159,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1540760951774508023}
   - {fileID: 3139105461054465783}
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxLibrary: {fileID: 3991610590703026049}
-  sfx2DSource: {fileID: 3819257527371475487}
+  poolSize: 500
 --- !u!114 &3991610590703026049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +289,7 @@ MonoBehaviour:
   - groupID: Collection_Point
     clips:
     - {fileID: 8300000, guid: ede59832d10f933b3af2939c815933e6, type: 3}
-    volume: 4.65
+    volume: 4.13
   - groupID: Concussion
     clips:
     - {fileID: 8300000, guid: ea945270f48e0eb77a292ab7e535bc98, type: 3}
@@ -362,13 +362,13 @@ MonoBehaviour:
   tracks:
   - trackName: Main_Menu
     clip: {fileID: 8300000, guid: 39895c1d1c0068243b7f473ad5984b47, type: 3}
-    volume: 3.66
+    volume: 2.77
   - trackName: Stage_1_Intro
     clip: {fileID: 8300000, guid: 4ac198fe2f2ae02218817669a039d3e9, type: 3}
-    volume: 3.66
+    volume: 3.32
   - trackName: Stage_1_Loop
     clip: {fileID: 8300000, guid: 7fc66d52671194d469240dc0e446e0d9, type: 3}
-    volume: 3.66
+    volume: 0.29
   - trackName: Game_Over
     clip: {fileID: 8300000, guid: e88a11da3a7488c57b1ddfc2c91ff91a, type: 3}
     volume: 3.66
