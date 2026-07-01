@@ -29,8 +29,6 @@ namespace Game.UI.HUD
         private void Start()
         {
             dialogManager = FindAnyObjectByType<DialogManager>();
-
-            // dialogManager.StartDialog("tutorial");
         }
 
         public void Show()

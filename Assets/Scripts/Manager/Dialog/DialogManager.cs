@@ -15,7 +15,7 @@ namespace Game.Dialog
         {
             dialogHUD = FindAnyObjectByType<DialogHUD>();
 
-            StartDialog("tutorial");
+            // StartDialog("tutorial");
         }
 
         public void StartDialog(string id)
