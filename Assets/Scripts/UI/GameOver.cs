@@ -1,8 +1,9 @@
 using System.Collections;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+using Game.Manager;
 using Game.Player;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -11,12 +12,15 @@ public class GameOver : MonoBehaviour
     [SerializeField] private GameObject gameOverCanvas;
     [SerializeField] private GameObject respawnPos;
     [SerializeField] private TextMeshProUGUI timerText;
-    // [SerializeField] private TextMeshProUGUI threatPoint;
-    // [SerializeField] private TextMeshProUGUI growthPoint;
-    // [SerializeField] private TextMeshProUGUI SubscriberPoint;
+    [SerializeField] private TextMeshProUGUI threatPoint;
+    [SerializeField] private TextMeshProUGUI growthPoint;
+    [SerializeField] private TextMeshProUGUI SubscriberPoint;
 
     [Header("Player Data")]
     [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private PlayerCollection playerGrowth;
+    [SerializeField] private ThreatPointManager playerThreath;
+    [SerializeField] private SubscriptionPointManager playerSubs;
     // [SerializeField] private PlayerGrowth playerGrowth;
 
     [Header("Settings")]
@@ -73,6 +77,21 @@ public class GameOver : MonoBehaviour
     private IEnumerator GameOverSequence()
     {
         yield return new WaitForSeconds(freezeDuration);
+
+        if (threatPoint != null && playerThreath != null)
+        {
+            threatPoint.text = playerThreath.GetPoint() + " Threat Point";
+        }
+
+        if (SubscriberPoint != null && playerSubs != null)
+        {
+            SubscriberPoint.text = playerSubs.GetPoint() + " Subscription";
+        }
+
+        if (growthPoint != null && playerGrowth != null)
+        {
+            growthPoint.text = playerGrowth.GetOrbs() + " Growth";
+        }
 
         if (gameOverCanvas != null)
         {
