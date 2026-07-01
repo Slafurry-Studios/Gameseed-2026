@@ -12,21 +12,24 @@ namespace Game.Player
         [Header("Movement Settings")]
         [SerializeField] private float forwardSpeed = 5f;
         [SerializeField] private float turnSpeed = 360f; // Kecepatan berputar (derajat per detik)
-        
+
         [Header("Sprint & Stamina Settings")]
         [SerializeField] private float sprintMultiplier = 1.5f;
         [SerializeField] private float maxStamina = 100f;
         [SerializeField] private float staminaDrainRate = 20f;
         [SerializeField] private float staminaRegenRate = 15f;
         [SerializeField] private float staminaRegenDelay = 1f;
-        
+
         [Header("Input")]
         [SerializeField] private InputActionReference moveAction;
         [SerializeField] private InputActionReference sprintAction;
 
+        [Header("Objective")]
+        [SerializeField] private BaseObjectiveChannel[] sprintChannel;
+
         private Rigidbody2D rb;
         private float targetAngle;
-        
+
         private float currentStamina;
         private bool isSprinting;
         private float regenTimer;
@@ -37,7 +40,7 @@ namespace Game.Player
             rb = GetComponent<Rigidbody2D>();
             rb.gravityScale = 0f;
             targetAngle = rb.rotation;
-            
+
             currentStamina = maxStamina;
         }
 
@@ -63,7 +66,7 @@ namespace Game.Player
             if (moveAction != null)
             {
                 Vector2 input = moveAction.action.ReadValue<Vector2>();
-                
+
                 if (input.sqrMagnitude > 0.01f)
                 {
                     if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
@@ -82,6 +85,28 @@ namespace Game.Player
             }
 
             HandleSprintingAndStamina();
+
+            if (sprintAction != null)
+            {
+                bool pressed = sprintAction.action.IsPressed();
+
+                if (pressed && !isSprinting)
+                {
+                    foreach (BaseObjectiveChannel channel in sprintChannel)
+                    {
+                        channel.Raise(1);
+                    }
+                }
+                else if (!pressed && isSprinting)
+                {
+                    foreach (BaseObjectiveChannel channel in sprintChannel)
+                    {
+                        channel.Raise(0);
+                    }
+                }
+
+                isSprinting = pressed;
+            }
         }
 
         private void HandleSprintingAndStamina()
@@ -100,7 +125,7 @@ namespace Game.Player
                 isSprinting = true;
                 currentStamina -= staminaDrainRate * Time.deltaTime;
                 currentStamina = Mathf.Max(currentStamina, 0f);
-                
+
                 regenTimer = staminaRegenDelay;
 
                 if (currentStamina <= 0f)
@@ -111,7 +136,7 @@ namespace Game.Player
             else
             {
                 isSprinting = false;
-                
+
                 if (regenTimer > 0f)
                 {
                     regenTimer -= Time.deltaTime;
@@ -156,12 +181,12 @@ namespace Game.Player
             rb.angularVelocity = 0f;
         }
 
-        public float CurrentSpeed 
-        { 
-            get 
-            { 
-                return forwardSpeed * (isSprinting ? sprintMultiplier : 1f); 
-            } 
+        public float CurrentSpeed
+        {
+            get
+            {
+                return forwardSpeed * (isSprinting ? sprintMultiplier : 1f);
+            }
         }
 
         public bool GetSprint()

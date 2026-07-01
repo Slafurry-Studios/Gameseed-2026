@@ -9,6 +9,7 @@ namespace Game.Manager
     {
         [SerializeField] private int MaxPoint = 5000;
         [SerializeField] private Threshold[] threatThresholds;
+        [SerializeField] private BaseObjectiveChannel[] threatPointChannel;
         public event Action<float, float> OnThreatPointIncreased;
         public event Action<int> OnCurrentThreatStateChanged;
 
@@ -23,6 +24,11 @@ namespace Game.Manager
             int newThreshold = GetCurrentThreshold();
 
             OnThreatPointIncreased?.Invoke(threatPoints, MaxPoint);
+
+            foreach (BaseObjectiveChannel channel in threatPointChannel)
+            {
+                channel.Raise(threatPoints);
+            }
 
             if (newThreshold > currentThreatState)
             {

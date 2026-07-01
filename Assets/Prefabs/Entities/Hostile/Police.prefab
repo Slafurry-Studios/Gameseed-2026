@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 250240689249557267}
   - component: {fileID: 8751540784575826490}
   m_Layer: 3
-  m_Name: Polisi
+  m_Name: Police
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,6 +179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  destroyChannel:
+  - {fileID: 11400000, guid: 2ea80c76512b88df68ddb0b1164b89b8, type: 2}
   dieAnim: Death
   hitAnim: Hit
 --- !u!114 &489954732526789305

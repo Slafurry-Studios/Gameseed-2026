@@ -1,3 +1,4 @@
+using Game.Manager;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Channels/OrdinaryKidChannel")]
@@ -8,6 +9,5 @@ public class OrdinaryKidChannel : BaseObjectiveChannel
         Debug.Log("OrdinaryKidChannel completed");
         FindAnyObjectByType<IntroCutscene>().NextCutscene();
         FindAnyObjectByType<IntroCutscene>().NextCutscene();
-
     }
 }

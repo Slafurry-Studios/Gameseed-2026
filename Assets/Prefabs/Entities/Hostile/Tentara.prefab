@@ -179,6 +179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  destroyChannel:
+  - {fileID: 11400000, guid: abcf9dd5658e71465917c510a1b9df1d, type: 2}
   dieAnim: Death
   hitAnim: Hit
 --- !u!114 &3987714821460101945
