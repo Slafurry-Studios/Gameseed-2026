@@ -10,7 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce4ae438c247a4c7a9263912fe64fa5d, type: 3}
-  m_Name: Urban Chaos Channel
+  m_Name: 2_Urban Chaos Channel
   m_EditorClassIdentifier: 
   useDonation: 1
   donationSprite: {fileID: 21300000, guid: 112bd53c899890cac8013c59751d7c34, type: 3}
+  nextObjective:
+    DisplayName: Eliminate Police
+    Channel: {fileID: 11400000, guid: 2ea80c76512b88df68ddb0b1164b89b8, type: 2}
+    ObjectiveThreshold: 10
+    ObjectiveType: 5
+    IsMainMission: 0

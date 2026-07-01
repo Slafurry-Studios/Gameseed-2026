@@ -56,6 +56,7 @@ MonoBehaviour:
   SubsPointValue: 0
   destroyChannel:
   - {fileID: 11400000, guid: b33d7556fdf30298fb4efe9847b34b07, type: 2}
+  - {fileID: 11400000, guid: 3ca9f5900133a070ba835504ed431a80, type: 2}
 --- !u!114 &9011974869693768847
 MonoBehaviour:
   m_ObjectHideFlags: 0

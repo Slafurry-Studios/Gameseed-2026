@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &731017564662321437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1915346463505321604}
+  - component: {fileID: 5281098072673928890}
+  m_Layer: 0
+  m_Name: MediumBuilding_4x3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1915346463505321604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731017564662321437}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 476346433084964770}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5281098072673928890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731017564662321437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d21b2a15fa14e08b919e434b7985413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 3
+  prefabs:
+  - {fileID: 5824946582643473316, guid: 8f538e6510c1f3c40845fa1affaa3af8, type: 3}
+  - {fileID: 3395691104848570656, guid: d1b0ababaa0ebd3439876322efec8c2f, type: 3}
+  - {fileID: 2851258835729364982, guid: 24ef3ec6d6c5ee648b20857ab4325a1d, type: 3}
+  buildingSize: {x: 5, y: 4}
+  marginLeftRange: {x: 0, y: 0}
+  marginRightRange: {x: 0, y: 0}
+  marginBottomRange: {x: 0, y: 0}
+  marginTopRange: {x: 0, y: 0}
 --- !u!1 &3614792116918650737
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,11 +84,120 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6313668688853466566}
+  - {fileID: 3109094791078377962}
   - {fileID: 3510646638712807146}
+  - {fileID: 1915346463505321604}
   - {fileID: 1918216831971122321}
+  - {fileID: 8188503557361630977}
   - {fileID: 6676289901346650494}
   m_Father: {fileID: 6656300709399086097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5131937499206745611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3109094791078377962}
+  - component: {fileID: 7380510900896117871}
+  m_Layer: 0
+  m_Name: SmallBuilding_3x2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3109094791078377962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131937499206745611}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 476346433084964770}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7380510900896117871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131937499206745611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d21b2a15fa14e08b919e434b7985413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 5
+  prefabs:
+  - {fileID: 5416794805173567339, guid: ca32ef9de73ae9e4a98695e2dfe34eed, type: 3}
+  - {fileID: 322584192736616865, guid: 979253f78e6b9d840aa9318277d583c3, type: 3}
+  buildingSize: {x: 4, y: 3}
+  marginLeftRange: {x: 0, y: 0}
+  marginRightRange: {x: 0, y: 0}
+  marginBottomRange: {x: 0, y: 0}
+  marginTopRange: {x: 0, y: 0}
+--- !u!1 &5402686217200629896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8188503557361630977}
+  - component: {fileID: 5331513154937001848}
+  m_Layer: 0
+  m_Name: LargeBuilding_5x5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8188503557361630977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402686217200629896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 476346433084964770}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5331513154937001848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402686217200629896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d21b2a15fa14e08b919e434b7985413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 4
+  prefabs:
+  - {fileID: 6206908649285805218, guid: de59401ee75441d4bb485c52d6684090, type: 3}
+  - {fileID: 279694350136992588, guid: 0dcf613222486a545a05c8ee77ec8147, type: 3}
+  buildingSize: {x: 5, y: 5}
+  marginLeftRange: {x: 0, y: 0}
+  marginRightRange: {x: 0, y: 0}
+  marginBottomRange: {x: 0, y: 0}
+  marginTopRange: {x: 0, y: 0}
 --- !u!1 &5698379675542821123
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   order: 1
   roadRuleTile: {fileID: 11400000, guid: 575e54845802ea04fb59d9957ba05250, type: 2}
-  minBlockSize: 8
+  minBlockSize: 12
   maxBlockSize: 30
   stopDividingChance: 0.15
   deadEndChance: 0.2
@@ -163,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   order: 2
-  bossMarginRange: {x: 20, y: 20}
+  bossMarginRange: {x: 10, y: 10}
   bossSize: {x: 4, y: 4}
   bossBuildings:
   - {fileID: 7178440261986189834, guid: cfec774fc9ee16f498abd752dc660166, type: 3}
@@ -211,7 +374,7 @@ GameObject:
   - component: {fileID: 1918216831971122321}
   - component: {fileID: 1923572161630814962}
   m_Layer: 0
-  m_Name: LargeBuilding
+  m_Name: LargeBuilding_5x4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,13 +407,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d21b2a15fa14e08b919e434b7985413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  order: 5
+  order: 4
   prefabs:
   - {fileID: 5398375568961534747, guid: ff4456f47b0190e47a2d19ae35d6a220, type: 3}
-  - {fileID: 6206908649285805218, guid: de59401ee75441d4bb485c52d6684090, type: 3}
-  - {fileID: 279694350136992588, guid: 0dcf613222486a545a05c8ee77ec8147, type: 3}
   - {fileID: 1999314171020843392, guid: 838259ceb2c87b540b4e5f2bb91290d7, type: 3}
-  buildingSize: {x: 4, y: 4}
+  buildingSize: {x: 6, y: 5}
   marginLeftRange: {x: 0, y: 0}
   marginRightRange: {x: 0, y: 0}
   marginBottomRange: {x: 0, y: 0}
@@ -266,7 +427,7 @@ GameObject:
   - component: {fileID: 3510646638712807146}
   - component: {fileID: 9180149929939002501}
   m_Layer: 0
-  m_Name: MediumBuilding
+  m_Name: MediumBuilding_3x3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,17 +460,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d21b2a15fa14e08b919e434b7985413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  order: 4
+  order: 3
   prefabs:
   - {fileID: 8783792209048939217, guid: c5e9474e39627834cae61b9f8fc7a335, type: 3}
   - {fileID: 8370704668778762501, guid: d2d2eb738f0d57640ace9ffc923039f6, type: 3}
   - {fileID: 1487362049162404025, guid: 959a27b1ad8a1c44fba2da1c152f8e58, type: 3}
   - {fileID: 8822202631964834699, guid: 54166f7e604417d43b3b11aabb48ae9c, type: 3}
   - {fileID: 2491733599425041944, guid: 67b35ca2e6d56604081fa7777ac4f724, type: 3}
-  - {fileID: 5824946582643473316, guid: 8f538e6510c1f3c40845fa1affaa3af8, type: 3}
-  - {fileID: 3395691104848570656, guid: d1b0ababaa0ebd3439876322efec8c2f, type: 3}
-  - {fileID: 2851258835729364982, guid: 24ef3ec6d6c5ee648b20857ab4325a1d, type: 3}
-  buildingSize: {x: 3, y: 3}
+  buildingSize: {x: 4, y: 4}
   marginLeftRange: {x: 0, y: 0}
   marginRightRange: {x: 0, y: 0}
   marginBottomRange: {x: 0, y: 0}
@@ -407,8 +565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250f9e9b4fced0144a03a392aa0a0d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 200
-  height: 200
+  width: 100
+  height: 100
   roadTilemap: {fileID: 8249933538091407757}
 --- !u!1 &9139349893162370282
 GameObject:
@@ -421,7 +579,7 @@ GameObject:
   - component: {fileID: 6313668688853466566}
   - component: {fileID: 8209991843599736598}
   m_Layer: 0
-  m_Name: SmallBuilding
+  m_Name: SmallBuilding_2x2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -454,13 +612,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d21b2a15fa14e08b919e434b7985413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  order: 3
+  order: 5
   prefabs:
   - {fileID: 8005792738082797078, guid: ad9d3b1ee0a2371438583fb1d3d04136, type: 3}
-  - {fileID: 5416794805173567339, guid: ca32ef9de73ae9e4a98695e2dfe34eed, type: 3}
-  - {fileID: 322584192736616865, guid: 979253f78e6b9d840aa9318277d583c3, type: 3}
   - {fileID: 322584192736616865, guid: 27331a7f17769711b972bb71ab99b170, type: 3}
-  buildingSize: {x: 2, y: 2}
+  buildingSize: {x: 3, y: 3}
   marginLeftRange: {x: 0, y: 0}
   marginRightRange: {x: 0, y: 0}
   marginBottomRange: {x: 0, y: 0}

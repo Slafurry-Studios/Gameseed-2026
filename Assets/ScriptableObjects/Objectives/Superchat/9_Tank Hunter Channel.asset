@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcefbb7a76020a724885c42a41c0c880, type: 3}
-  m_Name: Healthy Guy Channel
+  m_Script: {fileID: 11500000, guid: d958cfba748eb83b3af9247e6060d116, type: 3}
+  m_Name: 9_Tank Hunter Channel
   m_EditorClassIdentifier: 
   useDonation: 1
-  donationSprite: {fileID: 21300000, guid: eeeecff1adeaa5583ba04766573a669a, type: 3}
+  donationSprite: {fileID: 21300000, guid: 052a51f9081784ca8a79e952f3e52645, type: 3}

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1ac7c1467537d5f48579d6d384ca8fb, type: 3}
-  m_Name: Road Destroyer Channel
+  m_Script: {fileID: 11500000, guid: 866e9b070035c365bbba6769d09f2fef, type: 3}
+  m_Name: 1_Ordinary Kid Channel
   m_EditorClassIdentifier: 
   useDonation: 1
-  donationSprite: {fileID: 21300000, guid: 34cc997ac9fe369e58f5d1c6aac716e7, type: 3}
+  donationSprite: {fileID: 21300000, guid: 923a5115fabf96103ae4887cce0296b5, type: 3}

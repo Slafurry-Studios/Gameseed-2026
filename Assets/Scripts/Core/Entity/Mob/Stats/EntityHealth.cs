@@ -2,8 +2,10 @@ using Game.AI;
 using Game.Generic;
 using UnityEngine;
 
-public class ExampleEntityHealth : Health
+public class EntityHealth : Health
 {
+    [SerializeField] private BaseObjectiveChannel[] destroyChannel;
+
     private EntityBrain entityBrain;
     [SerializeField] private string dieAnim;
     [SerializeField] private string hitAnim;
@@ -31,6 +33,11 @@ public class ExampleEntityHealth : Health
 
         Debug.Log("[ExampleEntityHealth] Entity has died!");
 
+        foreach (BaseObjectiveChannel channel in destroyChannel)
+        {
+            channel.Raise(1);
+        }
+
         if (entityBrain != null)
         {
             if (entityBrain.aiAnimation != null && !string.IsNullOrEmpty(dieAnim))
@@ -44,6 +51,8 @@ public class ExampleEntityHealth : Health
                 entityBrain.Movement.SetMovement(Vector2.zero, 0f);
                 entityBrain.Movement.enabled = false;
             }
+
+
 
             entityBrain.enabled = false;
         }

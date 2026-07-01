@@ -37,29 +37,39 @@ public class BuildingGenerator : MonoBehaviour, IGenerate
         int width = generator.Width;
         int height = generator.Height;
 
+        // Buat list semua koordinat, lalu acak urutannya
+        List<Vector2Int> positions = new List<Vector2Int>();
         for (int x = 0; x < width; x++)
-        {
             for (int y = 0; y < height; y++)
+                positions.Add(new Vector2Int(x, y));
+
+        // Fisher-Yates shuffle
+        for (int i = positions.Count - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+            (positions[i], positions[j]) = (positions[j], positions[i]);
+        }
+
+        foreach (var pos in positions)
+        {
+            int x = pos.x, y = pos.y;
+
+            int mLeft = Random.Range(marginLeftRange.x, marginLeftRange.y + 1);
+            int mRight = Random.Range(marginRightRange.x, marginRightRange.y + 1);
+            int mBottom = Random.Range(marginBottomRange.x, marginBottomRange.y + 1);
+            int mTop = Random.Range(marginTopRange.x, marginTopRange.y + 1);
+
+            if (BuildingUtils.CanFitBuildingWithMargins(grid, x, y, buildingSize.x, buildingSize.y, mLeft, mRight, mBottom, mTop))
             {
-                int mLeft = Random.Range(marginLeftRange.x, marginLeftRange.y + 1);
-                int mRight = Random.Range(marginRightRange.x, marginRightRange.y + 1);
-                int mBottom = Random.Range(marginBottomRange.x, marginBottomRange.y + 1);
-                int mTop = Random.Range(marginTopRange.x, marginTopRange.y + 1);
+                GameObject prefabToSpawn = prefabs[Random.Range(0, prefabs.Length)];
+                Vector3 spawnPos = generator.RoadTilemap.GetCellCenterWorld(new Vector3Int(x, y, 0));
+                spawnPos += new Vector3((buildingSize.x - 1) * 0.5f, (buildingSize.y - 1) * 0.5f, 0);
 
-                if (BuildingUtils.CanFitBuildingWithMargins(grid, x, y, buildingSize.x, buildingSize.y, mLeft, mRight, mBottom, mTop))
-                {
-                    GameObject prefabToSpawn = prefabs[Random.Range(0, prefabs.Length)];
-                    Vector3 spawnPos = generator.RoadTilemap.GetCellCenterWorld(new Vector3Int(x, y, 0));
-                    spawnPos += new Vector3((buildingSize.x - 1) * 0.5f, (buildingSize.y - 1) * 0.5f, 0);
+                GameObject newBuilding = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
+                newBuilding.transform.parent = generator.transform;
+                spawnedBuildings.Add(newBuilding);
 
-                    GameObject newBuilding = Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
-                    newBuilding.transform.parent = generator.transform;
-                    spawnedBuildings.Add(newBuilding);
-
-                    // Mark ONLY the building's physical footprint as occupied (2).
-                    // This allows other buildings' empty margins to overlap.
-                    BuildingUtils.MarkGridOccupied(grid, x, y, buildingSize.x, buildingSize.y);
-                }
+                BuildingUtils.MarkGridOccupied(grid, x, y, buildingSize.x, buildingSize.y);
             }
         }
     }

@@ -67,3 +67,6 @@ TagManager:
   - name: Building
     uniqueID: 1565190731
     locked: 0
+  - name: VFX
+    uniqueID: 754668013
+    locked: 0

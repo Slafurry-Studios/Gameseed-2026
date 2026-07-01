@@ -13,6 +13,10 @@ namespace Game.Gameplay
         [Header("Consume Animation Settings")]
         [SerializeField] private float duration = 0.5f;
         [SerializeField] private float pullDistance = 2f;
+
+        [Header("Objective")]
+        [SerializeField] private BaseObjectiveChannel[] consumeChannel;
+
         private SpriteRenderer spriteRenderer;
         private bool isConsumed = false;
         private Collider2D eatableCollider;
@@ -50,6 +54,11 @@ namespace Game.Gameplay
             OnConsumed();
 
             Debug.Log($"[Eatable] {gameObject.name} has been consumed.");
+
+            foreach (BaseObjectiveChannel channel in consumeChannel)
+            {
+                channel.Raise(1);
+            }
 
             StartCoroutine(ConsumeRoutine(player, direction.normalized));
         }
