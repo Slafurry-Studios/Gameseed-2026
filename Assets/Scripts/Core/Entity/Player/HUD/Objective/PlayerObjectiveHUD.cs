@@ -11,7 +11,7 @@ namespace Game.UI.HUD
         private readonly List<PlayerObjectiveItem> playerObjectiveItems = new();
         private readonly Dictionary<Objective, PlayerObjectiveItem> itemLookup = new();
 
-        private void OnEnable()
+        private void Start()
         {
             ObjectiveManager.Instance.OnObjectiveProgress += HandleProgress;
             ObjectiveManager.Instance.OnObjectiveCompleted += HandleCompleted;

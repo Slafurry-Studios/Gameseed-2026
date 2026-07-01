@@ -27,7 +27,7 @@ namespace Game.UI.HUD
             originalPos = donationRect.anchoredPosition;
         }
 
-        private void OnEnable()
+        private void Start()
         {
             ObjectiveManager.Instance.OnObjectiveAdded += HandleObjectiveAdded;
         }

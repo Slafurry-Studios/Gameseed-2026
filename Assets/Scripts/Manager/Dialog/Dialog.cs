@@ -8,5 +8,7 @@ namespace Game.Dialog
         public Sprite faceShotSprite;
         public string name;
         public string dialog;
+
+        // public DialogAction[] actions;
     }
 }

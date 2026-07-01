@@ -18,6 +18,10 @@ namespace Game.UI.HUD
         [Header("Type Effect")]
         [SerializeField] private float typingSpeed = 0.03f;
 
+        [Header("SFX")]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip typeLoopSfx;
+
         private DialogManager dialogManager;
 
         private bool isLast;
@@ -35,11 +39,13 @@ namespace Game.UI.HUD
         {
             Time.timeScale = 0f;
             dialogUIPrefab.SetActive(true);
+            PlayerManager.Instance.Pause();
         }
 
         public void Hide()
         {
             Time.timeScale = 1f;
+            PlayerManager.Instance.Resume();
             dialogUIPrefab.SetActive(false);
         }
 
@@ -64,11 +70,15 @@ namespace Game.UI.HUD
             isTyping = true;
             dialogText.text = "";
 
+            PlayTypeSfx();
+
             foreach (char c in currentDialog)
             {
                 dialogText.text += c;
                 yield return new WaitForSecondsRealtime(typingSpeed);
             }
+
+            StopTypeSfx();
 
             dialogText.text = currentDialog;
             isTyping = false;
@@ -82,6 +92,7 @@ namespace Game.UI.HUD
             if (isTyping)
             {
                 StopCoroutine(typingCoroutine);
+                StopTypeSfx();
 
                 dialogText.text = currentDialog;
                 isTyping = false;
@@ -100,6 +111,24 @@ namespace Game.UI.HUD
             }
 
             dialogManager.NextDialog();
+        }
+
+        private void PlayTypeSfx()
+        {
+            if (audioSource == null || typeLoopSfx == null)
+                return;
+
+            audioSource.clip = typeLoopSfx;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+
+        private void StopTypeSfx()
+        {
+            if (audioSource == null)
+                return;
+
+            audioSource.Stop();
         }
     }
 }

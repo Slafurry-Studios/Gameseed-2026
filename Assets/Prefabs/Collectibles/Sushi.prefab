@@ -140,7 +140,6 @@ MonoBehaviour:
     amount: 3
   duration: 0.5
   pullDistance: 2
-  audioClipName: Collection_Point
 --- !u!114 &100831400714501250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,4 +168,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchDuration: 0.4
   launchHeight: 0.7
-  audioClipName: ConsumableDrop
+  audioClipName: Consumable_Drop
