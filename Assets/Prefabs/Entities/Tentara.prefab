@@ -180,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   dieAnim: Death
+  hitAnim: Hit
 --- !u!114 &3987714821460101945
 MonoBehaviour:
   m_ObjectHideFlags: 0
