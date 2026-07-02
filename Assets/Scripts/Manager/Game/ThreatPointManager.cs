@@ -16,11 +16,12 @@ namespace Game.Manager
 
 
 
-        private int threatPoints = 0;
-        private int currentThreatState = 0;
+        [SerializeField] private int threatPoints = 0;
+        [SerializeField] private int currentThreatState = 0;
 
         public void IncreasePoints(int amount)
         {
+            Debug.Log($"[ThreatPointManager] IncreasePoints called with {amount}");
             threatPoints += amount;
 
             int newThreshold = GetCurrentThreshold();
@@ -35,7 +36,7 @@ namespace Game.Manager
             if (newThreshold > currentThreatState)
             {
                 currentThreatState = newThreshold;
-
+                Debug.Log($"[ThreatPointManager] Invoking OnCurrentThreatStateChanged with {currentThreatState}. Subscriber count: {OnCurrentThreatStateChanged?.GetInvocationList().Length ?? 0}");
                 OnCurrentThreatStateChanged?.Invoke(currentThreatState);
             }
 
@@ -53,7 +54,7 @@ namespace Game.Manager
             {
                 if (threatPoints >= threatThresholds[i].ThresholdValue)
                 {
-                    level = i;
+                    level = i + 1;   // <-- ubah ini
                 }
             }
 

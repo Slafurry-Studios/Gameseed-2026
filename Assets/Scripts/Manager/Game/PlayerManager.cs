@@ -25,15 +25,15 @@ public class PlayerManager : MonoBehaviour
 
     public void Pause()
     {
-        playerPrefab.GetComponent<PlayerShoot>().enabled = false;
-        playerPrefab.GetComponent<PlayerAim>().enabled = false;
+        playerPrefab.GetComponentInChildren<PlayerShoot>().enabled = false;
+        playerPrefab.GetComponentInChildren<PlayerAim>().enabled = false;
 
     }
 
     public void Resume()
     {
-        playerPrefab.GetComponent<PlayerShoot>().enabled = true;
-        playerPrefab.GetComponent<PlayerAim>().enabled = true;
+        playerPrefab.GetComponentInChildren<PlayerShoot>().enabled = true;
+        playerPrefab.GetComponentInChildren<PlayerAim>().enabled = true;
 
     }
 }
