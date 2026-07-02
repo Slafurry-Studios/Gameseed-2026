@@ -1,4 +1,5 @@
 using System;
+using Game.Core.Effects;
 using Game.Generic;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace Game.Player
         [SerializeField] private PlayerMovement playerMovement;
 
         [SerializeField] private float collisionDmg = 1f;
+        private IVisualEffect[] visualEffects;
 
         private RigidbodyConstraints2D originalConstraints;
         private bool vipSprint;
@@ -31,6 +33,8 @@ namespace Game.Player
                     originalConstraints = rb.constraints;
                 }
             }
+
+            visualEffects = GetComponentsInChildren<IVisualEffect>();
         }
 
         protected override void Die()
@@ -127,6 +131,12 @@ namespace Game.Player
 
             base.TakeDamage(amount);
             SoundManager.Instance.PlaySound2D("Take_Damage");
+            StreamChatManager.Instance.HandleStreamChat(StreamChatType.TAKE_DAMAGE, 5);
+
+            foreach (var effect in visualEffects)
+            {
+                effect.PlayEffect();
+            }
         }
 
         public void SafetyFirst()

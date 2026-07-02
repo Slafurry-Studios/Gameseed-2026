@@ -11,6 +11,7 @@ namespace Game.AI
 
         [Header("Animation")]
         [SerializeField] private string attackAnim;
+        [SerializeField] private string attackSound;
 
         [Header("Bullet Settings")]
         [Tooltip("Drag the Bullet prefab here (it must have the Bullet script attached)")]
@@ -76,6 +77,8 @@ namespace Game.AI
                         false,
                         false
                     );
+
+                    SoundManager.Instance.PlaySound2D(attackSound);
 
 
                     // Trigger attack hanya saat menembak

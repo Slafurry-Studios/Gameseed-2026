@@ -22,13 +22,13 @@ public class ObjectiveManager : Singleton<ObjectiveManager>
 
         if (completedObjectives.Contains(objective)) // ← block re-add
         {
-            Debug.LogWarning($"Objective '{objective.DisplayName}' already completed, skipping.");
+            // Debug.LogWarning($"Objective '{objective.DisplayName}' already completed, skipping.");
             return;
         }
 
         if (activeObjectives.Contains(objective))
         {
-            Debug.LogWarning($"Objective '{objective.DisplayName}' already active, skipping.");
+            // Debug.LogWarning($"Objective '{objective.DisplayName}' already active, skipping.");
             return;
         }
 

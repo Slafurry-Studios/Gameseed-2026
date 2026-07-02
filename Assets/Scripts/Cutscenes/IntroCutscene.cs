@@ -33,7 +33,7 @@ public class IntroCutscene : MonoBehaviour
 
     public void NextCutscene()
     {
-        Debug.Log($"CurrentSequence: {CurrentSequence}");
+        // Debug.Log($"CurrentSequence: {CurrentSequence}");
         if (CurrentSequence == 0)
         {
             CurrentSequence++;

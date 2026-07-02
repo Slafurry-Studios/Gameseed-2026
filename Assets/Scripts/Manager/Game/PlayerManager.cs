@@ -16,7 +16,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject PauseHUD;
     public GameObject DonationHUD;
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
         playerPrefab = GameObject.FindGameObjectWithTag("Player");

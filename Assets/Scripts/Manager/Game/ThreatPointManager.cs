@@ -12,6 +12,8 @@ namespace Game.Manager
         [SerializeField] private BaseObjectiveChannel[] threatPointChannel;
         public event Action<float, float> OnThreatPointIncreased;
         public event Action<int> OnCurrentThreatStateChanged;
+        [SerializeField] private ObjectiveScriptableObject Objective;
+
 
 
         private int threatPoints = 0;
@@ -27,7 +29,7 @@ namespace Game.Manager
 
             foreach (BaseObjectiveChannel channel in threatPointChannel)
             {
-                channel.Raise(threatPoints);
+                channel.Raise(amount);
             }
 
             if (newThreshold > currentThreatState)
@@ -35,6 +37,11 @@ namespace Game.Manager
                 currentThreatState = newThreshold;
 
                 OnCurrentThreatStateChanged?.Invoke(currentThreatState);
+            }
+
+            if (currentThreatState > 0)
+            {
+                ObjectiveManager.Instance.AddObjective(Objective.Objective);
             }
         }
 

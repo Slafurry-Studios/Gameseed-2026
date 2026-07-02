@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5121607882258503389}
   - component: {fileID: 4945326036448420087}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,6 +84,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1281813789711911343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6381265049541072296}
+  - component: {fileID: 1279991665809585797}
+  m_Layer: 3
+  m_Name: Effect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6381265049541072296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281813789711911343}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3010827601464262802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1279991665809585797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281813789711911343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d965a8375abc25292f7fa38c00c0c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultAmplitude: 1
+  defaultFrequency: 1
 --- !u!1 &2942693537167940922
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +149,7 @@ GameObject:
   - component: {fileID: -8338949141181473109}
   - component: {fileID: -7058775488412070641}
   - component: {fileID: 556949521701828137}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -126,6 +172,7 @@ Transform:
   - {fileID: 7748659725532356106}
   - {fileID: 5121607882258503389}
   - {fileID: 4236434970009435774}
+  - {fileID: 6381265049541072296}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9012625788964980658
@@ -273,6 +320,7 @@ MonoBehaviour:
   staminaRegenDelay: 1
   moveAction: {fileID: -1680190386980627800, guid: 487d6f98c21f58d4c8a0d99e91627e36, type: 3}
   sprintAction: {fileID: -7471211009204490832, guid: 487d6f98c21f58d4c8a0d99e91627e36, type: 3}
+  sprintChannel: []
 --- !u!114 &1407290619429894367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,7 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b49d6b9b8d360c4b8994d9f550bbf4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   playerDizzyAnimator: {fileID: 0}
   playerMovement: {fileID: 6872822171515884240}
   collisionDmg: 1
@@ -400,7 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4236434970009435774}
   - component: {fileID: 6449099033124845950}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Snaket_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7748659725532356106}
   - component: {fileID: 3860691582737385186}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

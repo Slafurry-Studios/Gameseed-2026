@@ -248,6 +248,60 @@ MonoBehaviour:
   maxBlockSize: 30
   stopDividingChance: 0.15
   deadEndChance: 0.2
+--- !u!1 &6177696523555359049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 642379943560529269}
+  - component: {fileID: 3693591552853026386}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &642379943560529269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6177696523555359049}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4016166453176487220}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3693591552853026386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6177696523555359049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62be55fa07f5d6a28859a02d488d27e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  entityPrefabs:
+  - {fileID: 7315821036877757477, guid: 21fba290c9b7360489d302ebd73494d1, type: 3}
+  - {fileID: 5321207816764167371, guid: b931bb516f6677943b70b2f4513a1777, type: 3}
+  maxEntities: 10
+  spawnInterval: 2
+  spawnsPerTick: 1
+  minSpawnRadius: 6
+  maxSpawnRadius: 14
+  maxAttemptsPerSpawn: 10
 --- !u!1 &6338689857568189495
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +605,7 @@ Transform:
   m_Children:
   - {fileID: 6990491767737954182}
   - {fileID: 6656300709399086097}
+  - {fileID: 642379943560529269}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4670171064504329192
