@@ -137,6 +137,9 @@ MonoBehaviour:
   - Name: Oh shit!
     Level: 4
     ThresholdValue: 5000
+  threatPointChannel:
+  - {fileID: 11400000, guid: 22e59adf54cb913f7b1962f637301c87, type: 2}
+  - {fileID: 11400000, guid: 2ac6c56cca9542c24a35d1c56779be5a, type: 2}
 --- !u!114 &3641634936374996148
 MonoBehaviour:
   m_ObjectHideFlags: 0

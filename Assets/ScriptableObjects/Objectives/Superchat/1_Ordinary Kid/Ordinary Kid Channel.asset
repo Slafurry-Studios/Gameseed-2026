@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d958cfba748eb83b3af9247e6060d116, type: 3}
-  m_Name: 9_Tank Hunter Channel
+  m_Script: {fileID: 11500000, guid: 866e9b070035c365bbba6769d09f2fef, type: 3}
+  m_Name: Ordinary Kid Channel
   m_EditorClassIdentifier: 
   useDonation: 1
-  donationSprite: {fileID: 21300000, guid: 052a51f9081784ca8a79e952f3e52645, type: 3}
+  donationSprite: {fileID: 21300000, guid: 923a5115fabf96103ae4887cce0296b5, type: 3}

@@ -9,14 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aa9480375cd4c4f88215cdab8a822ed, type: 3}
-  m_Name: 6_Chaos Fan Channel
+  m_Script: {fileID: 11500000, guid: 4628587d3e6e4baacbcd249d387046cc, type: 3}
+  m_Name: Road Destroyer Objective
   m_EditorClassIdentifier: 
-  useDonation: 1
-  donationSprite: {fileID: 21300000, guid: 9bc2696a4bfd1c49bb1a6c6d0b8f8180, type: 3}
-  nextObjective:
+  Objective:
     DisplayName: Destroy Truck
     Channel: {fileID: 11400000, guid: 1aace1b53127957f6bdef9ed7bb69d07, type: 2}
     ObjectiveThreshold: 5
-    ObjectiveType: 5
+    ObjectiveType: 1
     IsMainMission: 0
